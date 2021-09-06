@@ -11,7 +11,7 @@ const navigation = [
   { name: 'Hidrosfer', to: '/hidrosfer', current: false },
   { name: 'Biosfer', to: '/biosfer', current: false },
   { name: 'Antroposfer', to: '/antroposfer', current: false },
-  { name: 'Olimpiade 🔥', to: '/#', current: false },
+  { name: 'Olimpiade 🔥', to: '/#', current: true },
 ]
 
 function classNames(...classes) {
@@ -24,10 +24,11 @@ export default function Example() {
       <Disclosure as="nav" className="">
         {({ open }) => (
           <>
-            <div className="max-w-7xl mx-auto mt-6 px-2 sm:px-6 lg:px-8">
-              <div className="relative flex items-center justify-left">
-                <div className="flex-none sm:hidden">
-                  {/* Mobile menu button*/}
+            <div className="mx-auto mt-4 sm:mt-0">
+              <div className="relative flex sm:border-b-2 border-gray-100 items-center justify-center">
+
+                {/* Mobile menu button */}
+                <div className="flex-none sm:hidden pl-2">
                   <Disclosure.Button className="inline-flex items-center justify-center p-2 rounded-md text-gray-800 hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-gray-200">
                     <span className="sr-only">Open main menu</span>
                     {open ? (
@@ -37,17 +38,27 @@ export default function Example() {
                     )}
                   </Disclosure.Button>
                 </div>
-                <div className="flex flex-1 sm:justify-start sm:border-b-2 align-middle py-4">
+
+                {/* Main header */}
+                <div className="flex flex-1 max-w-6xl sm:justify-start align-middle py-6 pr-2">
+
+                  {/* Logo */}
                   <div className="flex-none">
                     <Link to="/">
                       <img
-                        className="inline mx-4 h-8"
+                        className="inline mx-2 sm:mx-4 h-8"
                         src={logo}
                         alt="Logo"
                       />
                     </Link>
                   </div>
-                  {/* Search bar goes here*/}
+                  
+                  {/* Search bar */}
+                  <div className="bg-black">
+                      
+                  </div>
+
+                  {/* Social buttons */}
                   <div className="flex flex-1 object-left">
                     <div className="hidden sm:flex sm:flex-grow sm:ml-6">
                       <div className="flex flex-grow my-auto">
@@ -56,25 +67,26 @@ export default function Example() {
                     </div>
                   </div>
                 </div>
-                
               </div>
 
               {/* Lower header*/}
-              <div className="hidden sm:flex justify-end border-b-2">
-                <div className="flex space-x-0">
-                  {navigation.map((item) => (
-                    <Link
-                      key={item.name}
-                      to={item.to}
-                      className={classNames(
-                        item.current ? 'bg-gray-900 text-white' : 'text-gray-800 hover:bg-gray-200',
-                        'px-2 py-2 my-auto rounded-md text-sm uppercase items-center font-semibold tracking-wider'
-                      )}
-                      aria-current={item.current ? 'page' : undefined}
-                    >
-                      {item.name}
-                    </Link>
-                  ))}
+              <div className="hidden sm:flex sm:border-b-2 border-gray-100 justify-center">
+                <div className="flex flex-1 max-w-6xl sm:justify-end align-middle py-1">
+                  <div className="flex space-x-2">
+                    {navigation.map((item) => (
+                      <Link
+                        key={item.name}
+                        to={item.to}
+                        className={classNames(
+                          item.current ? 'flex text-red-800 hover:bg-gray-100' : 'text-gray-800 hover:bg-gray-100',
+                          'px-1 py-1 my-auto rounded-md text-sm uppercase items-center font-semibold tracking-wider'
+                        )}
+                        aria-current={item.current ? 'page' : undefined}
+                      >
+                        {item.name}
+                      </Link>
+                    ))}
+                  </div>
                 </div>
               </div>
             </div>
@@ -86,7 +98,7 @@ export default function Example() {
                     key={item.name}
                     to={item.to}
                     className={classNames(
-                      item.current ? 'bg-gray-900 text-white' : 'flex text-gray-800 hover:bg-gray-200',
+                      item.current ? 'flex text-red-800 hover:bg-gray-100' : 'flex text-gray-800 hover:bg-gray-100',
                       'inline px-3 py-2 rounded-md text-base font-medium'
                     )}
                     aria-current={item.current ? 'page' : undefined}

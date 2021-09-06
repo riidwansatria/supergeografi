@@ -1,7 +1,8 @@
 import * as React from "react"
 import { Link, graphql } from "gatsby"
-import Layout from "../components/layout"
+import Layout from "../components/templates/layout"
 import Seo from "../components/seo"
+import Hero from "../components/organisms/Hero"
 
 
 const BlogIndex = ({ data, location }) => {
@@ -12,26 +13,7 @@ const BlogIndex = ({ data, location }) => {
     <body className="bg-white">
       <Layout location={location} title={siteTitle}>
       <Seo title = 'Home'/>
-        <div>
-          <div class="md:py-32 py-12">
-              <div class="md:pb-20 pb-12 mx-auto text-left font-family-sans ">
-                  <h1 class="md:text-6xl text-3xl text-black dark:text-white font-bold mb-4"><span className="text-2xl md:text-5xl text-gray-800">Hey there! 👋 </span><br/>I'm Ridwan, Global Engineering student at Kyoto University</h1>
-                  <p class="text-lg text-gray-600 dark:text-gray-400">Welcome to my personal website. This site will be used as a platform to share my thoughts and showcase the projects that I’m currently doing/I’ve done in the past.</p>
-                  <div className="inline-flex space-x-2">
-                    <button className="bg-gray-800 hover:bg-gray-600 text-white text-sm sm:text-md font-bold my-8 py-2 px-4 rounded">
-                      <Link to="/blog">
-                        Go to Blog →
-                      </Link>
-                    </button>
-                    <button className="bg-white hover:bg-lemon text-gray-800 text-sm sm:text-md font-bold my-8 py-2 px-4 border-2 border-gray-200 hover:border-lemon rounded">
-                      <Link to="/about">
-                        About Me
-                      </Link>
-                    </button>
-                  </div>
-              </div>
-          </div>
-        </div>
+        <Hero />
         <div className="mb-8 pb-4 border-b-2 flex justify-between items-center">
           <h2 className="md:text-4xl text-2xl font-semibold flex">📝 Latest Posts</h2>
           <div className="flex">

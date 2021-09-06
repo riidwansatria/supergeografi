@@ -1,13 +1,13 @@
 import * as React from "react"
-import Header from "../components/organisms/Header.js"
-import Footer from "../components/Footer"
+import Header from "../organisms/Header.js"
+import Footer from "../Footer"
 
 const Layout = ({ children }) => {
 
   return (
     <body className="bg-white">
       <Header/>
-      <main className="max-w-6xl mx-auto md:px-6 px-4 py-8">
+      <main className="mx-auto md:px-12 px-4 py-6">
         {children}
       </main>
       <Footer/>
