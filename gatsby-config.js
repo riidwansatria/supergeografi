@@ -94,8 +94,8 @@ module.exports = {
                   nodes {
                     excerpt
                     html
-                    fields {
-                      slug
+                    fields { 
+                      slug 
                     }
                     frontmatter {
                       title
@@ -106,6 +106,14 @@ module.exports = {
               }
             `,
             output: "/rss.xml",
+            title: "Supergeografi's RSS Feed",
+            // optional configuration to insert feed reference in pages:
+            // if `string` is used, it will be used to create RegExp and then test if pathname of
+            // current page satisfied this regular expression;
+            // if not provided or `undefined`, all pages will have feed reference inserted
+            match: "^/blog/",
+            // optional configuration to specify external rss feed, such as feedburner
+            link: "https://feeds.feedburner.com/gatsby/blog",
           },
         ],
       },
@@ -122,8 +130,9 @@ module.exports = {
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
     },
+    `gatsby-plugin-netlify`,
+    `gatsby-plugin-netlify-cms`,
     `gatsby-plugin-react-helmet`,
-    `gatsby-plugin-gatsby-cloud`,
     {
       resolve: 'gatsby-plugin-web-font-loader',
       options: {
