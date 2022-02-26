@@ -78,7 +78,7 @@ export default function Example() {
                         key={item.name}
                         to={item.to}
                         className={classNames(
-                          item.current ? 'flex text-red-800 hover:bg-gray-100' : 'text-gray-800 hover:bg-gray-100',
+                          item.current ? 'flex text-primary hover:bg-gray-100' : 'text-gray-600 hover:bg-gray-100',
                           'px-1 py-1 my-auto rounded-md text-sm uppercase items-center font-semibold tracking-wider'
                         )}
                         aria-current={item.current ? 'page' : undefined}
@@ -98,7 +98,7 @@ export default function Example() {
                     key={item.name}
                     to={item.to}
                     className={classNames(
-                      item.current ? 'flex text-red-800 hover:bg-gray-100' : 'flex text-gray-800 hover:bg-gray-100',
+                      item.current ? 'flex text-primary hover:bg-gray-100' : 'flex text-gray-800 hover:bg-gray-100',
                       'inline px-3 py-2 rounded-md text-base font-medium'
                     )}
                     aria-current={item.current ? 'page' : undefined}

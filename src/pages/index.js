@@ -3,6 +3,7 @@ import { Link, graphql } from "gatsby"
 import Layout from "../components/templates/layout"
 import Seo from "../components/seo"
 import Hero from "../components/organisms/Hero"
+import OSN from "../components/organisms/OSN"
 
 
 const BlogIndex = ({ data, location }) => {
@@ -14,6 +15,7 @@ const BlogIndex = ({ data, location }) => {
       <Layout location={location} title={siteTitle}>
       <Seo title = 'Home'/>
         <Hero />
+        <OSN />
         <div className="mb-8 pb-4 border-b-2 flex justify-between items-center">
           <h2 className="md:text-4xl text-2xl font-semibold flex">📝 Latest Posts</h2>
           <div className="flex">

@@ -14,16 +14,16 @@ const Hero = () => {
                 alt="Logo"
                 />
                 <p class="m-2 text-lg text-gray-800">Telusuri lebih jauh tentang manusia, lingkungannya, dan bumi yang kita pijak beserta bentang alamnya bersama Supergeografi!</p>
-                <button className="bg-gray-800 hover:bg-gray-600 text-white text-sm sm:text-md font-bold m-2 mt-8 py-2 px-4 rounded-lg">
+                <button className="bg-primary hover:bg-gray-600 text-white text-sm sm:text-md font-bold m-2 mt-8 py-2 px-4 rounded-lg">
                     <Link to="/blog">
                     Materi OSN Geografi →
                     </Link>
                 </button>
             </div>
 
-            <div className="hidden sm:grid col-span-1 m-auto">
+            <div className="hidden sm:grid col-span-1 my-auto ml-auto">
                 <img
-                className="h-64"
+                className="h-72"
                 src={earth}
                 alt="Earth"
                 />
