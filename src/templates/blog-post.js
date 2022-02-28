@@ -16,29 +16,28 @@ const BlogPostTemplate = ({ data, location }) => {
         description={post.frontmatter.description || post.excerpt}
       />
       <article
-        className="blog-post"
+        className=""
         itemScope
         itemType="http://schema.org/Article"
       >
-        <header>
-          <h1 itemProp="headline">{post.frontmatter.title}</h1>
+        <header className="max-w-3xl mx-auto">
+          <h1 itemProp="headline" className="text-5xl font-semibold py-4">{post.frontmatter.title}</h1>
           <p>{post.frontmatter.date}</p>
         </header>
+        <div className="max-w-4xl mx-auto py-12">
+          <img 
+          className="w-full lg:h-96 sm:h-72 h-48 mx-auto object-cover rounded-md"
+          src={post.frontmatter.featuredImage} alt={post.frontmatter.title}></img>
+        </div>
         <section
           dangerouslySetInnerHTML={{ __html: post.html }}
           itemProp="articleBody"
+          className="prose max-w-3xl mx-auto"
         />
-        <hr />
       </article>
-      <nav className="blog-post-nav">
+      <nav className="max-w-3xl mx-auto py-4 my-8 border-t-2 border-gray-200">
         <ul
-          style={{
-            display: `flex`,
-            flexWrap: `wrap`,
-            justifyContent: `space-between`,
-            listStyle: `none`,
-            padding: 0,
-          }}
+          className="flex flex-wrap justify-between p-0 uppercase font-semibold text-gray-600 text-sm tracking-widest"
         >
           <li>
             {previous && (
@@ -81,6 +80,7 @@ export const pageQuery = graphql`
         title
         date(formatString: "MMMM DD, YYYY")
         description
+        featuredImage
       }
     }
     previous: markdownRemark(id: { eq: $previousPostId }) {
@@ -101,3 +101,4 @@ export const pageQuery = graphql`
     }
   }
 `
+ 

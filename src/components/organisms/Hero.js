@@ -6,7 +6,7 @@ import earth from '/src/images/earth.png'
 const Hero = () => {
   return (
     <body className="bg-white rounded-xl">
-        <div className="max-w-6xl md:py-32 py-12 mx-auto grid grid-cols-1 sm:grid-cols-2">
+        <div className="max-w-6xl md:py-32 py-12 mx-auto grid grid-cols-1 md:grid-cols-2">
             <div className="col-span-1 p-4">
                 <img
                 className="inline h-12 sm:h-20"
@@ -21,7 +21,7 @@ const Hero = () => {
                 </button>
             </div>
 
-            <div className="hidden sm:grid col-span-1 my-auto ml-auto">
+            <div className="hidden md:grid col-span-1 my-auto ml-auto">
                 <img
                 className="h-72"
                 src={earth}
