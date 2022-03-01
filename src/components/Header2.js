@@ -26,7 +26,7 @@ export default function Example() {
               <div className="relative flex items-center justify-left h-24">
                 <div className="flex-none sm:hidden">
                   {/* Mobile menu button*/}
-                  <Disclosure.Button className="inline-flex items-center justify-center p-2 rounded-md text-gray-800 hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-gray-200">
+                  <Disclosure.Button className="inline-flex items-center justify-center p-2 rounded-md text-neutral-800 hover:bg-neutral-200 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-neutral-200">
                     <span className="sr-only">Open main menu</span>
                     {open ? (
                       <XIcon className="block h-6 w-6" aria-hidden="true" />
@@ -54,7 +54,7 @@ export default function Example() {
                             key={item.name}
                             to={item.to}
                             className={classNames(
-                              item.current ? 'bg-gray-900 text-white' : 'text-gray-800 hover:bg-gray-200',
+                              item.current ? 'bg-neutral-900 text-white' : 'text-neutral-800 hover:bg-neutral-200',
                               'px-3 py-2 my-auto rounded-md text-base uppercase items-center font-semibold tracking-wider'
                             )}
                             aria-current={item.current ? 'page' : undefined}
@@ -80,8 +80,8 @@ export default function Example() {
                     key={item.name}
                     to={item.to}
                     className={classNames(
-                      item.current ? 'bg-gray-900 text-white' : 'flex text-gray-800 hover:bg-gray-200',
-                      'inline px-3 py-2 rounded-md text-base font-medium'
+                      item.current ? 'bg-neutral-900 text-white' : 'flex text-neutral-800 hover:bg-neutral-200',
+                      'inline px-4 py-2 rounded-md text-base font-medium'
                     )}
                     aria-current={item.current ? 'page' : undefined}
                   >

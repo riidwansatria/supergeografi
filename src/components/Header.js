@@ -97,13 +97,13 @@ export default function Example() {
                 </a>
               </div>
               <div className="-mr-2 -my-2 md:hidden">
-                <Popover.Button className="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
+                <Popover.Button className="bg-white rounded-md p-2 inline-flex items-center justify-center text-neutral-400 hover:text-neutral-500 hover:bg-neutral-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
                   <span className="sr-only">Open menu</span>
                   <MenuIcon className="h-6 w-6" aria-hidden="true" />
                 </Popover.Button>
               </div>
               <Popover.Group as="nav" className="hidden md:flex space-x-10">
-                <a href="/about" className="text-base font-medium text-gray-500 hover:text-gray-900">
+                <a href="/about" className="text-base font-medium text-neutral-500 hover:text-neutral-900">
                   About
                 </a>
 
@@ -112,15 +112,15 @@ export default function Example() {
                     <>
                       <Popover.Button
                         className={classNames(
-                          open ? 'text-gray-900' : 'text-gray-500',
-                          'group bg-white rounded-md inline-flex items-center text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500'
+                          open ? 'text-neutral-900' : 'text-neutral-500',
+                          'group bg-white rounded-md inline-flex items-center text-base font-medium hover:text-neutral-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500'
                         )}
                       >
                         <span>Blog</span>
                         <ChevronDownIcon
                           className={classNames(
-                            open ? 'text-gray-600' : 'text-gray-400',
-                            'ml-2 h-5 w-5 group-hover:text-gray-500'
+                            open ? 'text-neutral-600' : 'text-neutral-400',
+                            'ml-2 h-5 w-5 group-hover:text-neutral-500'
                           )}
                           aria-hidden="true"
                         />
@@ -146,25 +146,25 @@ export default function Example() {
                                 <a
                                   key={item.name}
                                   href={item.href}
-                                  className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50"
+                                  className="-m-3 p-3 flex items-start rounded-lg hover:bg-neutral-50"
                                 >
                                   <item.icon className="flex-shrink-0 h-6 w-6 text-indigo-600" aria-hidden="true" />
                                   <div className="ml-4">
-                                    <p className="text-base font-medium text-gray-900">{item.name}</p>
-                                    <p className="mt-1 text-sm text-gray-500">{item.description}</p>
+                                    <p className="text-base font-medium text-neutral-900">{item.name}</p>
+                                    <p className="mt-1 text-sm text-neutral-500">{item.description}</p>
                                   </div>
                                 </a>
                               ))}
                             </div>
-                            <div className="px-5 py-5 bg-gray-50 sm:px-8 sm:py-8">
+                            <div className="px-5 py-5 bg-neutral-50 sm:px-8 sm:py-8">
                               <div>
-                                <h3 className="text-sm tracking-wide font-medium text-gray-500 uppercase">
+                                <h3 className="text-sm tracking-wide font-medium text-neutral-500 uppercase">
                                   Recent Posts
                                 </h3>
                                 <ul className="mt-4 space-y-4">
                                   {recentPosts.map((post) => (
                                     <li key={post.id} className="text-base truncate">
-                                      <a href={post.href} className="font-medium text-gray-900 hover:text-gray-700">
+                                      <a href={post.href} className="font-medium text-neutral-900 hover:text-neutral-700">
                                         {post.name}
                                       </a>
                                     </li>
@@ -185,11 +185,11 @@ export default function Example() {
                   )}
                 </Popover>
 
-                <a href="/projects" className="text-base font-medium text-gray-500 hover:text-gray-900">
+                <a href="/projects" className="text-base font-medium text-neutral-500 hover:text-neutral-900">
                   Projects
                 </a>
 
-                <a href="/contact" className="text-base font-medium text-gray-500 hover:text-gray-900">
+                <a href="/contact" className="text-base font-medium text-neutral-500 hover:text-neutral-900">
                   Contacts
                 </a>
 
@@ -213,7 +213,7 @@ export default function Example() {
               static
               className="absolute top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden"
             >
-              <div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 bg-white divide-y-2 divide-gray-50">
+              <div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 bg-white divide-y-2 divide-neutral-50">
                 <div className="pt-5 pb-6 px-5">
                   <div className="flex items-center justify-between">
                     <div>
@@ -224,7 +224,7 @@ export default function Example() {
                       />
                     </div>
                     <div className="-mr-2">
-                      <Popover.Button className="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
+                      <Popover.Button className="bg-white rounded-md p-2 inline-flex items-center justify-center text-neutral-400 hover:text-neutral-500 hover:bg-neutral-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
                         <span className="sr-only">Close menu</span>
                         <XIcon className="h-6 w-6" aria-hidden="true" />
                       </Popover.Button>
@@ -236,10 +236,10 @@ export default function Example() {
                         <a
                           key={item.name}
                           href={item.href}
-                          className="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50"
+                          className="-m-3 p-3 flex items-center rounded-md hover:bg-neutral-50"
                         >
                           <item.icon className="flex-shrink-0 h-6 w-6 text-indigo-600" aria-hidden="true" />
-                          <span className="ml-3 text-base font-medium text-gray-900">{item.name}</span>
+                          <span className="ml-3 text-base font-medium text-neutral-900">{item.name}</span>
                         </a>
                       ))}
                     </nav>
@@ -247,18 +247,18 @@ export default function Example() {
                 </div>
                 <div className="py-6 px-5 space-y-6">
                   <div className="grid grid-cols-2 gap-y-4 gap-x-8">
-                    <a href="#" className="text-base font-medium text-gray-900 hover:text-gray-700">
+                    <a href="#" className="text-base font-medium text-neutral-900 hover:text-neutral-700">
                       Pricing
                     </a>
 
-                    <a href="#" className="text-base font-medium text-gray-900 hover:text-gray-700">
+                    <a href="#" className="text-base font-medium text-neutral-900 hover:text-neutral-700">
                       Docs
                     </a>
                     {resources.map((item) => (
                       <a
                         key={item.name}
                         href={item.href}
-                        className="text-base font-medium text-gray-900 hover:text-gray-700"
+                        className="text-base font-medium text-neutral-900 hover:text-neutral-700"
                       >
                         {item.name}
                       </a>

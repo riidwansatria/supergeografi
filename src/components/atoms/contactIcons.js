@@ -8,7 +8,7 @@ const contactIcons = () => (
   <ul className="flex space-x-4 mr-0 ml-auto">
     {data.map((s) => (
       <li key={s.label}>
-        <a alt={s.label} href={s.link} className="text-xs text-gray-600 hover:text-gray-800">
+        <a alt={s.label} href={s.link} className="text-xs text-neutral-600 hover:text-neutral-800">
           <FontAwesomeIcon icon={s.icon} />
         </a>
       </li>

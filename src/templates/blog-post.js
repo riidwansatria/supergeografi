@@ -35,9 +35,9 @@ const BlogPostTemplate = ({ data, location }) => {
           className="prose max-w-3xl mx-auto"
         />
       </article>
-      <nav className="max-w-3xl mx-auto py-4 my-8 border-t-2 border-gray-200">
+      <nav className="max-w-3xl mx-auto py-4 my-8 border-t-2 border-neutral-200">
         <ul
-          className="flex flex-wrap justify-between p-0 uppercase font-semibold text-gray-600 text-sm tracking-widest"
+          className="flex flex-wrap justify-between p-0 uppercase font-semibold text-neutral-600 text-sm tracking-widest"
         >
           <li>
             {previous && (

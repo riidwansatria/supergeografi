@@ -6,6 +6,8 @@ import Seo from "../components/seo"
 import Hero from "../components/organisms/Hero"
 import HighlightOSN from "../components/organisms/HighlightOSN"
 
+import ContactIcons from '../components/contactIcons'
+
 
 const BlogIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
@@ -17,10 +19,24 @@ const BlogIndex = ({ data, location }) => {
       <Seo title = 'Home'/>
         <Hero />
 
-        <div className="grid grid-cols-3 max-w-6xl mx-auto">
-          <div className="bg-gray-200 p-4 m-4 rounded-2xl">
+        {/* Recent articles section */}
+        <div className="max-w-6xl p-6 mx-auto">
+          <div className="flex items-center gap-2">
+              <svg width="50" height="4" viewBox="0 0 50 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <line y1="2" x2="50" y2="2" stroke="#4565DB" strokeWidth="4"/>
+              </svg>
+              <p className="col-span-1">supergeografi</p>
+          </div>
+          <h2 className="font-bold text-5xl">Artikel Terbaru</h2>
+        </div>
+
+        <div className="grid grid-cols-3 max-w-6xl mx-auto gap-8">
+          {/* Last published article */}
+          <div className="bg-neutral-200 p-4 rounded-3xl">
+            
           </div>
 
+          {/* Recent articles */}
           <div>
             <ol style={{ listStyle: `none` }}>
               {posts.map(post => {
@@ -37,12 +53,12 @@ const BlogIndex = ({ data, location }) => {
                       className="w-20 h-20 mx-auto object-cover rounded-2xl"
                       src={post.frontmatter.featuredImage} alt={post.frontmatter.title}></img>
                       <div className="flex-1 items-center">
-                        <h3 className="font-bold text-gray-800 text-sm">
+                        <h3 className="font-bold text-neutral-800 text-sm">
                           <Link to={post.fields.slug} itemProp="url">
                             <span itemProp="headline">{title}</span>
                           </Link>
                         </h3>
-                        <small className="text-gray-400">{post.frontmatter.date}</small>
+                        <small className="text-neutral-400">{post.frontmatter.date}</small>
                       </div>
                     </article>
                   </li>
@@ -50,31 +66,37 @@ const BlogIndex = ({ data, location }) => {
               })}
             </ol>
           </div>
+
+          {/* Newsletter */}
+          <div className="">
+            <h3 className="text-xl font-bold">
+            📬 Ikuti Newsletter kami dan dapatkan Artikel terbaru lebih awal
+            </h3>
+            <form name="contact" method="POST" data-netlify="true" onSubmit="submit" data-netlify-honeypot="bot-field">
+              <input type="hidden" name="form-name" value="contact"></input>
+              <div hidden>
+                <input name="bot-field"/>
+              </div>
+              <input
+                    type="email"
+                    name="email"
+                    class="mt-6 block w-full rounded-lg border-neutral-300 shadow-sm"
+                    placeholder="Email"
+                  />
+              <div>
+                <button type="submit" className="block w-full bg-primary hover:bg-primary-light text-white text-sm sm:text-md font-bolda tracking-widest py-3 px-4 mt-3 rounded-lg">SUBSCRIBE</button>
+              </div>
+              <div data-netlify-recaptcha="true"></div>
+            </form>
+
+            <ContactIcons/>
+          </div>
+
+
         </div>
 
         <HighlightOSN />
-        <div className="mb-8 pb-4 border-b-2 flex justify-between items-center">
-          <h2 className="md:text-4xl text-2xl font-semibold flex">📝 Latest Posts</h2>
-          <div className="flex">
-            <Link to="/blog" className="sm:text-md text-sm text-gray-600 p-4">Read all posts →</Link>
-          </div>
-        </div>
         
-        
-
-        <h2 className="md:text-4xl text-2xl font-semibold mb-8 pt-24 pb-4 border-b-2">🕹️ Projects</h2>
-        <ol className="space-y-4">
-          <li>
-            <h3 className="text-gray-800 md:text-2xl text-xl">
-              <a href="https://supergeografi.com/">Supergeografi</a>
-            </h3>
-          </li>
-          <li>
-            <h3 className="text-gray-800 md:text-2xl text-xl">
-              <a href="https://edufia.net/">Edufia</a>
-            </h3>
-          </li>
-        </ol>
       </Layout>
     </body>
   )

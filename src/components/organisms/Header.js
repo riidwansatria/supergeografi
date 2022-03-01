@@ -25,11 +25,11 @@ export default function Example() {
         {({ open }) => (
           <>
             <div className="mx-auto mt-4 sm:mt-0">
-              <div className="relative flex sm:border-b-2 border-gray-100 items-center justify-center">
+              <div className="relative flex sm:border-b-2 border-neutral-100 items-center justify-center">
 
                 {/* Mobile menu button */}
                 <div className="flex-none sm:hidden pl-2">
-                  <Disclosure.Button className="inline-flex items-center justify-center p-2 rounded-md text-gray-800 hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-gray-200">
+                  <Disclosure.Button className="inline-flex items-center justify-center p-2 rounded-md text-neutral-800 hover:bg-neutral-200 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-neutral-200">
                     <span className="sr-only">Open main menu</span>
                     {open ? (
                       <XIcon className="block h-6 w-6" aria-hidden="true" />
@@ -70,7 +70,7 @@ export default function Example() {
               </div>
 
               {/* Lower header*/}
-              <div className="hidden sm:flex sm:border-b-2 border-gray-100 justify-center">
+              <div className="hidden sm:flex sm:border-b-2 border-neutral-100 justify-center">
                 <div className="flex flex-1 max-w-6xl sm:justify-end align-middle py-1">
                   <div className="flex space-x-2">
                     {navigation.map((item) => (
@@ -78,7 +78,7 @@ export default function Example() {
                         key={item.name}
                         to={item.to}
                         className={classNames(
-                          item.current ? 'flex text-primary hover:bg-gray-100' : 'text-gray-600 hover:bg-gray-100',
+                          item.current ? 'flex text-primary hover:bg-neutral-100' : 'text-neutral-600 hover:bg-neutral-100',
                           'px-1 py-1 my-auto rounded-md text-sm uppercase items-center font-semibold tracking-wider'
                         )}
                         aria-current={item.current ? 'page' : undefined}
@@ -98,7 +98,7 @@ export default function Example() {
                     key={item.name}
                     to={item.to}
                     className={classNames(
-                      item.current ? 'flex text-primary hover:bg-gray-100' : 'flex text-gray-800 hover:bg-gray-100',
+                      item.current ? 'flex text-primary hover:bg-neutral-100' : 'flex text-neutral-800 hover:bg-neutral-100',
                       'inline px-3 py-2 rounded-md text-base font-medium'
                     )}
                     aria-current={item.current ? 'page' : undefined}

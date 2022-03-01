@@ -1,34 +1,22 @@
-import { faGithub } from '@fortawesome/free-brands-svg-icons/faGithub';
 import { faFacebookF } from '@fortawesome/free-brands-svg-icons/faFacebookF';
 import { faInstagram } from '@fortawesome/free-brands-svg-icons/faInstagram';
-import { faLinkedinIn } from '@fortawesome/free-brands-svg-icons/faLinkedinIn';
 import { faTwitter } from '@fortawesome/free-brands-svg-icons/faTwitter';
 // See https://fontawesome.com/icons?d=gallery&s=brands,regular&m=free
 // to add other icons.
 
 const data = [
   {
-    link: 'https://github.com/riidwansatria',
-    label: 'Github',
-    icon: faGithub,
-  },
-  {
-    link: 'https://www.facebook.com/riidwansatria/',
+    link: 'https://facebook.com/Supergeografi/',
     label: 'Facebook',
     icon: faFacebookF,
   },
   {
-    link: 'https://www.instagram.com/riidwansatria/',
+    link: 'https://www.instagram.com/supergeografi.id/',
     label: 'Instagram',
     icon: faInstagram,
   },
   {
-    link: 'https://www.linkedin.com/in/ridwansatria/',
-    label: 'LinkedIn',
-    icon: faLinkedinIn,
-  },
-  {
-    link: 'https://twitter.com/riidwansatria',
+    link: 'https://twitter.com/Supergeografi',
     label: 'Twitter',
     icon: faTwitter,
   },
