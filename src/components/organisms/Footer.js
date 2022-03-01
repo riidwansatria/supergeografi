@@ -1,9 +1,8 @@
 import * as React from 'react'
 import { Link } from 'gatsby'
-
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-import data from '../data/social-media';
+import data from '../atoms/social-media.js';
 
 import logoWhite from '/src/images/logo-white.png'
 

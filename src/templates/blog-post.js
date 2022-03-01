@@ -1,5 +1,6 @@
 import * as React from "react"
 import { Link, graphql } from "gatsby"
+import { UserCircleIcon, CalendarIcon } from '@heroicons/react/outline'
 
 import Layout from "../components/templates/layout"
 import Seo from "../components/seo"
@@ -7,6 +8,7 @@ import Seo from "../components/seo"
 const BlogPostTemplate = ({ data, location }) => {
   const post = data.markdownRemark
   const siteTitle = data.site.siteMetadata?.title || `Title`
+  const author = data.site.siteMetadata.author?.name || `Supergeografi`
   const { previous, next } = data
 
   return (
@@ -20,15 +22,29 @@ const BlogPostTemplate = ({ data, location }) => {
         itemScope
         itemType="http://schema.org/Article"
       >
-        <header className="max-w-3xl mx-auto">
-          <h1 itemProp="headline" className="text-5xl font-semibold py-4">{post.frontmatter.title}</h1>
-          <p>{post.frontmatter.date}</p>
+        {/* Article header */}
+        <header className="grid grid-cols-2 bg-neutral-200 rounded-2xl items-center mt-6 mb-16">
+          <div>
+            <img 
+            className="w-full sm:h-[32rem] h-48 mx-auto object-cover rounded-l-2xl"
+            src={post.frontmatter.featuredImage} alt={post.frontmatter.title}></img>
+          </div>
+          <div className="p-12">
+            <span className="uppercase text-sm text-primary font-bold tracking-wider">{post.frontmatter.category}</span>
+            <h1 itemProp="headline" className="text-5xl font-semibold text-gray-800 py-4">{post.frontmatter.title}</h1>
+            <div className='flex gap-4 mt-8'>
+              <div className='flex gap-1 items-center'>
+                <UserCircleIcon className="block h-4 w-4"/>
+                <span className="uppercase text-sm font-medium tracking-wider">{author}</span>
+              </div>
+              <div className='flex gap-1 items-center'>
+                <CalendarIcon className="block h-4 w-4"/>
+                <span className="uppercase text-sm font-medium tracking-wider">{post.frontmatter.date}</span>
+              </div>
+            </div>
+          </div>
+
         </header>
-        <div className="max-w-4xl mx-auto py-12">
-          <img 
-          className="w-full lg:h-96 sm:h-72 h-48 mx-auto object-cover rounded-md"
-          src={post.frontmatter.featuredImage} alt={post.frontmatter.title}></img>
-        </div>
         <section
           dangerouslySetInnerHTML={{ __html: post.html }}
           itemProp="articleBody"
@@ -70,6 +86,9 @@ export const pageQuery = graphql`
     site {
       siteMetadata {
         title
+        author {
+          name
+        }
       }
     }
     markdownRemark(id: { eq: $id }) {
@@ -79,6 +98,7 @@ export const pageQuery = graphql`
       frontmatter {
         title
         date(formatString: "MMMM DD, YYYY")
+        category
         description
         featuredImage
       }

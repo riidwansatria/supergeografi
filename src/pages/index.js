@@ -2,11 +2,12 @@ import * as React from "react"
 import { Link, graphql } from "gatsby"
 import Layout from "../components/templates/layout"
 import Seo from "../components/seo"
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import Hero from "../components/organisms/Hero"
 import HighlightOSN from "../components/organisms/HighlightOSN"
 
-import ContactIcons from '../components/contactIcons'
+import socialMedia from '../data/social-media';
 
 
 const BlogIndex = ({ data, location }) => {
@@ -89,7 +90,17 @@ const BlogIndex = ({ data, location }) => {
               <div data-netlify-recaptcha="true"></div>
             </form>
 
-            <ContactIcons/>
+            <ul className="flex space-x-2 py-6">
+              {socialMedia.map((s) => (
+                <li key={s.label} className=''>
+                  <button className="flex bg-neutral-400 hover:bg-neutral-500 text-white text-xl font-bold p-2 items-center justify-center h-12 w-12 rounded-full">
+                    <a alt={s.label} href={s.link}>
+                      <FontAwesomeIcon icon={s.icon} />
+                    </a>
+                  </button>
+                </li>
+              ))}
+            </ul>
           </div>
 
 

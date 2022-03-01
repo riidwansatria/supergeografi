@@ -2,6 +2,7 @@
 title: "Kurva Hjulström: Erosi, Transportasi, dan Deposisi oleh Air"
 date: 2021-06-11T10:31:28.164Z
 featuredImage: /images/uploads/hello-world.jpg
+category: "Litosfer"
 description: Hello world! welcome to my personal website.
 ---
 
