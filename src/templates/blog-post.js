@@ -7,6 +7,7 @@ import Seo from "../components/seo"
 
 const BlogPostTemplate = ({ data, location }) => {
   const post = data.markdownRemark
+  const posts = data.allMarkdownRemark.nodes
   const siteTitle = data.site.siteMetadata?.title || `Title`
   const author = data.site.siteMetadata.author?.name || `Supergeografi`
   const { previous, next } = data
@@ -45,15 +46,78 @@ const BlogPostTemplate = ({ data, location }) => {
           </div>
 
         </header>
-        <section
-          dangerouslySetInnerHTML={{ __html: post.html }}
-          itemProp="articleBody"
-          className="prose max-w-3xl mx-auto"
-        />
+        <div className='grid grid-cols-6 gap-8 max-w-6xl mx-auto'>
+          {/* Main article */}
+          <section
+            dangerouslySetInnerHTML={{ __html: post.html }}
+            itemProp="articleBody"
+            className="prose col-span-4 p-4"
+          />
+
+          {/* Sidebar */}
+          <div className="col-span-2 grid grid-cols-1 gap-12 border-2 border-neutral-100 rounded-xl h-fit p-4 ml-20">
+            {/* Newsletter */}
+            <div className='space-y-4'>
+              <h3 className="text-md font-bold uppercase tracking-widest">Newsletter</h3>
+              <span className='text-sm'>📬 Ikuti Newsletter kami dan dapatkan Artikel terbaru lebih awal</span>
+              <form name="contact" method="POST" data-netlify="true" onSubmit="submit" data-netlify-honeypot="bot-field">
+                <input type="hidden" name="form-name" value="contact"></input>
+                <div hidden>
+                  <input name="bot-field"/>
+                </div>
+                <input
+                  type="email"
+                  name="email"
+                  class="block w-full rounded-lg bg-neutral-100 border-0 text-sm font-medium"
+                  placeholder="Email"
+                />
+                <div>
+                  <button type="submit" className="block w-full bg-primary hover:bg-primary-light text-white text-sm font-medium tracking-widest py-2 px-4 mt-3 rounded-lg">SUBSCRIBE</button>
+                </div>
+                <div data-netlify-recaptcha="true"></div>
+              </form>
+            </div>
+            
+
+            {/* Latest articles */}
+            <div className=''>
+              <h3 className="text-md font-bold uppercase tracking-widest">Artikel terbaru</h3>
+              <ol style={{ listStyle: `none` }}>
+                {posts.map(post => {
+                  const title = post.frontmatter.title || post.fields.slug
+
+                  return (
+                    <li key={post.fields.slug}>
+                      <article
+                        className="flex py-2 gap-4"
+                        itemScope
+                        itemType="http://schema.org/Article"
+                      >
+                        <img 
+                        className="w-12 h-12 mx-auto object-cover rounded-lg"
+                        src={post.frontmatter.featuredImage} alt={post.frontmatter.title}></img>
+                        <div className="flex-1 items-center">
+                          <h3 className="text-neutral-800 text-xs">
+                            <Link to={post.fields.slug} itemProp="url">
+                              <span itemProp="headline">{title}</span>
+                            </Link>
+                          </h3>
+                          <small className="text-neutral-400 text-xs">{post.frontmatter.date}</small>
+                        </div>
+                      </article>
+                    </li>
+                  )
+                })}
+              </ol>
+            </div>
+            
+          </div>
+        </div>
+        
       </article>
-      <nav className="max-w-3xl mx-auto py-4 my-8 border-t-2 border-neutral-200">
+      <nav className="mx-auto py-4 my-8 bg-neutral-200 border-t-2 border-neutral-200">
         <ul
-          className="flex flex-wrap justify-between p-0 uppercase font-semibold text-neutral-600 text-sm tracking-widest"
+          className="flex flex-wrap justify-between max-w-6xl p-0 mx-auto uppercase font-semibold text-neutral-600 text-sm tracking-widest"
         >
           <li>
             {previous && (
@@ -117,6 +181,20 @@ export const pageQuery = graphql`
       }
       frontmatter {
         title
+      }
+    }
+    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC}, limit: 5) {
+      nodes {
+        excerpt
+        fields {
+          slug
+        }
+        frontmatter {
+          date(formatString: "MMMM DD, YYYY")
+          title
+          description
+          featuredImage
+        }
       }
     }
   }

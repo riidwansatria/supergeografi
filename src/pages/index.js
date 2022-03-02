@@ -79,13 +79,13 @@ const BlogIndex = ({ data, location }) => {
                 <input name="bot-field"/>
               </div>
               <input
-                    type="email"
-                    name="email"
-                    class="mt-6 block w-full rounded-lg border-neutral-300 shadow-sm"
-                    placeholder="Email"
-                  />
+                type="email"
+                name="email"
+                class="mt-6 block w-full rounded-lg border-neutral-300 shadow-sm"
+                placeholder="Email"
+              />
               <div>
-                <button type="submit" className="block w-full bg-primary hover:bg-primary-light text-white text-sm sm:text-md font-bolda tracking-widest py-3 px-4 mt-3 rounded-lg">SUBSCRIBE</button>
+                <button type="submit" className="block w-full bg-primary hover:bg-primary-light text-white text-sm sm:text-md font-medium tracking-widest py-3 px-4 mt-3 rounded-lg">SUBSCRIBE</button>
               </div>
               <div data-netlify-recaptcha="true"></div>
             </form>
