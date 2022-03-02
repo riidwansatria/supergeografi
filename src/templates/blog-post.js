@@ -115,22 +115,42 @@ const BlogPostTemplate = ({ data, location }) => {
         </div>
         
       </article>
-      <nav className="mx-auto py-4 my-8 bg-neutral-200 border-t-2 border-neutral-200">
+      <nav className="mx-auto p-4 my-8 bg-neutral-200 border-t-2 border-neutral-200 rounded-2xl">
         <ul
-          className="flex flex-wrap justify-between max-w-6xl p-0 mx-auto uppercase font-semibold text-neutral-600 text-sm tracking-widest"
+          className="grid grid-cols-2 mx-auto font-semibold text-sm tracking-widest"
         >
           <li>
             {previous && (
-              <Link to={previous.fields.slug} rel="prev">
-                ← {previous.frontmatter.title}
-              </Link>
+            <Link to={previous.fields.slug} rel="prev">
+              <div className="flex justify-start items-center gap-4 border-r border-neutral-300 py-10 px-4">
+                <svg xmlns="http://www.w3.org/2000/svg" width="53" height="38" viewBox="0 0 53 38" fill="none">
+                  <path d="M1.23223 17.2322C0.255924 18.2085 0.255924 19.7915 1.23223 20.7678L17.1421 36.6777C18.1184 37.654 19.7014 37.654 20.6777 36.6777C21.654 35.7014 21.654 34.1184 20.6777 33.1421L6.53553 19L20.6777 4.85786C21.654 3.88155 21.654 2.29864 20.6777 1.32233C19.7014 0.34602 18.1184 0.34602 17.1421 1.32233L1.23223 17.2322ZM53 16.5L3 16.5V21.5L53 21.5V16.5Z" fill="#BDBDBD"/>
+                </svg>
+                <div>
+                  <p className="text-left">sebelumnya</p>
+                  <p className="text-xl text-left text-primary hover:text-primary-light">
+                    {previous.frontmatter.title}
+                  </p>
+                </div>
+              </div>  
+            </Link>  
             )}
           </li>
           <li>
             {next && (
-              <Link to={next.fields.slug} rel="next">
-                {next.frontmatter.title} →
-              </Link>
+            <Link to={next.fields.slug} rel="next">
+              <div className="flex justify-end items-center gap-4 border-l border-neutral-300 py-10 px-4">
+                <div>
+                  <p className="text-right">selanjutnya</p>
+                  <p className="text-xl text-right text-primary hover:text-primary-light">
+                    {next.frontmatter.title}
+                  </p>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="53" height="38" viewBox="0 0 53 38" fill="none">
+                  <path d="M51.7678 20.7678C52.7441 19.7915 52.7441 18.2085 51.7678 17.2322L35.8579 1.32233C34.8816 0.34602 33.2986 0.34602 32.3223 1.32233C31.346 2.29864 31.346 3.88155 32.3223 4.85786L46.4645 19L32.3223 33.1421C31.346 34.1184 31.346 35.7014 32.3223 36.6777C33.2986 37.654 34.8816 37.654 35.8579 36.6777L51.7678 20.7678ZM0 21.5H50V16.5H0V21.5Z" fill="#BDBDBD"/>
+                </svg>  
+              </div>  
+            </Link>  
             )}
           </li>
         </ul>
