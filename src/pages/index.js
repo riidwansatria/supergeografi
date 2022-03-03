@@ -9,6 +9,13 @@ import HighlightOSN from "../components/organisms/HighlightOSN"
 
 import socialMedia from '../data/social-media';
 
+const navigation = [
+  { name: 'Litosfer', to: '/litosfer', current: false },
+  { name: 'Atmosfer', to: '/atmosfer', current: false },
+  { name: 'Hidrosfer', to: '/hidrosfer', current: false },
+  { name: 'Biosfer', to: '/biosfer', current: false },
+  { name: 'Antroposfer', to: '/antroposfer', current: false },
+]
 
 const BlogIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
@@ -32,8 +39,8 @@ const BlogIndex = ({ data, location }) => {
           </div>
           <h2 className="font-bold text-5xl">Artikel Terbaru</h2>
         </div>
-        <div className="grid grid-cols-3 max-w-6xl mx-auto gap-8">
 
+        <div className="grid grid-cols-3 max-w-6xl mx-auto gap-8">
           {/* Last published article */}
           <div className="bg-neutral-200 p-4 rounded-3xl">
             <ol style={{ listStyle: `none` }}>
@@ -144,6 +151,46 @@ const BlogIndex = ({ data, location }) => {
         </div>
 
         <HighlightOSN />
+        
+        {/* Categories section */}
+        <div className="grid grid-cols-6 max-w-6xl mx-auto gap-8">
+          <div className="col-span-4 bg-neutral-200 h-96 p-4 rounded-3xl">
+            <div className="max-w-6xl p-6 mx-auto">
+              <div className="flex items-center gap-2">
+                  <svg width="30" height="4" viewBox="0 0 30 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <line y1="2" x2="30" y2="2" stroke="#4565DB" strokeWidth="4"/>
+                  </svg>
+                  <p className="col-span-1">batuan</p>
+              </div>
+              <h2 className="font-bold text-4xl">Litosfer</h2>
+            </div>
+
+          </div>
+
+          {/* Sidebar */}
+          <div className="col-span-2 bg-neutral-200 h-fit p-4 rounded-3xl">
+            <div className="max-w-6xl p-6 mx-auto">
+              <div className="flex items-center gap-2">
+                  <svg width="50" height="4" viewBox="0 0 50 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <line y1="2" x2="50" y2="2" stroke="#4565DB" strokeWidth="4"/>
+                  </svg>
+                  <p className="col-span-1">supergeografi</p>
+              </div>
+              <h2 className="font-bold text-4xl">Kategori</h2>
+            </div>
+            {navigation.map((item) => (
+              <Link
+                key={item.name}
+                to={item.to}
+                className="block bg-primary hover:bg-neutral-600 text-white text-sm sm:text-lg m-3 py-2 px-4 rounded-full"
+                aria-current={item.current ? 'page' : undefined}
+              >
+                {item.name}
+              </Link>
+            ))}
+          </div>
+
+        </div>
         
       </Layout>
     </body>
