@@ -67,7 +67,7 @@ const BlogPostTemplate = ({ data, location }) => {
                 <input
                   type="email"
                   name="email"
-                  class="block w-full rounded-lg bg-neutral-100 border-0 text-sm font-medium"
+                  className="block w-full rounded-lg bg-neutral-100 border-0 text-sm font-medium"
                   placeholder="Email"
                 />
                 <div>

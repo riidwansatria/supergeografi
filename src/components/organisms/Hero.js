@@ -13,7 +13,7 @@ const Hero = () => {
                 src={logo}
                 alt="Logo"
                 />
-                <p class="m-2 text-lg text-neutral-800">Telusuri lebih jauh tentang manusia, lingkungannya, dan bumi yang kita pijak beserta bentang alamnya bersama Supergeografi!</p>
+                <p className="m-2 text-lg text-neutral-800">Telusuri lebih jauh tentang manusia, lingkungannya, dan bumi yang kita pijak beserta bentang alamnya bersama Supergeografi!</p>
                 <button className="bg-primary hover:bg-neutral-600 text-white text-sm sm:text-md font-bold m-2 mt-8 py-2 px-4 rounded-lg">
                     <Link to="/blog">
                     Materi OSN Geografi →

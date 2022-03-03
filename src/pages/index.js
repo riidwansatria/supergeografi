@@ -12,7 +12,8 @@ import socialMedia from '../data/social-media';
 
 const BlogIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
-  const posts = data.allMarkdownRemark.nodes
+  const latestPost = data.latestArticle.nodes
+  const posts = data.recentArticles.nodes
 
   return (
     <body className="bg-white">
@@ -22,6 +23,7 @@ const BlogIndex = ({ data, location }) => {
 
         {/* Recent articles section */}
         <div className="max-w-6xl p-6 mx-auto">
+          {/* Header */}
           <div className="flex items-center gap-2">
               <svg width="50" height="4" viewBox="0 0 50 4" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <line y1="2" x2="50" y2="2" stroke="#4565DB" strokeWidth="4"/>
@@ -30,11 +32,46 @@ const BlogIndex = ({ data, location }) => {
           </div>
           <h2 className="font-bold text-5xl">Artikel Terbaru</h2>
         </div>
-
         <div className="grid grid-cols-3 max-w-6xl mx-auto gap-8">
+
           {/* Last published article */}
           <div className="bg-neutral-200 p-4 rounded-3xl">
-            
+            <ol style={{ listStyle: `none` }}>
+              {latestPost.map(post => {
+                const title = post.frontmatter.title || post.fields.slug
+
+                return (
+                  <li key={post.fields.slug}>
+                    <article
+                      className=""
+                      itemScope
+                      itemType="http://schema.org/Article"
+                    >
+                      <img 
+                      className="w-full h-48 mx-auto object-cover rounded-2xl"
+                      src={post.frontmatter.featuredImage} alt={post.frontmatter.title}></img>
+                      <div className="py-4">
+                        <h3 className="font-bold text-neutral-700 text-xl">
+                          <Link to={post.fields.slug} itemProp="url">
+                            <span itemProp="headline">{title}</span>
+                          </Link>
+                        </h3>
+                        <small className="text-neutral-400 text-xs">{post.frontmatter.date}</small>
+                        <p
+                          dangerouslySetInnerHTML={{
+                              __html: post.frontmatter.description || post.excerpt,
+                          }}
+                          itemProp="description" 
+                          className="text-sm text-neutral-600"
+                          />
+                        
+                      </div>
+                      <Link to={post.fields.slug} itemProp="url"><p className='text-sm text-primary font-bold pt-8'>Baca selengkapnya →</p></Link>
+                    </article>
+                  </li>
+                )
+              })}
+            </ol>
           </div>
 
           {/* Recent articles */}
@@ -46,20 +83,20 @@ const BlogIndex = ({ data, location }) => {
                 return (
                   <li key={post.fields.slug}>
                     <article
-                      className="flex py-4 gap-4"
+                      className="flex py-4 gap-4 items-center"
                       itemScope
                       itemType="http://schema.org/Article"
                     >
                       <img 
                       className="w-20 h-20 mx-auto object-cover rounded-2xl"
                       src={post.frontmatter.featuredImage} alt={post.frontmatter.title}></img>
-                      <div className="flex-1 items-center">
+                      <div className="flex-1">
                         <h3 className="font-bold text-neutral-800 text-sm">
                           <Link to={post.fields.slug} itemProp="url">
                             <span itemProp="headline">{title}</span>
                           </Link>
                         </h3>
-                        <small className="text-neutral-400">{post.frontmatter.date}</small>
+                        <small className="text-neutral-400 text-xs">{post.frontmatter.date}</small>
                       </div>
                     </article>
                   </li>
@@ -81,7 +118,7 @@ const BlogIndex = ({ data, location }) => {
               <input
                 type="email"
                 name="email"
-                class="mt-6 block w-full rounded-lg border-neutral-300 shadow-sm"
+                className="mt-6 block w-full rounded-lg border-neutral-300 shadow-sm"
                 placeholder="Email"
               />
               <div>
@@ -122,7 +159,21 @@ export const pageQuery = graphql`
         title
       }
     }
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC}, limit: 5) {
+    latestArticle: allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC}, limit: 1) {
+      nodes {
+        excerpt
+        fields {
+          slug
+        }
+        frontmatter {
+          date(formatString: "MMMM DD, YYYY")
+          title
+          description
+          featuredImage
+        }
+      }
+    }
+    recentArticles: allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC}, limit: 4) {
       nodes {
         excerpt
         fields {

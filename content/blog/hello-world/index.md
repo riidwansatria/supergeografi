@@ -6,7 +6,6 @@ category: Litosfer
 tags: 
    - Hidrologi
    - Geomorfologi
-description: Hello world! welcome to my personal website.
 ---
 
 Kurva Hjulström merupakan diagram yang menjelaskan hubungan antara erosi, transportasi, dan deposisi sedimen pada aliran air. Berdasarkan diagram ini, kita dapat mengetahui apakah suatu aliran sungai akan mengikis, mengangkut, atau mengendapkan sedimen tergantung pada ukuran partikel serta kecepatan aliran airnya.
