@@ -32,7 +32,7 @@ const BlogPostTemplate = ({ data, location }) => {
           </div>
           <div className="p-12">
             <span className="uppercase text-sm text-primary font-bold tracking-wider">{post.frontmatter.category}</span>
-            <h1 itemProp="headline" className="text-5xl font-semibold text-gray-800 py-4">{post.frontmatter.title}</h1>
+            <h1 itemProp="headline" className="text-5xl font-semibold text-neutral-800 py-4">{post.frontmatter.title}</h1>
             <div className='flex gap-4 mt-8'>
               <div className='flex gap-1 items-center'>
                 <UserCircleIcon className="block h-4 w-4"/>
@@ -44,7 +44,6 @@ const BlogPostTemplate = ({ data, location }) => {
               </div>
             </div>
           </div>
-
         </header>
         <div className='grid grid-cols-6 gap-8 max-w-6xl mx-auto'>
           {/* Main article */}
@@ -127,7 +126,7 @@ const BlogPostTemplate = ({ data, location }) => {
                   <path d="M1.23223 17.2322C0.255924 18.2085 0.255924 19.7915 1.23223 20.7678L17.1421 36.6777C18.1184 37.654 19.7014 37.654 20.6777 36.6777C21.654 35.7014 21.654 34.1184 20.6777 33.1421L6.53553 19L20.6777 4.85786C21.654 3.88155 21.654 2.29864 20.6777 1.32233C19.7014 0.34602 18.1184 0.34602 17.1421 1.32233L1.23223 17.2322ZM53 16.5L3 16.5V21.5L53 21.5V16.5Z" fill="#BDBDBD"/>
                 </svg>
                 <div>
-                  <p className="text-left">sebelumnya</p>
+                  <p className="text-left text-neutral-500">sebelumnya</p>
                   <p className="text-xl text-left text-primary hover:text-primary-light">
                     {previous.frontmatter.title}
                   </p>
@@ -141,7 +140,7 @@ const BlogPostTemplate = ({ data, location }) => {
             <Link to={next.fields.slug} rel="next">
               <div className="flex justify-end items-center gap-4 border-l border-neutral-300 py-10 px-4">
                 <div>
-                  <p className="text-right">selanjutnya</p>
+                  <p className="text-right text-neutral-500">selanjutnya</p>
                   <p className="text-xl text-right text-primary hover:text-primary-light">
                     {next.frontmatter.title}
                   </p>

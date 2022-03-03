@@ -2,6 +2,9 @@
 title: "Menghitung Populasi: Sensus, Registrasi, dan Survei"
 date: "2015-05-06T23:46:37.121Z"
 featuredImage: /images/uploads/hello-world.jpg
+tags: 
+   - Hidrologi
+   - Geomorfologi
 ---
 
 Wow! I love blogging so much already.
