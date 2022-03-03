@@ -20,23 +20,23 @@ const Hero = () => {
                 </svg>
                 <p className="col-span-1">osn geografi</p>
             </div>
-            <h2 className="col-span-1 text-5xl font-bold">Olimpiade Sains Nasional</h2>
+            <Link to='/olimpiade/mengenal-osn-geografi'><h2 className="col-span-1 text-5xl font-bold">Olimpiade Sains Nasional</h2></Link>
             <div className="col-span-1 flex gap-16">
                 <div className="flex items-center space-x-4">
-                    <button className="flex bg-primary hover:bg-neutral-600 text-white text-md sm:text-3xl font-bold p-2 items-center justify-center h-16 w-16 rounded-xl">
-                        <Link to="/blog">
+                    <button className="flex bg-primary hover:bg-primary-light text-white text-md sm:text-3xl p-2 items-center justify-center h-16 w-16 rounded-xl">
+                        <Link to="/materi">
                         <FontAwesomeIcon icon={faBook}/>
                         </Link>
                     </button>
-                    <span className="flex text-2xl">Materi</span>
+                    <span className="flex text-2xl font-bold">Materi</span>
                 </div>
                 <div className="flex items-center space-x-4">
-                    <button className="flex bg-primary hover:bg-neutral-600 text-white text-md sm:text-3xl font-bold p-2 items-center justify-center h-16 w-16 rounded-xl">
-                        <Link to="/blog">
+                    <button className="flex bg-primary hover:bg-primary-light text-white text-md sm:text-3xl p-2 items-center justify-center h-16 w-16 rounded-xl">
+                        <Link to="/kumpulan-soal">
                         <FontAwesomeIcon icon={faBook}/>
                         </Link>
                     </button>
-                    <span className="flex text-2xl">Kumpulan Soal</span>
+                    <span className="flex text-2xl font-bold">Kumpulan Soal</span>
                 </div>
             </div>
         </div>
