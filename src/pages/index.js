@@ -220,7 +220,7 @@ export const pageQuery = graphql`
         }
       }
     }
-    recentArticles: allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC}, limit: 4) {
+    recentArticles: allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC}, limit: 4, skip: 1) {
       nodes {
         excerpt
         fields {
