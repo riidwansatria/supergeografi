@@ -27,7 +27,7 @@ export default function LatestPost() {
     return (
         <div className="">
             <header>
-                <h3 className="text-neutral-800 md:text-2xl text-xl">
+                <h3 className="text-gray-8 md:text-2xl text-xl">
                     <Link to="/blog" itemProp="url">
                         <span itemProp="headline">{data.allMarkdownRemark.nodes.frontmatter.title}</span>
                     </Link>

@@ -18,7 +18,7 @@ const Footer = () => {
   return (
     <body className="">
       {/* Upper footer */}
-      <div className=" bg-neutral-600 py-16">
+      <div className=" bg-gray-6 py-16">
         <div className="grid grid-cols-3 max-w-6xl mx-auto">
           <div className='col-span-1'>
             <Link to='/'>
@@ -28,14 +28,14 @@ const Footer = () => {
               alt="Logo"
               />
             </Link>
-            <p className='text-neutral-200 py-4'>
+            <p className='text-gray-2 py-4'>
               Telusuri lebih jauh tentang manusia, lingkungannya, dan bumi yang kita pijak beserta bentang alamnya bersama Supergeografi!
             </p>
             
             <ul className="flex space-x-2 py-6">
               {data.map((s) => (
                 <li key={s.label} className=''>
-                  <button className="flex bg-neutral-400 hover:bg-neutral-500 text-white text-md font-bold p-2 items-center justify-center h-8 w-8 rounded">
+                  <button className="flex bg-gray-4 hover:bg-gray-5 text-white text-md font-bold p-2 items-center justify-center h-8 w-8 rounded">
                     <a alt={s.label} href={s.link}>
                       <FontAwesomeIcon icon={s.icon} />
                     </a>
@@ -54,7 +54,7 @@ const Footer = () => {
                 <Link
                   key={item.name}
                   to={item.to}
-                  className='block text-neutral-200 py-1'
+                  className='block text-gray-2 py-1'
                 >
                   {item.name}
                 </Link>
@@ -62,7 +62,7 @@ const Footer = () => {
             </div>
             <div>
               <span className='text-white text-lg font-medium'><Link to='/tentang-kami'>Tentang kami</Link></span>
-              <ol className='text-neutral-200 py-2 space-y-2'>
+              <ol className='text-gray-2 py-2 space-y-2'>
                 <li><Link to='/profil-kontributor'>Profil kontributor</Link></li>
                 <li><Link to='/kebijakan-privasi'>Kebijakan privasi</Link></li>
                 <li><Link to='/masukan-dan-saran'>Masukan dan saran</Link></li>
@@ -75,7 +75,7 @@ const Footer = () => {
       
 
       {/* Lower footer */}
-      <div className="bg-neutral-700 text-neutral-300 py-4">
+      <div className="bg-gray-7 text-gray-3 py-4">
         <div className="max-w-6xl mx-auto text-sm">© {new Date().getFullYear()} All rights reserved.</div>
       </div>
     </body>

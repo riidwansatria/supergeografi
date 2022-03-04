@@ -24,7 +24,7 @@ const BlogPostTemplate = ({ data, location }) => {
         itemType="http://schema.org/Article"
       >
         {/* Article header */}
-        <header className="grid grid-cols-2 bg-neutral-200 rounded-2xl items-center mt-6 mb-16">
+        <header className="grid grid-cols-2 bg-gray-2 rounded-2xl items-center mt-6 mb-16">
           <div>
             <img 
             className="w-full sm:h-[32rem] h-48 mx-auto object-cover rounded-l-2xl"
@@ -32,7 +32,7 @@ const BlogPostTemplate = ({ data, location }) => {
           </div>
           <div className="p-12">
             <span className="uppercase text-sm text-primary font-bold tracking-wider">{post.frontmatter.category}</span>
-            <h1 itemProp="headline" className="text-5xl font-semibold text-neutral-800 py-4">{post.frontmatter.title}</h1>
+            <h1 itemProp="headline" className="text-5xl font-semibold text-gray-8 py-4">{post.frontmatter.title}</h1>
             <div className='flex gap-4 mt-8'>
               <div className='flex gap-1 items-center'>
                 <UserCircleIcon className="block h-4 w-4"/>
@@ -54,7 +54,7 @@ const BlogPostTemplate = ({ data, location }) => {
           />
 
           {/* Sidebar */}
-          <div className="col-span-2 grid grid-cols-1 gap-12 border-2 border-neutral-100 rounded-xl h-fit p-4 ml-20">
+          <div className="col-span-2 grid grid-cols-1 gap-12 border-2 border-gray-1 rounded-xl h-fit p-4 ml-20">
             {/* Newsletter */}
             <div className='space-y-4'>
               <h3 className="text-md font-bold uppercase tracking-widest">Newsletter</h3>
@@ -67,7 +67,7 @@ const BlogPostTemplate = ({ data, location }) => {
                 <input
                   type="email"
                   name="email"
-                  className="block w-full rounded-lg bg-neutral-100 border-0 text-sm font-medium"
+                  className="block w-full rounded-lg bg-gray-1 border-0 text-sm font-medium"
                   placeholder="Email"
                 />
                 <div>
@@ -96,12 +96,12 @@ const BlogPostTemplate = ({ data, location }) => {
                         className="w-12 h-12 mx-auto object-cover rounded-lg"
                         src={post.frontmatter.featuredImage} alt={post.frontmatter.title}></img>
                         <div className="flex-1 items-center">
-                          <h3 className="text-neutral-800 text-xs">
+                          <h3 className="text-gray-8 text-xs">
                             <Link to={post.fields.slug} itemProp="url">
                               <span itemProp="headline">{title}</span>
                             </Link>
                           </h3>
-                          <small className="text-neutral-400 text-xs">{post.frontmatter.date}</small>
+                          <small className="text-gray-4 text-xs">{post.frontmatter.date}</small>
                         </div>
                       </article>
                     </li>
@@ -114,19 +114,19 @@ const BlogPostTemplate = ({ data, location }) => {
         </div>
         
       </article>
-      <nav className="mx-auto p-4 my-8 bg-neutral-200 border-t-2 border-neutral-200 rounded-2xl">
+      <nav className="mx-auto p-4 my-8 bg-gray-2 border-t-2 border-gray-2 rounded-2xl">
         <ul
           className="grid grid-cols-2 mx-auto font-semibold text-sm tracking-widest"
         >
           <li>
             {previous && (
             <Link to={previous.fields.slug} rel="prev">
-              <div className="flex justify-start items-center gap-4 border-r border-neutral-300 py-10 px-4">
+              <div className="flex justify-start items-center gap-4 border-r border-gray-3 py-10 px-4">
                 <svg xmlns="http://www.w3.org/2000/svg" width="53" height="38" viewBox="0 0 53 38" fill="none">
                   <path d="M1.23223 17.2322C0.255924 18.2085 0.255924 19.7915 1.23223 20.7678L17.1421 36.6777C18.1184 37.654 19.7014 37.654 20.6777 36.6777C21.654 35.7014 21.654 34.1184 20.6777 33.1421L6.53553 19L20.6777 4.85786C21.654 3.88155 21.654 2.29864 20.6777 1.32233C19.7014 0.34602 18.1184 0.34602 17.1421 1.32233L1.23223 17.2322ZM53 16.5L3 16.5V21.5L53 21.5V16.5Z" fill="#BDBDBD"/>
                 </svg>
                 <div>
-                  <p className="text-left text-neutral-500">sebelumnya</p>
+                  <p className="text-left text-gray-5">sebelumnya</p>
                   <p className="text-xl text-left text-primary hover:text-primary-light">
                     {previous.frontmatter.title}
                   </p>
@@ -138,9 +138,9 @@ const BlogPostTemplate = ({ data, location }) => {
           <li>
             {next && (
             <Link to={next.fields.slug} rel="next">
-              <div className="flex justify-end items-center gap-4 border-l border-neutral-300 py-10 px-4">
+              <div className="flex justify-end items-center gap-4 border-l border-gray-3 py-10 px-4">
                 <div>
-                  <p className="text-right text-neutral-500">selanjutnya</p>
+                  <p className="text-right text-gray-5">selanjutnya</p>
                   <p className="text-xl text-right text-primary hover:text-primary-light">
                     {next.frontmatter.title}
                   </p>

@@ -13,7 +13,7 @@ const Hero = () => {
             alt="OSN Geografi"
             />
         </div>
-        <div className="col-span-1 grid grid-cols-1 bg-neutral-200 rounded-r-3xl px-8 py-16 gap-8">
+        <div className="col-span-1 grid grid-cols-1 bg-gray-2 rounded-r-3xl px-8 py-16 gap-8">
             <div className="flex items-center gap-2">
                 <svg width="20" height="4" viewBox="0 0 20 4" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <line y1="2" x2="20" y2="2" stroke="#4565DB" strokeWidth="4"/>

@@ -24,7 +24,7 @@ const RecentArticles = () => {
             render={data => (
                 <div className="">
                     <header>
-                        <h3 className="text-neutral-800 md:text-2xl text-xl">
+                        <h3 className="text-gray-8 md:text-2xl text-xl">
                             <Link to={data.allMarkdownRemark.nodes.fields.slug} itemProp="url">
                                 <span itemProp="headline">{data.allMarkdownRemark.nodes.frontmatter.title}</span>
                             </Link>

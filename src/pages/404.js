@@ -19,8 +19,8 @@ const NotFoundPage = ({ data, location }) => {
         alt="404 not found"
         />
         <div className="px-8">
-          <h1 className="text-2xl text-neutral-700 font-bold py-4">Ooooops! The page you were looking for couldn't be found</h1>
-          <p className="text-neutral-400">You can navigate through our menu or use this search bar:</p>
+          <h1 className="text-2xl text-gray-7 font-bold py-4">Ooooops! The page you were looking for couldn't be found</h1>
+          <p className="text-gray-4">You can navigate through our menu or use this search bar:</p>
         </div>
       </main>
       
