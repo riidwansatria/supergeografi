@@ -21,6 +21,7 @@ const BlogIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
   const latestPost = data.latestArticle.nodes
   const posts = data.recentArticles.nodes
+  const categories = data.allCategories.group
 
   return (
     <body className="bg-white">
@@ -154,22 +155,31 @@ const BlogIndex = ({ data, location }) => {
         
         {/* Categories section */}
         <div className="grid grid-cols-6 max-w-6xl mx-auto gap-8">
-          <div className="col-span-4 bg-gray-2 h-96 p-4 rounded-3xl">
-            <div className="max-w-6xl p-6 mx-auto">
-              <div className="flex items-center gap-2">
-                  <svg width="30" height="4" viewBox="0 0 30 4" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <line y1="2" x2="30" y2="2" stroke="#4565DB" strokeWidth="4"/>
-                  </svg>
-                  <p className="col-span-1">batuan</p>
-              </div>
-              <h2 className="font-bold text-4xl">Litosfer</h2>
-            </div>
-
+          <div className="col-span-4">
+            <ol style={{ listStyle: `none` }} className='grid gap-8'>
+              {categories.map(category => {
+                return (
+                  <li key={category.fieldValue}>
+                    <div className="col-span-4 bg-gray-2 h-96 p-4 rounded-3xl">
+                      <div className="max-w-6xl p-6 mx-auto">
+                        <div className="flex items-center gap-2">
+                            <svg width="30" height="4" viewBox="0 0 30 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <line y1="2" x2="30" y2="2" stroke="#4565DB" strokeWidth="4"/>
+                            </svg>
+                            <p className="col-span-1">batuan</p>
+                        </div>
+                        <h2 className="font-bold text-4xl">{category.fieldValue}</h2>              
+                      </div>
+                    </div>
+                  </li>
+                )
+              })}
+            </ol>
           </div>
 
           {/* Sidebar */}
-          <div className="col-span-2 bg-gray-2 h-fit p-4 rounded-3xl">
-            <div className="max-w-6xl p-6 mx-auto">
+          <div className="col-span-2 bg-gray-2 h-fit px-6 py-4 rounded-3xl">
+            <div className="max-w-6xl px-4 pb-12 pt-6 mx-auto">
               <div className="flex items-center gap-2">
                   <svg width="50" height="4" viewBox="0 0 50 4" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <line y1="2" x2="50" y2="2" stroke="#4565DB" strokeWidth="4"/>
@@ -182,12 +192,28 @@ const BlogIndex = ({ data, location }) => {
               <Link
                 key={item.name}
                 to={item.to}
-                className="block bg-primary hover:bg-gray-6 text-white text-sm sm:text-lg m-3 py-2 px-4 rounded-full"
+                className="block bg-primary hover:bg-gray-6 text-white text-sm sm:text-lg my-3 py-2 px-4 rounded-full"
                 aria-current={item.current ? 'page' : undefined}
               >
                 {item.name}
               </Link>
             ))}
+            <div className="flex border-t-2 border-gray-3 gap-3">
+              <Link
+                key='materi'
+                to='/materi'
+                className="flex-auto bg-primary-dark hover:bg-gray-6 text-center text-white text-sm sm:text-lg my-3 py-2 px-4 rounded-full"
+              >
+                Materi
+              </Link>
+              <Link
+                key='kumpulan-soal'
+                to='/kumpulan-soal'
+                className="flex-auto bg-primary-dark hover:bg-gray-6 text-center text-white text-sm sm:text-lg my-3 py-2 px-4 rounded-full"
+              >
+                Kumpulan soal
+              </Link>
+            </div>
           </div>
 
         </div>
@@ -206,6 +232,7 @@ export const pageQuery = graphql`
         title
       }
     }
+
     latestArticle: allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC}, limit: 1) {
       nodes {
         excerpt
@@ -220,6 +247,7 @@ export const pageQuery = graphql`
         }
       }
     }
+
     recentArticles: allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC}, limit: 4, skip: 1) {
       nodes {
         excerpt
@@ -230,6 +258,24 @@ export const pageQuery = graphql`
           date(formatString: "MMMM DD, YYYY")
           title
           description
+          featuredImage
+        }
+      }
+    }
+
+    allCategories: allMarkdownRemark {
+      group(field: frontmatter___category) {
+        fieldValue
+      }
+    }
+
+    categoryArticles: allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC}, limit: 3) {
+      nodes {
+        fields {
+          slug
+        }
+        frontmatter {
+          title
           featuredImage
         }
       }

@@ -12,9 +12,9 @@ module.exports = {
       },
       colors: {
         primary: {
-          light: "#d56059",
+          light: "#7f92ff",
           DEFAULT: "#4565DB",
-          dark: "#6a0009",
+          dark: "#003ba8",
         },
         lemon: '#F5FF00',
         gray: {
