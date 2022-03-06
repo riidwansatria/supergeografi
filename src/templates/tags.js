@@ -15,7 +15,7 @@ const Tags = ({ pageContext, data, location }) => {
         <Seo title = {tag}/>
 
         {/* Tag header */}
-        <header className="bg-gray-2 rounded-2xl items-center mb-16">
+        <header className="md:mx-12 mx-4 bg-gray-2 rounded-2xl items-center mb-16">
             <div className='max-w-6xl p-8 mx-auto'>
                 <h1 className="text-3xl text-gray-7 font-semibold py-4">{tag}</h1>
             </div>

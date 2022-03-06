@@ -22,7 +22,7 @@ const BlogPostTemplate = ({ data, location }) => {
         description={post.frontmatter.description || post.excerpt}
       />
       <article
-        className=""
+        className="md:px-12 px-4"
         itemScope
         itemType="http://schema.org/Article"
       >
@@ -133,7 +133,7 @@ const BlogPostTemplate = ({ data, location }) => {
         </div>
         
       </article>
-      <nav className="mx-auto p-4 my-8 bg-gray-2 border-t-2 border-gray-2 rounded-2xl">
+      <nav className="md:mx-12 mx-4 p-4 my-8 bg-gray-2 border-t-2 border-gray-2 rounded-2xl">
         <ul
           className="grid grid-cols-2 mx-auto font-semibold text-sm tracking-widest"
         >

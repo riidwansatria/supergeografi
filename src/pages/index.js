@@ -192,7 +192,7 @@ const BlogIndex = ({ data, location }) => {
               <Link
                 key={item.name}
                 to={item.to}
-                className="block bg-primary hover:bg-gray-6 text-white text-sm sm:text-lg my-3 py-2 px-4 rounded-full"
+                className="block bg-primary hover:bg-primary-light text-white text-sm sm:text-lg my-3 py-2 px-4 rounded-full"
                 aria-current={item.current ? 'page' : undefined}
               >
                 {item.name}
@@ -202,14 +202,14 @@ const BlogIndex = ({ data, location }) => {
               <Link
                 key='materi'
                 to='/materi'
-                className="flex-auto bg-primary-dark hover:bg-gray-6 text-center text-white text-sm sm:text-lg my-3 py-2 px-4 rounded-full"
+                className="flex-auto bg-primary-dark hover:bg-primary-light text-center text-white text-sm sm:text-lg my-3 py-2 px-4 rounded-full"
               >
                 Materi
               </Link>
               <Link
                 key='kumpulan-soal'
                 to='/kumpulan-soal'
-                className="flex-auto bg-primary-dark hover:bg-gray-6 text-center text-white text-sm sm:text-lg my-3 py-2 px-4 rounded-full"
+                className="flex-auto bg-primary-dark hover:bg-primary-light text-center text-white text-sm sm:text-lg my-3 py-2 px-4 rounded-full"
               >
                 Kumpulan soal
               </Link>

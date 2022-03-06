@@ -7,7 +7,7 @@ const Layout = ({ children }) => {
   return (
     <body className="bg-white">
       <Header/>
-      <main className="mx-auto md:px-12 px-4 py-6">
+      <main className="py-6">
         {children}
       </main>
       <Footer/>
