@@ -1,4 +1,5 @@
 ---
+contentType: post
 title: test2
 seotitle: Hello world!
 date: 2022-03-07T13:11:46.813Z

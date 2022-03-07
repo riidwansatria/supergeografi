@@ -1,4 +1,5 @@
 ---
+contentType: post
 title: "Sensus, Registrasi, dan Survei"
 date: "2021-04-30T23:46:37.121Z"
 featuredImage: "/images/uploads/sensus-header, unsplash.jpg"

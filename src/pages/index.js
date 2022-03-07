@@ -267,7 +267,7 @@ export const pageQuery = graphql`
       }
     }
 
-    latestArticle: allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC}, limit: 1) {
+    latestArticle: allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC}, filter: {frontmatter: {contentType: {eq: "post"}}}, limit: 1) {
       nodes {
         excerpt
         fields {
@@ -282,7 +282,7 @@ export const pageQuery = graphql`
       }
     }
 
-    recentArticles: allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC}, limit: 4, skip: 1) {
+    recentArticles: allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC}, filter: {frontmatter: {contentType: {eq: "post"}}}, limit: 4, skip: 1) {
       nodes {
         excerpt
         fields {

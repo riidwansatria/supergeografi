@@ -1,4 +1,5 @@
 ---
+contentType: post
 title: test
 date: 2022-03-07T10:06:39.075Z
 featuredImage: /images/uploads/akulturasi-cheng-ho-mosque.jpg

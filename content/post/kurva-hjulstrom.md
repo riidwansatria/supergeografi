@@ -1,4 +1,5 @@
 ---
+contentType: post
 title: "Kurva Hjulström: Erosi, Transportasi, dan Deposisi oleh Air"
 date: 2021-05-03T10:31:28.164Z
 featuredImage: "/images/uploads/kurva hjulstrom-header, pixabay.jpg"

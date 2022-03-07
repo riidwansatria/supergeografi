@@ -1,4 +1,5 @@
 ---
+contentType: post
 title: "Klasifikasi Iklim Köppen"
 date: "2021-05-07T10:31:28.164Z"
 featuredImage: "/images/uploads/klasifikasi iklim koppen-header, Pexels.jpg"

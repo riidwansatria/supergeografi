@@ -1,4 +1,5 @@
 ---
+contentType: post
 title: Gyre dan Fenomena the Great Pacific Garbage Patch
 date: 2022-03-07T13:42:08.381Z
 featuredImage: /images/uploads/biosfer.jpg
