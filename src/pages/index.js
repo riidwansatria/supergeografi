@@ -24,7 +24,7 @@ const BlogIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
   const latestPost = data.latestArticle.nodes
   const posts = data.recentArticles.nodes
-  const categories = data.allCategories.group
+  const categories = data.categoryList.nodes
   const categoryPosts = data.categoryArticles.nodes
 
   return (
@@ -163,7 +163,7 @@ const BlogIndex = ({ data, location }) => {
             <ol style={{ listStyle: `none` }} className='grid gap-8'>
               {categories.map(category => {
                 return (
-                  <li key={category.fieldValue}>
+                  <li key={category.frontmatter.title}>
                     <div className="col-span-4 bg-gray-2 p-4 rounded-3xl">
                       <div className="p-6">
                         <div className="flex items-center gap-2">
@@ -172,7 +172,7 @@ const BlogIndex = ({ data, location }) => {
                             </svg>
                             <p className="col-span-1">batuan</p>
                         </div>
-                        <h2 className="font-bold text-4xl">{category.fieldValue}</h2>
+                        <h2 className="font-bold text-4xl">{category.frontmatter.title}</h2>
                         <ol style={{ listStyle: `none` }} className="grid grid-cols-3 gap-4 py-4">
                           {categoryPosts.map(post => {
                             const title = post.frontmatter.title || post.fields.slug
@@ -200,7 +200,7 @@ const BlogIndex = ({ data, location }) => {
                           })}
                         </ol>
                           <div className='flex gap-1 items-center justify-end'>
-                        <Link to={`/${_.kebabCase(category.fieldValue)}/`}><p className="flex text-sm text-primary-dark hover:text-primary font-bold uppercase tracking-wider">Selanjutnya</p></Link>
+                        <Link to={`/${_.kebabCase(category.frontmatter.title)}/`}><p className="flex text-sm text-primary-dark hover:text-primary font-bold uppercase tracking-wider">Selanjutnya</p></Link>
                           <ChevronRightIcon className="flex h-4 w-4 text-primary-dark"/>
                         </div>
                       </div>
@@ -297,15 +297,21 @@ export const pageQuery = graphql`
       }
     }
 
-    allCategories: allMarkdownRemark {
-      group(field: frontmatter___category) {
-        fieldValue
+    categoryList: allMarkdownRemark(
+      sort: {fields: frontmatter___id, order: ASC}
+      filter: {frontmatter: {contentType: {eq: "postCategory"}}}
+      ) {
+      nodes {
+        frontmatter {
+          title
+        }
       }
     }
 
     categoryArticles: allMarkdownRemark(
       sort: { fields: [frontmatter___date], 
       order: DESC}, 
+      filter: {frontmatter: {contentType: {eq: "post"}}},
       limit: 3,
       ) {
       nodes {

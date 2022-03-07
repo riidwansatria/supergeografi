@@ -1,4 +1,5 @@
 ---
+contentType: postCategory
 id: 4
 title: Hidrosfer
 subtitle: Mencakup seluruh massa air di bumi, baik perairan di permukaan, air

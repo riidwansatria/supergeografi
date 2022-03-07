@@ -1,4 +1,5 @@
 ---
+contentType: postCategory
 id: 2
 title: Atmosfer
 subtitle: Seluruh lapisan gas yang menyelimuti bumi dan menjadi pelindung bagi
