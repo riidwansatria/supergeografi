@@ -1,6 +1,6 @@
 ---
 title: "Columbian Exchange: Pertukaran Komoditas Antarbenua"
-date: 2022-03-07T08:46:55.448Z
+date: 2021-04-20T08:46:55.448Z
 featuredImage: /images/uploads/columbian-exchange-landing-of-columbus-wikimedia.jpg
 description: "Mendaratnya Christopher Columbus di Benua Baru, Amerika, menandai
   bertemunya 2 dunia biologis yang berbeda. Benua Amerika sebelumnya terisolasi
