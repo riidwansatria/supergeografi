@@ -10,7 +10,6 @@ const _ = require("lodash")
 const BlogPostTemplate = ({ data, location }) => {
   const post = data.markdownRemark
   const posts = data.allMarkdownRemark.nodes
-  const tags = data.markdownRemark.frontmatter.tags
   const siteTitle = data.site.siteMetadata?.title || `Title`
   const author = data.site.siteMetadata.author?.name || `Supergeografi`
   const { previous, next } = data
@@ -35,20 +34,7 @@ const BlogPostTemplate = ({ data, location }) => {
           </div>
           <div className="p-12">
             <div className="flex space-x-2">
-              <Link to={`/${_.kebabCase(post.frontmatter.category)}/`}><span className="uppercase text-sm text-primary-dark font-bold tracking-wider">{post.frontmatter.category}</span></Link>
-              
-              <div className='flex flex-1'>
-                <ol style={{ listStyle: `none` }} className='flex space-x-2'>
-                  {tags.map(tag => {
-                    return (
-                      <li className=''>
-                        <span className="uppercase text-sm text-primary font-bold tracking-wider">{tag}</span>
-                      </li>
-                    )
-                  })}
-                </ol>
-              </div>
-              
+              <Link to={`/${_.kebabCase(post.frontmatter.category)}/`}><span className="uppercase text-sm text-primary-dark font-bold tracking-wider">{post.frontmatter.category}</span></Link>             
             </div>
             
             <h1 itemProp="headline" className="text-5xl font-semibold text-gray-8 py-4">{post.frontmatter.title}</h1>
