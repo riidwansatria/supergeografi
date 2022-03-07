@@ -1,5 +1,6 @@
 import * as React from "react"
 import { Link, graphql } from "gatsby"
+import ReactMarkdown from 'react-markdown'
 
 import Layout from "../components/templates/layout"
 import Seo from "../components/seo"
@@ -44,9 +45,20 @@ const MateriPage = ({ data, location }) => {
             </div>
 
             {/* Main section */}
-            <article className="prose max-w-6xl mx-auto">
-                
-            </article>
+            <div className="grid grid-cols-6 max-w-6xl mx-auto">
+              <article className="col-span-4 prose">
+                <ReactMarkdown>
+                  ## Iklim dan Perubahan Iklim
+                  
+
+
+                </ReactMarkdown>
+              </article>
+              <div className="col-span-2">
+
+              </div>
+            </div>
+            
         </main>
       
     </Layout>

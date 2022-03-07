@@ -3,11 +3,14 @@ import { Link, graphql } from "gatsby"
 import Layout from "../components/templates/layout"
 import Seo from "../components/seo"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { ChevronRightIcon } from '@heroicons/react/outline'
 
 import Hero from "../components/organisms/Hero"
 import HighlightOSN from "../components/organisms/HighlightOSN"
 
 import socialMedia from '../data/social-media';
+
+const _ = require("lodash")
 
 const navigation = [
   { name: 'Litosfer', to: '/litosfer', current: false },
@@ -22,6 +25,7 @@ const BlogIndex = ({ data, location }) => {
   const latestPost = data.latestArticle.nodes
   const posts = data.recentArticles.nodes
   const categories = data.allCategories.group
+  const categoryPosts = data.categoryArticles.nodes
 
   return (
     <body className="bg-white">
@@ -160,15 +164,45 @@ const BlogIndex = ({ data, location }) => {
               {categories.map(category => {
                 return (
                   <li key={category.fieldValue}>
-                    <div className="col-span-4 bg-gray-2 h-96 p-4 rounded-3xl">
-                      <div className="max-w-6xl p-6 mx-auto">
+                    <div className="col-span-4 bg-gray-2 p-4 rounded-3xl">
+                      <div className="p-6">
                         <div className="flex items-center gap-2">
                             <svg width="30" height="4" viewBox="0 0 30 4" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <line y1="2" x2="30" y2="2" stroke="#4565DB" strokeWidth="4"/>
                             </svg>
                             <p className="col-span-1">batuan</p>
                         </div>
-                        <h2 className="font-bold text-4xl">{category.fieldValue}</h2>              
+                        <h2 className="font-bold text-4xl">{category.fieldValue}</h2>
+                        <ol style={{ listStyle: `none` }} className="grid grid-cols-3 gap-4 py-4">
+                          {categoryPosts.map(post => {
+                            const title = post.frontmatter.title || post.fields.slug
+
+                            return (
+                              <li key={post.fields.slug} className="bg-white rounded-3xl">
+                                <article
+                                  className=""
+                                  itemScope
+                                  itemType="http://schema.org/Article"
+                                >
+                                  <img 
+                                  className="w-full h-40 mx-auto object-cover rounded-t-3xl"
+                                  src={post.frontmatter.featuredImage} alt={post.frontmatter.title}></img>
+                                  <div className="p-4">
+                                    <h3 className="font-bold text-gray-8 text-lg">
+                                      <Link to={post.fields.slug} itemProp="url">
+                                        <span itemProp="headline">{title}</span>
+                                      </Link>
+                                    </h3>
+                                  </div>
+                                </article>
+                              </li>
+                            )
+                          })}
+                        </ol>
+                          <div className='flex gap-1 items-center justify-end'>
+                        <Link to={`/${_.kebabCase(category.fieldValue)}/`}><p className="flex text-sm text-primary-dark hover:text-primary font-bold uppercase tracking-wider">Selanjutnya</p></Link>
+                          <ChevronRightIcon className="flex h-4 w-4 text-primary-dark"/>
+                        </div>
                       </div>
                     </div>
                   </li>
@@ -269,7 +303,11 @@ export const pageQuery = graphql`
       }
     }
 
-    categoryArticles: allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC}, limit: 3) {
+    categoryArticles: allMarkdownRemark(
+      sort: { fields: [frontmatter___date], 
+      order: DESC}, 
+      limit: 3,
+      ) {
       nodes {
         fields {
           slug
