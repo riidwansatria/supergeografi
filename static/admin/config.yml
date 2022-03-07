@@ -8,11 +8,11 @@ public_folder: "/images/uploads" # The src attribute for uploaded media will beg
 local_backend: true
 
 collections:
-  - name: "blog" # Used in routes, e.g., /admin/collections/blog
-    label: "Blog" # Used in the UI
-    folder: "content/blog" # The path to the folder where the documents are stored
+  - name: "post" # Used in routes, e.g., /admin/collections/blog
+    label: "Post" # Used in the UI
+    folder: "content/post" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
-    slug: "{{category}}/{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
     fields: # The fields for each document, usually in front matter
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Publish Date", name: "date", widget: "datetime"}
@@ -23,6 +23,11 @@ collections:
         collection: 'postCategory'
         searchFields: ['title']
         valueField: 'title'
+      - label: 'Tags'
+        name: 'tags'
+        widget: 'list'
+        required: false
+      - {label: "URL Slug", name: "slug", widget: "string"}
       - {label: "Description", name: "description", widget: "string", required: false}
       - {label: "Body", name: "body", widget: "markdown"}
 
