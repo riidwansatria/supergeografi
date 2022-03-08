@@ -170,7 +170,7 @@ const BlogIndex = ({ data, location }) => {
                             <svg width="30" height="4" viewBox="0 0 30 4" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <line y1="2" x2="30" y2="2" stroke="#4565DB" strokeWidth="4"/>
                             </svg>
-                            <p className="col-span-1">batuan</p>
+                            <p className="col-span-1">{category.frontmatter.subtitle}</p>
                         </div>
                         <h2 className="font-bold text-4xl">{category.frontmatter.title}</h2>
                         <ol style={{ listStyle: `none` }} className="grid grid-cols-3 gap-4 py-4">
@@ -304,6 +304,7 @@ export const pageQuery = graphql`
       nodes {
         frontmatter {
           title
+          subtitle
         }
       }
     }
