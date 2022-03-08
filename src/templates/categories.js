@@ -5,9 +5,10 @@ import { Link, graphql } from "gatsby"
 import Layout from "../components/templates/layout"
 import Seo from "../components/seo"
 
-const Categories = ({ pageContext, data, location }) => {
-    const { category } = pageContext
+const Categories = ({ data, location }) => {
+    const category = data.markdownRemark.frontmatter
     const siteTitle = data.site.siteMetadata?.title || `Title`
+    const categoryTags = data.categoryTags.nodes
     const categoryPosts = data.categoryArticles.nodes
     const recentPosts = data.recentArticles.nodes
 
@@ -15,12 +16,37 @@ const Categories = ({ pageContext, data, location }) => {
     <Layout location={location} title={siteTitle}>
         <Seo title = {category}/>
 
-        {/* Tag header */}
-        <header className="md:mx-12 mx-4 bg-gray-2 rounded-2xl items-center mb-16">
-            <div className='max-w-6xl p-8 mx-auto'>
-                <h1 className="text-3xl text-gray-7 font-semibold py-4">{category}</h1>
+        {/* Category header */}
+        <header className="relative h-[32rem] md:mx-12 mx-4 rounded-2xl items-center mt-6 mb-16">
+            <div className='absolute bg-gray-2/50 h-[32rem] w-full z-10 p-8 mx-auto rounded-2xl'>
+              <div className="grid grid-cols-2 h-full max-w-6xl items-center mx-auto">
+                <div>
+                  <h1 className="text-6xl text-gray-8 font-bold font-serif p-4">{category.title}</h1>
+                  <p className="text-lg text-gray-8 p-4">{category.description}</p>
+                </div>
+                <div className="h-full"></div>
+              </div>
             </div>
+            <img 
+            className="absolute col-span-2 w-full h-[32rem] z-0 mx-auto object-cover rounded-2xl"
+            src={category.featuredImage} alt={category.title}></img>
         </header>
+
+        <div className="border-y-2 border-gray-1 my-8">
+          <div className="flex flex-1 max-w-6xl align-middle py-1 mx-auto">
+            <div className="flex space-x-2">
+              {categoryTags.map((tag) => (
+                <Link
+                  key={tag.frontmatter.title}
+                  to={`/tags${tag.fields.slug}`}
+                  className= 'text-gray-6 hover:bg-gray-1 px-1 py-1 my-auto rounded-md text-sm uppercase items-center font-semibold tracking-wider'
+                >
+                  {tag.frontmatter.icon} {tag.frontmatter.title}
+                </Link>
+              ))}
+            </div>
+          </div>
+        </div>
 
         <main className="grid grid-cols-6 gap-8 max-w-6xl mx-auto">
             {/* Articles list */}
@@ -150,18 +176,48 @@ Categories.propTypes = {
 }
 export default Categories
 export const pageQuery = graphql`
-  query($category: String) {
+  query(
+    $id: String!
+    $category: String
+    ) {
+    
     site {
-        siteMetadata {
+      siteMetadata {
+        title
+      }
+    }
+
+    markdownRemark(id: { eq: $id }) {
+      id
+      frontmatter {
+        title
+        subtitle
+        description
+        featuredImage
+      }
+    }
+
+    categoryTags: allMarkdownRemark(
+      limit: 2000
+      sort: {fields: frontmatter___id, order: ASC}
+      filter: {frontmatter: {contentType: {eq: "postTags"}, category: { in: [$category] }}}
+    ) {
+      nodes {
+        fields {
+          slug
+        }
+        frontmatter {
           title
+          icon
         }
       }
+    }
+
     categoryArticles: allMarkdownRemark(
       limit: 2000
       sort: { fields: [frontmatter___date], order: DESC }
-      filter: { frontmatter: { category: { in: [$category] } } }
+      filter: { frontmatter: { contentType: {eq: "post"}, category: { in: [$category] } } }
     ) {
-      totalCount
       nodes {
         excerpt
         fields {
@@ -175,7 +231,7 @@ export const pageQuery = graphql`
         }
       }
     }
-    recentArticles: allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC}, limit: 5) {
+    recentArticles: allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC}, filter: {frontmatter: {contentType: {eq: "post"}}}, limit: 5) {
       nodes {
         excerpt
         fields {

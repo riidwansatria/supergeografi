@@ -80,7 +80,7 @@ collections:
     fields: # The fields each document in this collection have
       - {label: "Type", name: "contentType", widget: "hidden", default: "postTags"}
       - { label: Title, name: title, widget: string }
-      - { label: Subtitle, name: subtitle, widget: string, required: false }
+      - { label: Icon, name: icon, widget: string, required: false }
       - label: 'Category'
         name: 'category'
         widget: 'relation'

@@ -1,5 +1,6 @@
 ---
+contentType: postTags
 title: Hidrologi
-subtitle: ""
+icon: 🏞️
 category: Hidrosfer
 ---

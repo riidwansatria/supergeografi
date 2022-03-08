@@ -30,6 +30,13 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
+        path: `${__dirname}/content/postTags`,
+        name: `postTags`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
         name: `images`,
         path: `${__dirname}/src/images`,
       },
@@ -144,7 +151,7 @@ module.exports = {
       resolve: 'gatsby-plugin-web-font-loader',
       options: {
         google: {
-          families: ['DM Sans', 'Open Sans']
+          families: ['DM Sans', 'DM Serif Text', 'Open Sans']
         }
       }
     },

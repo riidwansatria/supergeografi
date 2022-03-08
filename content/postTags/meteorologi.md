@@ -1,5 +1,6 @@
 ---
+contentType: postTags
 title: Meteorologi
-subtitle: ""
+icon: 🌠
 category: Atmosfer
 ---

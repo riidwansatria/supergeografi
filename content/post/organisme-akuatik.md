@@ -1,7 +1,6 @@
 ---
 contentType: post
-title: Organisme Akuatik
-seotitle: "Organisme Akuatik: Plankton, Nekton, dan Bentos"
+title: "Organisme Akuatik: Plankton, Nekton, dan Bentos"
 date: 2022-03-07T13:21:30.439Z
 featuredImage: /images/uploads/litosfer.jpg
 category: Biosfer

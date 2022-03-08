@@ -8,6 +8,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   // Define a template for blog post
   const blogPost = path.resolve(`./src/templates/blog-post.js`)
   const tagTemplate = path.resolve("src/templates/tags.js")
+  const categoryTemplate = path.resolve("src/templates/categories.js")
 
   // Get all markdown blog posts sorted by date
   const result = await graphql(
@@ -15,6 +16,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
       {
         postsRemark: allMarkdownRemark(
           sort: { fields: [frontmatter___date], order: ASC }
+          filter: {frontmatter: {contentType: {eq: "post"}}}
           limit: 1000
         ) {
           nodes {
@@ -24,6 +26,17 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
             }
             frontmatter {
               tags
+            }
+          }
+        }
+        categoriesGroup: allMarkdownRemark(
+          sort: {fields: frontmatter___id, order: ASC}
+          filter: {frontmatter: {contentType: {eq: "postCategory"}}}
+          ) {
+          nodes {
+            id
+            frontmatter {
+              title
             }
           }
         }
@@ -66,6 +79,21 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
       })
     })
   }
+
+  // Extract category data from query
+  const categories = result.data.categoriesGroup.nodes
+  // Make category pages
+  categories.forEach(category => {
+    createPage({
+      path: `/${_.kebabCase(category.frontmatter.title)}/`,
+      component: categoryTemplate,
+      context: {
+        id: category.id,
+        category: category.frontmatter.title,
+      },
+    })
+  })
+
   // Extract tag data from query
   const tags = result.data.tagsGroup.group
   // Make tag pages

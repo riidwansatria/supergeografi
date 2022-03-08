@@ -1,5 +1,6 @@
 ---
+contentType: postTags
 title: Geomorfologi
-subtitle: ""
+icon: 🏜️
 category: Litosfer
 ---
