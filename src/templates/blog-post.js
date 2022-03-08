@@ -206,7 +206,7 @@ export const pageQuery = graphql`
         featuredImage
       }
     }
-    previous: markdownRemark(id: { eq: $previousPostId }) {
+    previous: markdownRemark(id: { eq: $previousPostId }, frontmatter: {contentType: {eq: "post"}}) {
       fields {
         slug
       }
@@ -214,7 +214,7 @@ export const pageQuery = graphql`
         title
       }
     }
-    next: markdownRemark(id: { eq: $nextPostId }) {
+    next: markdownRemark(id: { eq: $nextPostId }, frontmatter: {contentType: {eq: "post"}}) {
       fields {
         slug
       }
