@@ -5,7 +5,7 @@ const _ = require("lodash")
 exports.createPages = async ({ graphql, actions, reporter }) => {
   const { createPage } = actions
 
-  // Define a template for blog post
+  // Define a template for pages
   const blogPost = path.resolve(`./src/templates/blog-post.js`)
   const tagTemplate = path.resolve("src/templates/tags.js")
   const categoryTemplate = path.resolve("src/templates/categories.js")
@@ -43,6 +43,21 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
         tagsGroup: allMarkdownRemark(limit: 2000) {
           group(field: frontmatter___tags) {
             fieldValue
+          }
+        }
+        pagesGroup: allMarkdownRemark(
+          sort: {fields: frontmatter___id, order: ASC}
+          filter: {frontmatter: {contentType: {eq: "page"}}}
+          ) {
+          nodes {
+            id
+            fields {
+              slug
+            }
+            frontmatter {
+              template
+              title
+            }
           }
         }
       }
@@ -103,6 +118,21 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
       component: tagTemplate,
       context: {
         tag: tag.fieldValue,
+      },
+    })
+  })
+
+  // Extract page data from query
+  const pages = result.data.pagesGroup.nodes
+  // Make pages
+  pages.forEach(page => {
+    createPage({
+      path: page.fields.slug,
+      component: path.resolve(
+        `src/templates/${String(page.frontmatter.template)}.js`
+      ),
+      context: {
+        id: page.id
       },
     })
   })

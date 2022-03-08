@@ -6,7 +6,7 @@ featuredImage: /images/uploads/bantuan-internasional-unhcr.jpg
 category: Antroposfer
 tags:
   - Ekonomi
-slug: ekonomi-keynesian
+slug: antroposfer/ekonomi-keynesian
 ---
 ## Apa itu Teori Ekonomi Keynesian?
 Teori ekonomi Keynesian adalah prinsip ekonomi makro yang membahas tentang peran pemerintah dalam ekonomi. Menurut teori ini, pemerintah memiliki peran penting dalam mengelola ekonomi, terutama dalam menjaga dari terjadinya resesi. Teori ini dikembangkan oleh seorang ekonom Inggris, John Maynard Keynes, pada tahun 1930-an. Pada awalnya, teori ini digunakan sebagai usaha dalam memahami the Great Depression yang terjadi saat itu.
