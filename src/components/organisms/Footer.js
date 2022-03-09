@@ -18,18 +18,19 @@ const Footer = () => {
   return (
     <body className="">
       {/* Upper footer */}
-      <div className=" bg-gray-6 py-16">
-        <div className="grid grid-cols-3 max-w-6xl mx-auto">
+      <div className=" bg-gray-6 px-4 py-8 sm:py-16">
+        <div className="grid grid-cols-1 sm:grid-cols-3 max-w-6xl mx-auto">
           <div className="col-span-1">
             <Link to="/">
-              <img className="inline h-12 sm:h-12" src={logoWhite} alt="Logo" />
+              <img className="inline h-8 sm:h-12" src={logoWhite} alt="Logo" />
             </Link>
+
             <p className="text-gray-2 py-4">
               Telusuri lebih jauh tentang manusia, lingkungannya, dan bumi yang
               kita pijak beserta bentang alamnya bersama Supergeografi!
             </p>
 
-            <ul className="flex space-x-2 py-6">
+            <ul className="flex space-x-2 pb-6 sm:pt-6">
               {data.map(s => (
                 <li key={s.label} className="">
                   <button className="flex bg-gray-4 hover:bg-gray-5 text-white text-md font-bold p-2 items-center justify-center h-8 w-8 rounded">
@@ -76,7 +77,7 @@ const Footer = () => {
       </div>
 
       {/* Lower footer */}
-      <div className="bg-gray-7 text-gray-3 py-4">
+      <div className="bg-gray-7 text-gray-3 p-4">
         <div className="max-w-6xl mx-auto text-sm">
           © {new Date().getFullYear()} All rights reserved.
         </div>
