@@ -2,7 +2,7 @@
 contentType: post
 title: "Ekonomi Keynesian: Peran Pemerintah dalam Ekonomi"
 date: 2020-12-06
-featuredImage: /images/uploads/bantuan-internasional-unhcr.jpg
+featuredImage: /images/uploads/ekonomi keynesian-header, pexels.jpg
 category: Antroposfer
 tags:
   - Ekonomi

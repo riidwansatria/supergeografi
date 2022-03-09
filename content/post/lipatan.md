@@ -2,10 +2,11 @@
 contentType: post
 title: "Struktur Batuan: Lipatan"
 date: 2021-03-28
-tags: 
-  - "geomorfologi"
-  - "litosfer"
-featuredImage: "lipatan-header-Unsplash-scaled.jpg"
+featuredImage: /images/uploads/lipatan-header, Unsplash.jpg
+category: Litosfer
+tags:
+  - Geomorfologi
+slug: litosfer/lipatan
 ---
 
 Lempeng tektonik bumi secara perlahan terus menerus bergerak akibat tenaga endogen dari bumi. Pergerakan lempeng tektonik ini menyebabkan pada satu sisi lempeng, batuan baru terbentuk dan pada sisi lainnya, batuan melebur setiap saatnya. Tenaga endogen ini juga berperan dalam pembentukan barisan pegunungan di bumi. Salah satu prosesnya melibatkan deformasi batuan yang menghasilkan formasi lipatan.

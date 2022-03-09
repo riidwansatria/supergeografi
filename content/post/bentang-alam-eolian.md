@@ -1,11 +1,12 @@
 ---
 contentType: post
-title: "Bentang Alam Eolian"
+title: Bentang Alam Eolian
 date: 2021-04-26
-featuredImage: "/images/uploads/bentang alam eolian-rock pedestal, wikimedia.png"
+featuredImage: /images/uploads/bentang alam eolian-rock pedestal, wikimedia.png
 category: Litosfer
-tags: 
-   - Geomorfologi
+tags:
+  - Geomorfologi
+slug: litosfer/bentang-alam-eolian
 ---
 
 Angin juga merupakan salah satu faktor yang dapat menyebabkan perubahan geomorfologi bumi. Hembusan angin dan hubungannya dengan partikel-partikel sedimen di permukaan sangat mempengaruhi kenampakan alam di wilayah-wilayah kering dunia. Pada banyak wilayah kering dunia, aliran angin yang berhembus mampu mengangkut partikel sedimen hingga yang sangat jarak jauh. Geomorfologi eolian merupakan cabang geomorfologi yang berkaitan dengan bentukan-bentukan lahan pada area dengan angin sebagai pengaruh utamanya. 

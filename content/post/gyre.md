@@ -2,12 +2,12 @@
 contentType: post
 title: Gyre dan Fenomena the Great Pacific Garbage Patch
 date: 2020-12-13
-featuredImage: /images/uploads/biosfer.jpg
+featuredImage: /images/uploads/gyre-header, unsplash.jpg
 category: Hidrosfer
 tags:
   - Hidrologi
   - Geomorfologi
-slug: gyre
+slug: hidrosfer/gyre
 ---
 
 ## Apa itu Gyre?

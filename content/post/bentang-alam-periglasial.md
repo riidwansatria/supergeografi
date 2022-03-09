@@ -1,11 +1,12 @@
 ---
 contentType: post
-title: "Bentang Alam Periglasial"
+title: Bentang Alam Periglasial
 date: 2021-04-05
-tags: 
-  - "geomorfologi"
-  - "litosfer"
-featuredImage: "bentang-alam-periglasial-header-pexels.jpg"
+featuredImage: /images/uploads/bentang alam periglasial-header, pexels.jpg
+category: Litosfer
+tags:
+  - Geomorfologi
+slug: litosfer/bentang-alam-periglasial
 ---
 
 Geomorfologi glasial dan periglasial merupakan cabang [geomorfologi](https://supergeografi.com/litosfer/geomorfologi/) yang berkaitan dengan bentukan-bentukan lahan pada area dingin bumi. Persebaran area-area dingin di [bumi](https://supergeografi.com/litosfer/struktur-lapisan-bumi/) sangatlah tidak merata. Secara umum, persebaran area-area dingin hanya terbatas pada wilayah lintang tinggi serta dataran-dataran tinggi bumi. Pada wilayah kutub di lintang tinggi, rendahnya radiasi matahari yang sampai ke permukaan bumi berdampak pada rendahnya temperatur permukaan, memungkinkan akumulasi salju dan es terbentuk di wilayah ini. Wilayah kutub, khususnya di belahan bumi utara, dikelilingi oleh sebuah sabuk periglasial dimana meskipun memiliki temperatur yang sangat rendah, lingkungannya tidak didominasi oleh tumpukan salju dan es sepanjang tahun. Artikel ini akan membahas tentang bentukan-bentukan alam unik yang terbentuk dan proses-proses yang terjadi pada wilayah periglasial.

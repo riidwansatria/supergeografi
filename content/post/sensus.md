@@ -1,11 +1,12 @@
 ---
 contentType: post
-title: "Sensus, Registrasi, dan Survei"
+title: Sensus, Registrasi, dan Survei
 date: 2021-04-30
-featuredImage: "/images/uploads/sensus-header, unsplash.jpg"
+featuredImage: /images/uploads/sensus-header, unsplash.jpg
 category: Antroposfer
-tags: 
-   - Demografi
+tags:
+  - Demografi
+slug: antroposfer/sensus
 ---
 
 Data-data [demografi](https://supergeografi.com/antroposfer/demografi/) merupakan aspek penting dalam pengambilan keputusan terkait kependudukan. Terdapat beberapa metodologi dalam pengambilan data kependudukan. Metodologi-metodologi yang paling umum digunakan dalam [demografi](https://supergeografi.com/antroposfer/demografi/) adalah sensus, registrasi, dan survey.

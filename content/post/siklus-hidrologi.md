@@ -1,11 +1,12 @@
 ---
 contentType: post
-title: "Siklus Hidrologi"
+title: Siklus Hidrologi
 date: 2020-09-05
-tags: 
-  - "hidrologi"
-  - "hidrosfer"
-featuredImage: "siklus-hidrologi-header.jpg"
+featuredImage: /images/uploads/siklus hidrologi-header.jpg
+category: Hidrosfer
+tags:
+  - Hidrologi
+slug: hidrosfer/siklus-hidrologi
 ---
 
 Konon katanya, air yang ada di bumi tidak akan pernah habis. Air yang ada di bumi mungkin dapat berubah wujudnya, namun jumlahnya akan selalu sama. Fenomena ini terjadi akibat sebuah proses yang bernama siklus hidrologi.

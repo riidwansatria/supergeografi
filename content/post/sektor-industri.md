@@ -2,7 +2,7 @@
 contentType: post
 title: 4 Sektor Industri
 date: 2020-07-08
-featuredImage: panoramic-shot-of-sky-247763.jpg
+featuredImage: /images/uploads/sektor industri-header.jpg
 category: Antroposfer
 tags:
   - Ekonomi

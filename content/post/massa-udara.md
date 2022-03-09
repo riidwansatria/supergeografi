@@ -1,11 +1,12 @@
 ---
 contentType: post
-title: "Massa Udara"
+title: Massa Udara
 date: 2020-11-03
-tags: 
-  - "atmosfer"
-  - "meteorologi"
-featuredImage: "massa-udara-header.jpg"
+featuredImage: /images/uploads/massa udara-header.jpg
+category: Atmosfer
+tags:
+  - Meteorologi
+slug: atmosfer/massa-udara
 ---
 
 Terdapat banyak faktor yang membentuk pola cuaca pada [atmosfer](https://supergeografi.com/atmosfer/) bumi kita ini. Salah satu dari faktor-faktor tersebut adalah massa udara. Massa udara memiliki peran penting dalam sirkulasi kelembapan dan temperatur antar daerah di bumi.

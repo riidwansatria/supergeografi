@@ -2,7 +2,7 @@
 contentType: post
 title: Ras Manusia
 date: 2020-07-01
-featuredImage: hadzabe-4265604_1280.jpg
+featuredImage: /images/uploads/ras manusia-header.jpg
 category: Antroposfer
 tags:
   - Budaya

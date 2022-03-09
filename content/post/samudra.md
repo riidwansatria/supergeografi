@@ -2,7 +2,7 @@
 contentType: post
 title: 5 Samudra yang Menyusun Permukaan Bumi
 date: 2020-07-27
-featuredImage: Samudra-header.jpg
+featuredImage: /images/uploads/Samudra-header.jpg
 category: Hidrosfer
 tags:
   - Oseanografi

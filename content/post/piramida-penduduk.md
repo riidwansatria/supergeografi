@@ -1,11 +1,12 @@
 ---
 contentType: post
-title: "Apa itu Piramida Penduduk?"
+title: Apa itu Piramida Penduduk?
 date: 2020-08-03
-tags: 
-  - "antroposfer"
-  - "demografi"
-featuredImage: "Piramida-Penduduk-header.jpg"
+featuredImage: /images/uploads/Piramida Penduduk-header.jpg
+category: Antroposfer
+tags:
+  - Demografi
+slug: antroposfer/piramida-penduduk
 ---
 
 Kita dapat menggambarkan karakteristik dari setiap populasi berdasarkan komposisinya. Selain itu, komposisi yang terdapat dalam suatu populasi juga memberikan petunjuk berharga tentang bagaimana suatu populasi kemungkinan akan berubah di masa depan. Piramida penduduk merupakan salah satu cara untuk merepresentasikan komposisi penduduk pada suatu wilayah. Diagram ini memberi gambaran visual tentang komposisi populasi berdasarkan susunan gender dan umur di dalam sebuah populasi.

@@ -1,11 +1,12 @@
 ---
 contentType: post
-title: "Upwelling"
+title: Upwelling
 date: 2020-08-07
-tags: 
-  - "hidrosfer"
-  - "oseanografi"
-featuredImage: "Upwelling-header.jpg"
+featuredImage: /images/uploads/Upwelling-header.jpg
+category: Hidrosfer
+tags:
+  - Oseanografi
+slug: hidrosfer/upwelling
 ---
 
 Aliran angin di atas lautan bukan hanya dapat menyebabkan terjadinya gerakan arus air secara horizontal, namun juga dapat menghasilkan arus air secara vertikal. Pergerakan air secara vertikal ini penting bagi keberlangsungan ekosistem lautan. Pada waktu-waktu tertentu di perairan lepas pantai barat Peru, sering terjadi sebuah fenomena yang membuat perairan tersebut menjadi kaya akan ikan dan biota-biota laut lainnya. Fenomena ini disebut dengan upwelling.

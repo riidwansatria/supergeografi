@@ -2,10 +2,11 @@
 contentType: post
 title: "Model Transisi Demografi: 5 Tahap Perubahan Penduduk"
 date: 2020-08-15
-tags: 
-  - "antroposfer"
-  - "demografi"
-featuredImage: "transisi-demografi-header.jpg"
+featuredImage: /images/uploads/transisi demografi-header.jpg
+category: Antroposfer
+tags:
+  - Demografi
+slug: antroposfer/transisi-demografi
 ---
 
 Model Transisi Demografi adalah sebuah model yang digunakan untuk mendeskripsikan perubahan-perubahan dalam statistik-statistik kependudukan seperti angka kelahiran, angka kematian, dan pertumbuhan penduduk seiring dengan berjalannya waktu. Model ini pada awalnya dibuat berdasarkan data-data statistik kependudukan negara-negara Amerika Utara dan Eropa dari waktu ke waktu.

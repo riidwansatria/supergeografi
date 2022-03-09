@@ -1,12 +1,13 @@
 ---
 contentType: post
-title: "Pasang Merah (Red Tide)"
+title: Pasang Merah (Red Tide)
 date: 2021-03-07
-tags: 
-  - "hidrosfer"
-  - "lingkungan"
-  - "oseanografi"
-featuredImage: "red-tide-header-Wikimedia-scaled.jpg"
+featuredImage: /images/uploads/red tide-header, Wikimedia.jpg
+category: Hidrosfer
+tags:
+  - Lingkungan
+  - Oseanografi
+slug: hidrosfer/pasang-merah
 ---
 
 ## Apa itu Pasang Merah?

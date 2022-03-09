@@ -1,11 +1,12 @@
 ---
 contentType: post
-title: "Faktor-faktor Penyebab Migrasi dan Push-Pull Theory"
+title: Faktor-faktor Penyebab Migrasi dan Push-Pull Theory
 date: 2020-09-10
-tags: 
-  - "antroposfer"
-  - "demografi"
-featuredImage: "prinsip-migrasi-header-nat-geo-1.jpg"
+featuredImage: /images/uploads/prinsip migrasi-header nat geo.jpg
+category: Antroposfer
+tags:
+  - Demografi
+slug: antroposfer/penyebab-migrasi
 ---
 
 Migrasi merupakan salah satu aspek terpenting dalam kependudukan. Kependudukan bersifat dinamis yang artinya statistik-statistik dalam kependudukan selalu berubah. Selain angka pertumbuhan penduduk alami, pertumbuhan penduduk suatu wilayah/negara juga ditentukan dari migrasi yang terjadi di wilayah tersebut. Terdapat beberapa teori tentang penyebab migrasi yang salah satunya dikemukakan **Everett S. Lee**.

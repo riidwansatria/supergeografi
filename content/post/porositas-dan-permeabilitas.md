@@ -1,12 +1,13 @@
 ---
 contentType: post
-title: "Porositas dan Permeabilitas Batuan"
+title: Porositas dan Permeabilitas Batuan
 date: 2021-03-22
-tags: 
-  - "geologi"
-  - "hidrologi"
-  - "hidrosfer"
-featuredImage: "porositas-permeabilitas-header-Pixabay.jpg"
+featuredImage: /images/uploads/porositas permeabilitas-header, Pixabay.jpg
+category: Hidrosfer
+tags:
+  - Geologi
+  - Hidrologi
+slug: hidrosfer/porositas-dan-permeabilitas
 ---
 
 Banyak orang berpikir bahwa air tanah ada dalam bentuk sungai dan danau bawah tanah. Namun, kenyataannya mayoritas tanah berada dalam sebuah lapisan bawah tanah dari batuan permeabel, rekahan batuan, dan lapisan campuran dari partikel kerikil dan pasir di bawah tanah. Lapisan bawah tanah ini sering disebut juga dengan [akuifer](https://supergeografi.com/hidrosfer/akuifer/). 30% dari suplai air tawar dunia ada dalam bentuk air tanah. Oleh karena itu, ketersediaan air tanah sangat penting perannya bagi kehidupan manusia, terutama di wilayah-wilayah dengan curah hujan minim. Air tanah menjadi penyuplai utama bagi kebutuhan domestik, aktivitas [industri](https://supergeografi.com/antroposfer/sektor-industri/), dan kegiatan [agrikultur](https://supergeografi.com/biosfer/agrikultur/) yang vital di daerah-daerah bercurah hujan rendah. Karakteristik **porositas** dan **permeabilitas** batuan penting dalam mempelajari air tanah.

@@ -2,10 +2,11 @@
 contentType: post
 title: "Sumber Polusi: Point dan Nonpoint"
 date: 2020-07-31
-tags: 
-  - "biosfer"
-  - "lingkungan"
-featuredImage: "Point-dan-Non-point-header.jpg"
+featuredImage: /images/uploads/Point dan Non-point-header.jpg
+category: Biosfer
+tags:
+  - Lingkungan
+slug: biosfer/point-dan-nonpoint
 ---
 
 Hampir seluruh aktivitas yang umat manusia lakukan mulai dari menghasilkan bahan makanan, kegiatan-kegiatan [industri](https://supergeografi.com/antroposfer/sektor-industri/), hingga manusia bepergian setiap harinya berpotensi menghasilkan polusi yang dapat berdampak buruk bagi lingkungan. Polusi ada dalam berbagai bentuk mulai dari polusi udara akibat kegiatan industri hingga limbah pertanian yang dapat menyebabkan [eutrofikasi](https://supergeografi.com/biosfer/eutrofikasi/) di perairan. Sumber polutan juga beragam, mulai dari pabrik hingga saluran pipa pembuangan. Menurut sumbernya, polusi dibagi menjadi polusi _point_ dan _nonpoint_.

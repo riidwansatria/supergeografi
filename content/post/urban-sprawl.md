@@ -1,11 +1,12 @@
 ---
 contentType: post
-title: "Urban Sprawl"
+title: Urban Sprawl
 date: 2021-03-15
-tags: 
-  - "antroposfer"
-  - "perkotaan"
-featuredImage: "urban-sprawl-header-unsplash-scaled.jpg"
+featuredImage: /images/uploads/urban sprawl-header, unsplash.jpg
+category: Antroposfer
+tags:
+  - Perkotaan
+slug: antroposfer/urban-sprawl
 ---
 
 Urbanisasi merupakan sebuah isu yang semakin penting di era globalisasi ini. Setiap tahunnya, semakin banyak masyarakat yang tinggal di wilayah-wilayah perkotaan dunia. Bukan hanya populasi pekotaan yang semakin meningkat, wilayah wilayah perkotaan juga semakin meluas. perluasaan wilayah perkotaan ini sangat erat kaitannya dengan fenomena yang biasa kita sebut dengan _urban sprawl._

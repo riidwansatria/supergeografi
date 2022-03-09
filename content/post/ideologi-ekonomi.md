@@ -2,10 +2,11 @@
 contentType: post
 title: "Ideologi Ekonomi: Kapitalis, Sosialis, dan Welfare State"
 date: 2020-08-26
-tags: 
-  - "antroposfer"
-  - "ekonomi"
-featuredImage: "ideologi-ekonomi-header.jpg"
+featuredImage: /images/uploads/ideologi ekonomi-header.jpg
+category: Antroposfer
+tags:
+  - Ekonomi
+slug: antroposfer/ideologi-ekonomi
 ---
 
 Setiap negara di dunia ini pastinya memiliki pandangan masing-masing terkait dengan bagaimana seharusnya ekonomi berjalan dan untuk apa tujuan dari berlangsungnya ekonomi. Contohnya, kita dapat melihat dengan jelas perbedaan antara sistem ekonomi di Korea Utara dengan ekonomi pada Amerika Serikat. AS memiliki ekonomi pasar bebas yang berbanding terbalik dengan Korea Utara yang seluruh aspek ekonominya dikendalikan oleh negara. Pandangan politik negara juga berkaitan erat dengan bagaimana sebuah negara memandang ekonomi. Hal ini disebut dengan ideologi ekonomi.

@@ -2,10 +2,11 @@
 contentType: post
 title: "Sirkulasi Termohalin: Sabuk Konveyor Lautan Global"
 date: 2020-12-23
-tags: 
-  - "hidrosfer"
-  - "oseanografi"
-featuredImage: "sirkulasi-termohalin-header-Pixabay.jpg"
+featuredImage: /images/uploads/sirkulasi termohalin-header, Pixabay.jpg
+category: Hidrosfer
+tags:
+  - Oseanografi
+slug: hidrosfer/sirkulasi-termohalin
 ---
 
 Lautan bumi merupakan satu kesatuan massa air yang secara konstan terus bergerak. Layaknya sebuah sabuk konveyor, massa air lautan bumi terus menerus bersirkulasi dari suatu wilayah bumi ke wilayah lainnya. Tidak hanya pada permukaan lautan, air laut dalam juga selalu bersirkulasi. Air laut dalam bersirkulasi melalui sebuah proses yang disebut dengan sirkulasi termohalin atau **_the Global Ocean Conveyor Belt_**.

@@ -2,12 +2,12 @@
 contentType: post
 title: "Organisme Akuatik: Plankton, Nekton, dan Bentos"
 date: 2020-08-29
-featuredImage: /images/uploads/litosfer.jpg
+featuredImage: /images/uploads/organisme akuatik-header.jpg
 category: Biosfer
 tags:
-  - Geomorfologi
-  - Meteorologi
-  - Hidrologi
+  - Oseanografi
+  - Biogeografi
+slug: biosfer/organisme-akuatik
 ---
 Plankton adalah organisme akuatik mikroskopis yang tidak dapat bergerak dengan sendirinya. Mereka bergerak hanya dengan mengandalkan arus laut dan pergerakan-pergerakan air lainnya. Umumnya kebanyakan plankton hidup di perairan dangkal dan populasinya berkembang pesat pada daerah-daerah upwelling. Plankton hidup pada zona fotik hingga kedalaman 200m di bawah permukaan air dan terbagi menjadi 2 tipe, fitoplankton dan zooplankton.
 

@@ -2,11 +2,12 @@
 contentType: post
 title: "Columbian Exchange: Pertukaran Komoditas Antarbenua"
 date: 2021-04-20
-tags: 
-  - "agrikultur"
-  - "biosfer"
-  - "budaya"
-featuredImage: "columbian-exchange-landing-of-columbus-Wikimedia.jpg"
+featuredImage: /images/uploads/columbian exchange-landing of columbus, Wikimedia.jpg
+category: Biosfer
+tags:
+  - Agrikultur
+  - Budaya
+slug: biosfer/columbian-exchange
 ---
 
 Mendaratnya Christopher Columbus di Benua Baru, Amerika, menandai bertemunya 2 dunia biologis yang berbeda. Benua Amerika sebelumnya terisolasi dari Afro-Eurasia kembali terhubung setelah terpisahkan akibat pergerakan [lempeng bumi](https://supergeografi.com/litosfer/struktur-lapisan-bumi/). Selama puluhan juta tahun lamanya, organisme-organisme berevolusi secara terisolir antara satu sama lain. Setelah pendaratan Columbus, hewan, tumbuhan, dan bakteri dari dua dunia ini mulai bercampur kembali dalam sebuah proses yang kita sebut dengan _**Columbian Exchange**._

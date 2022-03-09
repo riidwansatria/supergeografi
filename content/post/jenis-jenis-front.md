@@ -1,11 +1,12 @@
 ---
 contentType: post
-title: "Jenis-jenis Front dalam Meteorologi"
+title: Jenis-jenis Front dalam Meteorologi
 date: 2020-12-08
-tags: 
-  - "atmosfer"
-  - "meteorologi"
-featuredImage: "front-header-pixabay.jpg"
+featuredImage: /images/uploads/front-header, pixabay.jpg
+category: Atmosfer
+tags:
+  - Meteorologi
+slug: atmosfer/jenis-jenis-front
 ---
 
 Meskipun terlihat serupa, massa udara pada [atmosfer](https://supergeografi.com/atmosfer/struktur-dan-komposisi-atmosfer/) memiliki karakteristik khususnya masing masing. Satu [massa udara](https://supergeografi.com/atmosfer/massa-udara/) mungkin temperaturnya lebih dingin dibandingkan massa udara lainnnya. Hal ini juga berlaku untuk karakteristik kelembapannya. Massa udara yang terbentuk di atas lautan cenderung memiliki kelembapan yang lebih tinggi dibandingkan massa udara yang terbentuk di atas daratan. Saat massa udara bertemu dengan massa udara lainnya, perbedaan karakteristik keduanya akan menciptakan sebuah batasan yang disebut dengan **front**. Selanjutnya, front juga dapat diklasifikasikan menjadi beberapa jenis front.

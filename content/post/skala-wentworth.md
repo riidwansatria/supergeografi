@@ -1,11 +1,12 @@
 ---
 contentType: post
-title: "Skala Wentworth"
+title: Skala Wentworth
 date: 2020-08-19
-tags: 
-  - "geologi"
-  - "litosfer"
-featuredImage: "skala-wentworth-header.jpg"
+featuredImage: /images/uploads/skala wentworth-header.jpg
+category: Litosfer
+tags:
+  - Geologi
+slug: litosfer/skala-wentworth
 ---
 
 Ukuran partikel sedimen merupakan salah satu faktor terpenting dalam klasifikasi batuan sedimen, khususnya sedimen klastik. Skala Wentworth adalah sebuah skala yang dalam geologi digunakan untuk mengklasifikasikan sedimen berdasarkan ukuran partikelnya.

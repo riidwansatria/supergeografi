@@ -1,11 +1,12 @@
 ---
 contentType: post
-title: "Klasifikasi Iklim Köppen"
+title: Klasifikasi Iklim Köppen
 date: 2021-05-07
-featuredImage: "/images/uploads/klasifikasi iklim koppen-header, Pexels.jpg"
+featuredImage: /images/uploads/klasifikasi iklim koppen-header, Pexels.jpg
 category: Atmosfer
-tags: 
-   - Meteorologi
+tags:
+  - Meteorologi
+slug: atmosfer/klasifikasi-iklim-koppen
 ---
 
 Klasifikasi iklim Köppen-Geiger saat ini merupakan salah satu sistem klasifikasi iklim yang paling banyak digunakan di dunia. Sistem klasifikasi iklim ini disusun oleh ahli klimatologi Jerman-Rusia, **Wladimir Köppen** sekitar akhir abad ke-19 hingga awal abad ke-20. Selanjutnya, **Rudolf Geiger** memperkenalkan beberapa perubahan pada sistem klasifikasi ini yang menyempurnakan sistem klasifikasi iklim Köppen-Geiger. 

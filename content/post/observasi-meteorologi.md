@@ -2,10 +2,11 @@
 contentType: post
 title: "Observasi Meteorologi: Radar, Satelit, dan Radiosonde"
 date: 2020-12-06
-tags: 
-  - "atmosfer"
-  - "meteorologi"
-featuredImage: "observasi-meteorologi-header.jpg"
+featuredImage: /images/uploads/observasi meteorologi-header.jpg
+category: Atmosfer
+tags:
+  - Meteorologi
+slug: atmosfer/observasi-meteorologi
 ---
 
 Observasi cuaca atau observasi meteorologi merupakan salah satu pemanfaatan dari teknologi pengindraan jauh. Observasi meteorologi penting perannya dalam aviasi dan kehidupan manusia secara umum. Setiap bandara pada umumnya memiliki sistem observasi [cuaca](https://supergeografi.com/atmosfer/cuaca-dan-iklim/) tersendiri untuk membantu memandu lalu lintas penerbangan di daerah sekitar. Prediksi cuaca yang kita dapatkan setiap harinya dibuat menggunakan data-data hasil observasi meteorologi.

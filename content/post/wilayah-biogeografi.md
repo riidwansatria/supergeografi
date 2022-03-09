@@ -1,11 +1,12 @@
 ---
 contentType: post
-title: "Persebaran 8 Wilayah Biogeografi Terestrial Dunia"
+title: Persebaran 8 Wilayah Biogeografi Terestrial Dunia
 date: 2020-08-05
-tags: 
-  - "biogeografi"
-  - "biosfer"
-featuredImage: "WIlayah-Biogeografi-header.jpg"
+featuredImage: /images/uploads/WIlayah Biogeografi-header.jpg
+category: Biosfer
+tags:
+  - Biogeografi
+slug: biosfer/wilayah-biogeografi
 ---
 
 Wilayah biogeografi atau **ecozone** adalah suatu wilayah di mana ekosistem yang ada di dalamnya memiliki sejarah evolusi biologis yang serupa. Walaupun suatu ekosistem (misalnya hutan hujan tropis) memiliki proses dan tipe vegetasi utama yang sama di mana pun mereka berada, komposisi spesiesnya sangat bervariasi tergantung pada di wilayah biogeografi mana ekosistem tersebut berada.

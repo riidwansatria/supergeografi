@@ -1,11 +1,12 @@
 ---
 contentType: post
-title: "Siklus Milankovitch dan Pengaruhnya pada Iklim Bumi"
+title: Siklus Milankovitch dan Pengaruhnya pada Iklim Bumi
 date: 2020-08-18
-tags: 
-  - "atmosfer"
-  - "meteorologi"
-featuredImage: "siklus-milankovitch-earth.jpg"
+featuredImage: /images/uploads/siklus milankovitch-earth.jpg
+category: Atmosfer
+tags:
+  - Meteorologi
+slug: atmosfer/siklus-milankovitch
 ---
 
 Perubahan Iklim saat ini terus menjadi perhatian bagi masyarakat dunia. Saat ini, banyak sekali badan-badan pemerintah, praktisi, hingga _NGO_ yang memiliki misi untuk mempelajari penyebab, proses, dampak, dan proyeksi perubahan iklim di masa depan. Ternyata, perubahan iklim yang terjadi di zaman modern ini tidak hanya disebabkan oleh aktivitas manusia. Siklus alam juga menjadi faktor penting dalam terjadinya perubahan iklim saat ini. **Siklus Milankovitch** menjelaskan dampak dari perubahan gerakan bumi terhadap iklim bumi selama ribuan tahun lamanya.

@@ -2,11 +2,12 @@
 contentType: post
 title: "Kurva Hjulström: Erosi, Transportasi, dan Deposisi oleh Air"
 date: 2021-05-03
-featuredImage: "/images/uploads/kurva hjulstrom-header, pixabay.jpg"
+featuredImage: /images/uploads/kurva hjulstrom-header, pixabay.jpg
 category: Litosfer
-tags: 
-   - Hidrologi
-   - Geomorfologi
+tags:
+  - Hidrologi
+  - Geomorfologi
+slug: litosfer/kurva-hjulstrom
 ---
 
 Kurva Hjulström merupakan diagram yang menjelaskan hubungan antara erosi, transportasi, dan deposisi sedimen pada aliran air. Berdasarkan diagram ini, kita dapat mengetahui apakah suatu aliran sungai akan mengikis, mengangkut, atau mengendapkan sedimen tergantung pada ukuran partikel serta kecepatan aliran airnya.

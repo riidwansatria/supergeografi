@@ -1,11 +1,12 @@
 ---
 contentType: post
-title: "Jenis-jenis Gumuk Pasir"
+title: Jenis-jenis Gumuk Pasir
 date: 2020-08-11
-tags: 
-  - "geomorfologi"
-  - "litosfer"
-featuredImage: "gumuk-pasir-header.jpg"
+featuredImage: /images/uploads/gumuk pasir-header.jpg
+category: Litosfer
+tags:
+  - Geomorfologi
+slug: litosfer/gumuk-pasir
 ---
 
 Gumuk Pasir atau **_sand dunes_** merupakan sebuah bentukan lahan berupa gundukan pasir yang terbentuk akibat pengaruh angin, biasanya di daerah pantai ataupun gurun. Indonesia, walaupun tidak beriklim kering di mana gumuk pasir biasa terbentuk, juga memiliki beberapa bentukan gumuk pasir yang berada di Pantai **Parangkusumo**.

@@ -1,11 +1,12 @@
 ---
 contentType: post
-title: "Skala Mohs"
+title: Skala Mohs
 date: 2021-04-28
-featuredImage: "/images/uploads/skala mohs-header, pexels.jpg"
+featuredImage: /images/uploads/skala mohs-header, pexels.jpg
 category: Litosfer
-tags: 
-   - Geologi
+tags:
+  - Geologi
+slug: litosfer/skala-mohs
 ---
 
 Skala Mohs adalah skala yang paling umum digunakan untuk mengukur kekerasan suatu mineral. Kekerasan merupakan salah satu karakteristik utama dari sebuah mineral. Kekerasan adalah ukuran daya tahan relatif suatu mineral terhadap goresan. Karakteristik ini mengukur apakah suatu mineral akan tergores atau dapat menggores mineral lain.

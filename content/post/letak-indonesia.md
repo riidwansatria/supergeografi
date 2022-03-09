@@ -2,7 +2,7 @@
 contentType: post
 title: Letak Indonesia
 date: 2020-07-03
-featuredImage: view-of-city-during-golden-hour-2450221.jpg
+featuredImage: /images/uploads/letak indonesia-header.jpg
 category: Antroposfer
 tags:
   - Regional
