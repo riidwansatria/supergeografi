@@ -1,11 +1,12 @@
 ---
 contentType: post
-title: "Struktur Lapisan Bumi"
+title: Struktur Lapisan Bumi
 date: 2020-06-04
-tags: 
-  - "geologi"
-  - "litosfer"
-featuredImage: "pexels-photo-838981-1.jpeg"
+featuredImage: /images/uploads/struktur lapisan bumi-header.jpg
+category: Litosfer
+tags:
+  - Geologi
+slug: litosfer/struktur-lapisan-bumi
 ---
 
 Bumi kita ini ternyata memiliki struktur lapisan bumi yang terdiri dari lapisan lapisan dengan sifat berbeda yang membentuk karakteristik bumi kita yang kita tinggali saat ini. Diperkirakan bahwa bumi memiliki massa sekitar 6,000,000,000,000,000,000 kilogram. Bumi berbentuk bulat pepat yang memiliki radius sekitar 6,360 kilometer. Planet tempat kita tinggal ini terdiri dari beberapa lapisan. Mulai dari kerak bumi tempat manusia hidup, mantel yang menyusun sebagian besar volume bumi, dan inti bumi yang menghasilkan medan magnet bumi kita.

@@ -1,11 +1,12 @@
 ---
 contentType: post
-title: "Perkembangan Pariwisata"
+title: Perkembangan Pariwisata
 date: 2020-05-23
-tags: 
-  - "antroposfer"
-  - "pariwisata"
-featuredImage: "pexels-photo-699466.jpeg"
+featuredImage: /images/uploads/perkembangan pariwisata-header.jpg
+category: Antroposfer
+tags:
+  - Pariwisata
+slug: antroposfer/perkembangan-pariwisata
 ---
 
 Industri pariwisata saat ini adalah salah satu industri yang paling berkembang di dunia. Perkembangan pariwisata didukung oleh beberapa faktor yang turut bekontribusi dalam perkembangan pariwisata saat ini

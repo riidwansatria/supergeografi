@@ -2,10 +2,11 @@
 contentType: post
 title: "Geografi Perkotaan: Sejarah, Elemen, dan Klasifikasi Kota"
 date: 2020-05-22
-tags: 
-  - "antroposfer"
-  - "perkotaan"
-featuredImage: "pexels-photo-3964406.jpeg"
+featuredImage: /images/uploads/pengantar perkotaan-header.jpg
+category: Antroposfer
+tags:
+  - Perkotaan
+slug: antroposfer/pengantar-geografi-perkotaan
 ---
 
 Sebagai pusat kegiatan, kota terus menerus berubah dan berkembang. Kota adalah fitur penting yang menentukan dunia kita dan kekuatan pendorong dalam perputaran ekonomi global. Oleh karena itu, studi tentang kota dan proses perkotaan dibutuhkan agar dinamika yang terjadi di perkotaan bisa terkendali. Geografi perkotaan adalah studi tentang kota dan kehidupan kota dari perspektif geografis. Ilmu geografi perkotaan digunakan untuk merencanakan perkotaan agar sebuah kota bisa berfungsi dengan optimal untuk menunjang masyarakat yang tinggal didalamnya.

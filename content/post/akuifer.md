@@ -2,11 +2,15 @@
 contentType: post
 title: "Akuifer: Sumber Air yang Tersembunyi"
 date: 2020-07-13
+featuredImage: /images/uploads/akuifer-header.jpg
 category: Hidrosfer
-Tags: 
-  - "geologi"
-  - "hidrologi"
-featuredImage: "Akuifer-featured.jpg"
+tags:
+  - Hidrologi
+  - Geologi
+slug: hidrosfer/akuifer
+Tags:
+  - geologi
+  - hidrologi
 ---
 
 Air menutupi lebih dari 70% permukaan bumi. Selain pada permukaan, air juga terdapat di dalam tanah yang biasa kita sebut dengan air tanah. Kebanyakan air tanah tersebut berada beberapa ratus meter dari permukaan tanah. Air tanah tersebut masuk ke dalam tanah secara perlahan dari tanah menuju ke batuan dasar. Hal ini disebut dengan **perkolasi**. Di dalam tanah, air tanah tersimpan pada sebuah lapisan yang disebut dengan akuifer.

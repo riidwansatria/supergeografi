@@ -1,11 +1,12 @@
 ---
 contentType: post
-title: "Primate City dan Rank-size Rule"
+title: Primate City dan Rank-size Rule
 date: 2020-06-16
-tags: 
-  - "antroposfer"
-  - "perkotaan"
-featuredImage: "city-view-at-london-672532.jpg"
+featuredImage: /images/uploads/primate city-header.jpg
+category: Antroposfer
+tags:
+  - Perkotaan
+slug: antroposfer/primate-city-dan-rank-size-rule
 ---
 
 ## _Primate City_

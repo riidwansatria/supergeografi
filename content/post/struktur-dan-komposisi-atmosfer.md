@@ -1,11 +1,12 @@
 ---
 contentType: post
-title: "Struktur dan Komposisi Atmosfer"
+title: Struktur dan Komposisi Atmosfer
 date: 2020-06-18
-tags: 
-  - "atmosfer"
-  - "meteorologi"
-featuredImage: "earth-space-cosmos-5439.jpg"
+featuredImage: /images/uploads/struktur dan komposisi atmosfer-header.jpg
+category: Atmosfer
+tags:
+  - Meteorologi
+slug: atmosfer/struktur-dan-komposisi-atmosfer
 ---
 
 Atmosfer adalah lapisan udara yang menyelubungi permukaan bumi. Lapisan ini memiliki peran yang sangat penting bagi kehidupan di Bumi karena lapisan ini menjadi sumber bagi oksigen, air, CO2, dan sejumlah nutrisi yang vital bagi banyak organisme hidup. Lapisan ini juga menjadi pelindung organisme hidup dari suhu ekstrem dan radiasi UV yang berlebih.

@@ -1,11 +1,12 @@
 ---
 contentType: post
-title: "Urbanisasi"
+title: Urbanisasi
 date: 2020-05-22
-tags: 
-  - "antroposfer"
-  - "perkotaan"
-featuredImage: "pexels-photo-325185-1.jpeg"
+featuredImage: /images/uploads/urbanisasi-header.jpg
+category: Antroposfer
+tags:
+  - Perkotaan
+slug: antroposfer/urbanisasi
 ---
 
 ![Urbanisasi](images/uploads/Urbanisasi.png)

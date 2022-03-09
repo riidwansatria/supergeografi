@@ -1,11 +1,12 @@
 ---
 contentType: post
-title: "Struktur Kota"
+title: Struktur Kota
 date: 2020-05-22
-tags: 
-  - "antroposfer"
-  - "perkotaan"
-featuredImage: "pexels-photo-374870-1.jpeg"
+featuredImage: /images/uploads/struktur kota-header.jpg
+category: Antroposfer
+tags:
+  - Perkotaan
+slug: antroposfer/struktur-kota
 ---
 
 Kota sebagai tempat hidup dan berkembang masyarakat beragam yang tinggal di dalamnya pastinya memiliki berbagai fungsi penyedia layanan, perumahan tempat masyarakat tinggal, dan industri tempat orang orang bekerja. Bagaimana fungsi fungsi ini diatur dalam hubungannya dengan satu sama lain adalah apa yang kita sebut dengan struktur kota.

@@ -1,11 +1,12 @@
 ---
 contentType: post
-title: "Pengantar Geografi Pariwisata"
+title: Pengantar Geografi Pariwisata
 date: 2020-05-23
-tags: 
-  - "antroposfer"
-  - "pariwisata"
-featuredImage: "pexels-photo-1646870.jpeg"
+featuredImage: /images/uploads/pengantar geografi pariwisata-header.jpg
+category: Antroposfer
+tags:
+  - Pariwisata
+slug: antroposfer/pengantar-geografi-pariwisata
 ---
 
 Dalam beberapa dekade terakhir ini, kegiatan pariwisata telah berkembang dengan luar biasa signifikan. Contohnya, jumlah kedatangan internasional bertumbuh dari hanya 25 juta kedatangan internasional pada tahun 1950 menjadi hampir 12 miliar pada tahun 2015. Hal ini menunjukan betapa pentingnya pariwisata saat ini dan geografi pariwisata dibutuhkan dalam perkembangan industri pariwisata. Geografi pariwisata adalah cabang geografi manusia yang berkaitan dengan studi tentang pariwisata dan dampaknya pada tempat tersebut.

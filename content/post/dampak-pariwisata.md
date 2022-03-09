@@ -1,11 +1,12 @@
 ---
 contentType: post
-title: "Dampak Pariwisata"
+title: Dampak Pariwisata
 date: 2020-05-23
-tags: 
-  - "antroposfer"
-  - "pariwisata"
-featuredImage: "pexels-photo-3937730-1.jpeg"
+featuredImage: /images/uploads/dampak pariwisata-header.jpg
+category: Antroposfer
+tags:
+  - Pariwisata
+slug: antroposfer/dampak-pariwisata
 ---
 
 Pariwisata memiliki dampak yang sangat besar, baik dari segi Ekonomi, Sosial Budaya, maupun Lingkungan. Dampak Pariwisata dibagi menjadi dampak langsung (_direct effect_), dampak tidak langsung (_indirect effect_), dan dampak ikutan (_induced effect_).

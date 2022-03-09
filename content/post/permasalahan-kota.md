@@ -1,11 +1,12 @@
 ---
 contentType: post
-title: "Permasalahan Kota"
+title: Permasalahan Kota
 date: 2020-05-22
-tags: 
-  - "antroposfer"
-  - "perkotaan"
-featuredImage: "pexels-photo-1208986-1.jpeg"
+featuredImage: /images/uploads/permasalahan perkotaan-header.jpg
+category: Antroposfer
+tags:
+  - Perkotaan
+slug: antroposfer/permasalahan-perkotaan
 ---
 
 Dinamisnya kehidupan pada daerah perkotaan juga menimbulkan banyak masalah. Permasalahan permasalahan kota sebisa mungkin harus diminimalisasi agar seluruh warga kota yang menggantungkan kehidupannya pada kota tersebut dapat hidup dengan tenang, aman, dan nyaman.

@@ -1,11 +1,12 @@
 ---
 contentType: post
-title: "Faktor Pendorong dan Penarik Wisatawan"
+title: Faktor Pendorong dan Penarik Wisatawan
 date: 2020-05-23
-tags: 
-  - "antroposfer"
-  - "pariwisata"
-featuredImage: "pexels-photo-417074-1.jpeg"
+featuredImage: /images/uploads/faktor wisatawan-header.jpg
+category: Antroposfer
+tags:
+  - Pariwisata
+slug: antroposfer/faktor-wisatawan
 ---
 
 Wisatawan berperan penting dalam perkembangan pariwisata. Bisa dibilang, kemajuan suatu daerah pariwisata bergantung pada wisatawan yang datang ke situs tersebut.

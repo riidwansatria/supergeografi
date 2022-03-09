@@ -1,11 +1,12 @@
 ---
 contentType: post
-title: "Cuaca dan Iklim"
+title: Cuaca dan Iklim
 date: 2020-06-10
-tags: 
-  - "atmosfer"
-  - "meteorologi"
-featuredImage: "pexels-photo-108941-1.jpeg"
+featuredImage: /images/uploads/cuaca dan iklim-header.jpg
+category: Atmosfer
+tags:
+  - Meteorologi
+slug: atmosfer/cuaca-dan-iklim
 ---
 
 Apa yang kalian pikirkan saat mendengar kata cuaca dan iklim? Apakah cuaca dan iklim adalah hal yang sama? Meskipun keduanya berkaitan erat, cuaca dan iklim bukanlah hal yang sama. Keduanya punya perbedaan yang sangat mendasar.
