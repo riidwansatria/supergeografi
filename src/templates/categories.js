@@ -17,29 +17,31 @@ const Categories = ({ data, location }) => {
       <Seo title={category} />
 
       {/* Category header */}
-      <header className="relative h-[32rem] md:mx-12 mx-4 rounded-2xl items-center mt-6 mb-16">
-        <div className="absolute bg-gray-2/50 h-[32rem] w-full z-10 p-8 mx-auto rounded-2xl">
-          <div className="grid grid-cols-2 h-full max-w-6xl items-center mx-auto">
+      <header className="relative h-40 sm:h-[32rem] md:mx-12 mx-4 rounded-2xl items-center my-6 sm:mb-16">
+        <div className="absolute bg-gray-2/50 h-40 sm:h-[32rem] w-full z-10 p-8 mx-auto rounded-2xl">
+          <div className="grid sm:grid-cols-2 h-full max-w-6xl items-center mx-auto">
             <div>
-              <h1 className="text-6xl text-gray-8 font-bold font-serif p-4">
+              <h1 className="text-5xl sm:text-6xl text-gray-8 font-bold font-serif p-4">
                 {category.title}
               </h1>
-              <p className="text-lg text-gray-8 p-4">{category.description}</p>
+              <p className="hidden sm:block sm:text-lg text-gray-8 p-4">
+                {category.description}
+              </p>
             </div>
-            <div className="h-full"></div>
+            <div className="hidden h-full"></div>
           </div>
         </div>
 
         {category.featuredImage && (
           <img
-            className="absolute col-span-2 w-full h-[32rem] z-0 mx-auto object-cover rounded-2xl"
+            className="absolute col-span-2 w-full h-40 sm:h-[32rem] z-0 mx-auto object-cover rounded-2xl"
             src={category.featuredImage}
             alt={category.title}
           ></img>
         )}
       </header>
 
-      <div className="border-y-2 border-gray-1 my-8">
+      <div className="border-y-2 border-gray-1 px-4 my-8">
         <div className="flex flex-1 max-w-6xl align-middle py-1 mx-auto">
           <div className="flex space-x-2">
             {categoryTags.map(tag => (
@@ -55,7 +57,7 @@ const Categories = ({ data, location }) => {
         </div>
       </div>
 
-      <main className="grid grid-cols-6 gap-8 max-w-6xl mx-auto">
+      <main className="grid grid-cols-4 sm:grid-cols-6 gap-8 max-w-6xl px-4 mx-auto">
         {/* Articles list */}
         <div className="col-span-4">
           <ol style={{ listStyle: `none` }}>
@@ -69,14 +71,14 @@ const Categories = ({ data, location }) => {
                     itemScope
                     itemType="http://schema.org/Article"
                   >
-                    <div className="grid grid-cols-5 gap-4">
+                    <div className="grid grid-cols-8 sm:grid-cols-5 gap-4 items-center">
                       <img
-                        className="col-span-2 w-full h-48 mx-auto object-cover rounded-2xl"
+                        className="col-span-2 w-full h-20 sm:h-48 mx-auto object-cover rounded-2xl"
                         src={post.frontmatter.featuredImage}
                         alt={post.frontmatter.title}
                       ></img>
-                      <div className="col-span-3 items-center p-4">
-                        <h3 className="font-bold text-gray-7 text-2xl">
+                      <div className="col-span-6 sm:col-span-3 sm:p-4">
+                        <h3 className="font-bold text-gray-7 text-md sm:text-2xl">
                           <Link to={post.fields.slug} itemProp="url">
                             <span itemProp="headline">{title}</span>
                           </Link>
@@ -90,7 +92,7 @@ const Categories = ({ data, location }) => {
                               post.frontmatter.description || post.excerpt,
                           }}
                           itemProp="description"
-                          className="text-sm text-gray-4"
+                          className="hidden sm:block text-sm text-gray-4"
                         />
                       </div>
                     </div>
@@ -102,7 +104,7 @@ const Categories = ({ data, location }) => {
         </div>
 
         {/* Sidebar */}
-        <div className="col-span-2 grid grid-cols-1 gap-12 border-2 border-gray-1 rounded-xl h-fit p-4 ml-20">
+        <div className="hidden col-span-2 sm:grid grid-cols-1 gap-12 border-2 border-gray-1 rounded-xl h-fit p-4 ml-20">
           {/* Newsletter */}
           <div className="space-y-4">
             <h3 className="text-md font-bold uppercase tracking-widest">

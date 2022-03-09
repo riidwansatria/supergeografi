@@ -2,9 +2,10 @@
 contentType: post
 title: "Kumpulan Soal iGeo"
 date: 2020-05-25
-tags: 
-  - "olimpiade"
-featuredImage: "Slide-4_3-2.png"
+featuredImage: /images/uploads/supergeografi-header.png
+category: Olimpiade
+tags: []
+slug: olimpiade/kumpulan-soal-igeo
 ---
 
 Selain latihan soal OSN, soal soal iGeo juga kalian kerjakan sebagai latihan tambahan. **International Geography Olympiad** atau **iGeo** adalah kompetisi geografi internasional tahunan untuk siswa berusia 16 sampai 19 tahun. Pesertanya merupakan siswa siswi terbaik dari seluruh dunia yang dipilih untuk mewakili negara mereka. iGeo terdiri dari tiga bagian: tes tertulis, tes multimedia, dan tes kerja lapangan. iGeo merupakan salah satu dari 12 olimpiade sains internasional. Para medalis OSN berhak mengikuti pelatihan nasional yang akan memilih kontingen Indonesia di iGeo.
