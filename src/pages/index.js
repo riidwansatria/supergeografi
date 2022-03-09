@@ -28,7 +28,7 @@ const BlogIndex = ({ data, location }) => {
   const categoryPosts = data.categoryArticles.nodes
 
   return (
-    <body className="bg-white">
+    <div className="bg-white">
       <Layout location={location} title={siteTitle}>
         <Seo title="Home" />
         <Hero />
@@ -51,7 +51,7 @@ const BlogIndex = ({ data, location }) => {
           <h2 className="font-bold text-5xl">Artikel Terbaru</h2>
         </div>
 
-        <div className="grid grid-cols-3 max-w-6xl mx-auto gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-3 max-w-6xl mx-auto gap-8 p-4">
           {/* Last published article */}
           <div className="bg-gray-2 p-4 rounded-3xl">
             <ol style={{ listStyle: `none` }}>
@@ -185,8 +185,8 @@ const BlogIndex = ({ data, location }) => {
         <HighlightOSN />
 
         {/* Categories section */}
-        <div className="grid grid-cols-6 max-w-6xl mx-auto gap-8">
-          <div className="col-span-4">
+        <div className="grid grid-cols-4 sm:grid-cols-6 max-w-6xl mx-auto gap-8">
+          <div className="col-span-4 p-4">
             <ol style={{ listStyle: `none` }} className="grid gap-8">
               {categories.map(category => {
                 return (
@@ -218,7 +218,7 @@ const BlogIndex = ({ data, location }) => {
                         </h2>
                         <ol
                           style={{ listStyle: `none` }}
-                          className="grid grid-cols-3 gap-4 py-4"
+                          className="grid sm:grid-cols-3 gap-4 py-4"
                         >
                           {categoryPosts.map(post => {
                             const title =
@@ -273,7 +273,7 @@ const BlogIndex = ({ data, location }) => {
           </div>
 
           {/* Sidebar */}
-          <div className="col-span-2 bg-gray-2 h-fit px-6 py-4 rounded-3xl">
+          <div className="hidden sm:block col-span-2 bg-gray-2 h-fit px-6 py-4 rounded-3xl">
             <div className="max-w-6xl px-4 pb-12 pt-6 mx-auto">
               <div className="flex items-center gap-2">
                 <svg
@@ -324,7 +324,7 @@ const BlogIndex = ({ data, location }) => {
           </div>
         </div>
       </Layout>
-    </body>
+    </div>
   )
 }
 
@@ -379,7 +379,7 @@ export const pageQuery = graphql`
 
     categoryList: allMarkdownRemark(
       sort: { fields: frontmatter___id, order: ASC }
-      filter: { frontmatter: { contentType: { eq: "postCategory" } } }
+      filter: { frontmatter: { contentType: { eq: "postCategory" }, id: { gte: 1, lte: 5 } } }
     ) {
       nodes {
         frontmatter {

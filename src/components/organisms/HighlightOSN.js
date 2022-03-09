@@ -1,19 +1,19 @@
 import * as React from "react"
 import { Link } from "gatsby"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faBook } from "@fortawesome/free-solid-svg-icons"
+import { faBook, faPenRuler } from "@fortawesome/free-solid-svg-icons"
 
 const Hero = () => {
   return (
     <div className="max-w-6xl md:py-32 py-12 mx-auto grid grid-cols-1 sm:grid-cols-2 items-start">
-      <div className="col-span-1">
+      <div className="hidden sm:block col-span-1">
         <img
           className="rounded-l-3xl rounded-b-3xl"
           src="https://supergeografi.com/wp-content/uploads/2020/11/logo-osn-2-2.png"
           alt="OSN Geografi"
         />
       </div>
-      <div className="col-span-1 grid grid-cols-1 bg-gray-2 rounded-r-3xl px-8 py-16 gap-8">
+      <div className="col-span-1 grid grid-cols-1 bg-gray-2 rounded-r-3xl px-8 py-16 mr-4 sm:mr-0 gap-4 sm:gap-8">
         <div className="flex items-center gap-2">
           <svg
             width="20"
@@ -31,9 +31,9 @@ const Hero = () => {
             Olimpiade Sains Nasional
           </h2>
         </Link>
-        <div className="col-span-1 flex gap-16">
+        <div className="col-span-1 sm:flex gap-16 space-y-4">
           <div className="flex items-center space-x-4">
-            <button className="flex bg-primary hover:bg-primary-light text-white text-md sm:text-3xl p-2 items-center justify-center h-16 w-16 rounded-xl">
+            <button className="flex bg-primary hover:bg-primary-light text-white text-md text-3xl p-2 items-center justify-center h-16 w-16 rounded-xl">
               <Link to="/materi">
                 <FontAwesomeIcon icon={faBook} />
               </Link>
@@ -41,9 +41,9 @@ const Hero = () => {
             <span className="flex text-2xl font-bold">Materi</span>
           </div>
           <div className="flex items-center space-x-4">
-            <button className="flex bg-primary hover:bg-primary-light text-white text-md sm:text-3xl p-2 items-center justify-center h-16 w-16 rounded-xl">
+            <button className="flex bg-primary hover:bg-primary-light text-white text-3xl p-2 items-center justify-center h-16 w-16 rounded-xl">
               <Link to="/kumpulan-soal">
-                <FontAwesomeIcon icon={faBook} />
+                <FontAwesomeIcon icon={faPenRuler} />
               </Link>
             </button>
             <span className="flex text-2xl font-bold">Kumpulan Soal</span>
