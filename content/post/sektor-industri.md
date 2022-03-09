@@ -1,11 +1,12 @@
 ---
 contentType: post
-title: "4 Sektor Industri"
+title: 4 Sektor Industri
 date: 2020-07-08
-tags: 
-  - "antroposfer"
-  - "ekonomi"
-featuredImage: "panoramic-shot-of-sky-247763.jpg"
+featuredImage: panoramic-shot-of-sky-247763.jpg
+category: Antroposfer
+tags:
+  - Ekonomi
+slug: antroposfer/sektor-industri
 ---
 
 ![Sektor Industri dominan](images/uploads/image-5-1024x531.png)

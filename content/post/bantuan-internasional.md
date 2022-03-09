@@ -1,11 +1,12 @@
 ---
 contentType: post
-title: "Bantuan Internasional"
+title: Bantuan Internasional
 date: 2020-07-21
-tags: 
-  - "antroposfer"
-  - "ekonomi"
-featuredImage: "Bantuan-Internasional-dramatic.jpg"
+featuredImage: /images/uploads/Bantuan Internasional-header.jpg
+category: Antroposfer
+tags:
+  - Ekonomi
+slug: antroposfer/bantuan-internasional
 ---
 
 Pada 26 Desember 2004, sebuah gempa besar dan tsunami memorak-porandakan berbagai daerah di samudera Hindia termasuk Indonesia. Bencana alam tersebut menelan lebih dari 225.000 jiwa di 14 negara. Banda Aceh merupakan salah satu daerah yang terdampak besar oleh bencana alam tersebut. Sebagian wilayah kota tersebut hancur tersapu ombak yang menghantam kota Banda Aceh. Tidak lama kemudian, berbagai negara mengirimkan bantuan mereka untuk membantu korban-korban bencana. Berbagai _Non-Governmental Organization_ (_NGO_) juga turut memberikan bantuan internasional untuk membantu membangun kembali daerah yang hancur dilanda bencana. Namun, apa yang dimaksud dengan bantuan internasional itu?

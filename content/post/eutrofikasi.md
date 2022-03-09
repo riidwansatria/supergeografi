@@ -1,12 +1,13 @@
 ---
 contentType: post
-title: "Eutrofikasi"
+title: Eutrofikasi
 date: 2020-07-15
-tags: 
-  - "agrikultur"
-  - "biosfer"
-  - "lingkungan"
-featuredImage: "Eutrofikasi-river-potomac.jpg"
+featuredImage: /images/uploads/Eutrofikasi-river potomac.jpg
+category: Biosfer
+tags:
+  - Agrikultur
+  - Lingkungan
+slug: biosfer/eutrofikasi
 ---
 
 Pertanian merupakan salah satu aspek yang paling vital dalam hidup kita. Seluruh bahan makanan yang kita makan setiap harinya berasal dari hasil pertanian. Namun, pertanian juga dapat berdampak buruk bagi lingkungan kita. Salah satunya adalah menyebabkan terjadinya eutrofikasi.

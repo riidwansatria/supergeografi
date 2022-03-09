@@ -2,10 +2,11 @@
 contentType: post
 title: "Garis Brandt: Kesenjangan Utara-Selatan"
 date: 2020-07-25
-tags: 
-  - "antroposfer"
-  - "ekonomi"
-featuredImage: "juliana-kozoski-IoQioGLrz3Y-unsplash.jpg"
+featuredImage: /images/uploads/Garis Brandt-header.jpg
+category: Antroposfer
+tags:
+  - Ekonomi
+slug: antroposfer/garis-brandt
 ---
 
 Pembangunan adalah proses perubahan yang memengaruhi kehidupan manusia, menjelaskan bagaimana standar kehidupan, kekayaan, dan kualitas hidup populasi global bervariasi di seluruh penjuru planet kita. Terdapat beberapa indikator pembangunan yang secara singkat dapat dibagi menjadi tiga kategori. Indikator kesehatan mengukur statistik seperti nutrisi dan harapan hidup, indikator sosial mencakup parameter lapangan kerja dan pendidikan sementara indikator ekonomi menjelaskan tentang angka kemiskinan dan PDB per kapita. Salah satu permodelan yang menjelaskan ketimpangan ekonomi negara-negara dunia adalah Garis Brandt pada Brandt Report tahun 1980.

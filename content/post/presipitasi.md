@@ -2,10 +2,11 @@
 contentType: post
 title: "Presipitasi: Proses Bergeron dan Collision-Coalescence"
 date: 2020-07-24
-tags: 
-  - "atmosfer"
-  - "meteorologi"
-featuredImage: "rain-drops-459451.jpg"
+featuredImage: /images/uploads/presipitasi-header.jpg
+category: Atmosfer
+tags:
+  - Meteorologi
+slug: atmosfer/presipitasi
 ---
 
 Presipitasi adalah segala bentuk air maupun es yang terbentuk di [atmosfer](https://supergeografi.com/geografi/struktur-dan-komposisi-atmosfer/) dan jatuh kembali ke Bumi. Air yang turun datang dalam berbagai bentuk, seperti _rain, sleet, dan snow._ Bersama dengan evaporasi dan kondensasi, presipitasi merupakan salah satu dari 3 unsur utama dari siklus air global.

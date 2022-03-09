@@ -1,11 +1,12 @@
 ---
 contentType: post
-title: "Ras Manusia"
+title: Ras Manusia
 date: 2020-07-01
-tags: 
-  - "antroposfer"
-  - "budaya"
-featuredImage: "hadzabe-4265604_1280.jpg"
+featuredImage: hadzabe-4265604_1280.jpg
+category: Antroposfer
+tags:
+  - Budaya
+slug: antroposfer/ras-manusia
 ---
 
 Identitas manusia adalah hal yang bersifat dinamis dan kadang pula sensitif sehingga tidak dapat dengan mudah dikategorikan. Upaya-upaya untuk mengklasifikasikan identitas manusia ke dalam kelompok-kelompok sering kali cenderung membesarkan perbedaan-perbedaan dalam masyarakat, terutama pada perbedaan yang terlihat. Salah satu upaya mengklasifikasikan identitas adalah konsep ras manusia.

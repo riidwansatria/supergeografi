@@ -1,8 +1,10 @@
 ---
 contentType: post
-title: "Pendekatan Geografi"
+title: Pendekatan Geografi
 date: 2020-06-29
-featuredImage: "usgs-IHdQVLwEIdk-unsplash.jpg"
+featuredImage: usgs-IHdQVLwEIdk-unsplash.jpg
+category: Uncategorized
+slug: uncategorized/pendekatan-geografi
 ---
 
 Seperti yang sudah kita ketahui, geografi merupakan ilmu yang cakupannya sangat luas karena membahas aspek fisik maupun aspek sosial, serta masalah-masalah yang terjadi di dalamnya. Oleh karena itu, metode-metode pendekatan [geografi](http://supergeografi.com/geografi/pengertian-geografi) digunakan untuk memahami berbagai gejala, permasalahan, serta fenomena geosfer yang terjadi di bumi. 

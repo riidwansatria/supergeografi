@@ -1,10 +1,11 @@
 ---
 contentType: post
-title: "Kumpulan Soal USGC"
+title: Kumpulan Soal USGC
 date: 2020-07-01
-tags: 
-  - "olimpiade"
-featuredImage: "Slide-4_3-3.png"
+featuredImage: Slide-4_3-3.png
+category: Olimpiade
+tags: []
+slug: olimpiade/kumpulan-soal-usgc
 ---
 
 Selain latihan soal-soal OSN, latihan soal dari kompetisi geografi negara lain juga bisa menjadi tambahan pengetahuan. USGC bisa dibilang seperti OSN Geografi-nya Amerika Serikat sehingga soal USGC juga cukup relevan untuk mengasah kemampuan untuk menghadapi OSN selanjutnya.

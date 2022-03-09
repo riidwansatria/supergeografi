@@ -1,11 +1,12 @@
 ---
 contentType: post
-title: "5 Samudra yang Menyusun Permukaan Bumi"
+title: 5 Samudra yang Menyusun Permukaan Bumi
 date: 2020-07-27
-tags: 
-  - "hidrosfer"
-  - "oseanografi"
-featuredImage: "Samudra-header.jpg"
+featuredImage: Samudra-header.jpg
+category: Hidrosfer
+tags:
+  - Oseanografi
+slug: hidrosfer/samudra
 ---
 
 Seperti yang kita ketahui, air menutupi lebih dari 71% permukaan bumi. Sebagian besar air yang menutupi permukaan bumi terbagi ke dalam 5 samudera yang kita kenal saat ini. Seluruh lautan yang ada di muka bumi ini sebenarnya merupakan suatu kesatuan yang saling terhubung antara satu sama lain. Namun, biasanya samudra yang ada di bumi kita ini dibagi menjadi 5 bagian berdasarkan lokasi geografisnya.

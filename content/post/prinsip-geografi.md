@@ -1,8 +1,10 @@
 ---
 contentType: post
-title: "Prinsip Geografi"
+title: Prinsip Geografi
 date: 2020-06-28
-featuredImage: "map-3483539_1280.jpg"
+featuredImage: map-3483539_1280.jpg
+category: Uncategorized
+slug: uncategorized/prinsip-geografi
 ---
 
 Geografi adalah ilmu yang membahas sifat-sifat fisik permukaan Bumi dan manusia yang tersebar dan hidup di atasnya. Geografi juga menjelaskan fenomena-fenomena interaksi manusia dengan manusia lainnya maupun lingkungan alamnya. Untuk itu diperlukan prinsip geografi yang digunakan untuk memahami karakteristik dan keterkaitan fenomena-fenomena tersebut.

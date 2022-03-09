@@ -2,10 +2,11 @@
 contentType: post
 title: "Model Clark-Fisher: Model Transisi Ekonomi"
 date: 2020-07-10
-tags: 
-  - "antroposfer"
-  - "ekonomi"
-featuredImage: "stock-exchange-board-210607.jpg"
+featuredImage: /images/uploads/model clark fisher-header.jpg
+category: Antroposfer
+tags:
+  - Ekonomi
+slug: antroposfer/model-clark-fisher
 ---
 
 Pada artikel sebelumnya kita telah membahas tentang [4 sektor industri](https://supergeografi.com/geografi/sektor-industri/) yang utama bagi sebuah negara. Keempat sektor industri tersebut adalah sektor industri primer, sekunder, tersier, dan kuartener. Distribusi tenaga kerja pada tiap-tiap sektor industri pada negara-negara di dunia pastinya berbeda-beda antara satu negara dengan negara lainnya. Beberapa negara mungkin penduduknya dominan bekerja pada sektor primer sedangkan yang lain dominan pada sektor sekunder maupun tersier. Distribusi tenaga kerja yang bekerja pada tiap sektor industri selalu berubah. Perubahan dan transisi ekonomi ini dapat diprediksi melalui model Clark-Fisher.

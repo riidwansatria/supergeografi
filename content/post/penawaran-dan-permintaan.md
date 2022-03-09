@@ -1,11 +1,12 @@
 ---
 contentType: post
-title: "Hukum Penawaran dan Permintaan"
+title: Hukum Penawaran dan Permintaan
 date: 2020-07-29
-tags: 
-  - "antroposfer"
-  - "ekonomi"
-featuredImage: "markus-spiske-5gGcn2PRrtc-unsplash.jpg"
+featuredImage: /images/uploads/penawaran dan permintaan-header.jpg
+category: Antroposfer
+tags:
+  - Ekonomi
+slug: antroposfer/penawaran-dan-permintaan
 ---
 
 Dalam ekonomi, penentuan harga dari suatu produk tidak serta merta didasari oleh harga modal yang digunakan untuk memproduksi produk-produk tersebut. Sistem ekonomi kapitalis yang banyak digunakan saat ini lebih didasari pada penawaran dan permintaan yang dilakukan oleh produsen dan konsumen. Hal ini tertuang dalam hukum penawaran dan permintaan.

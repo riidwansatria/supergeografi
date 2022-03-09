@@ -1,11 +1,12 @@
 ---
 contentType: post
-title: "Letak Indonesia"
+title: Letak Indonesia
 date: 2020-07-03
-tags: 
-  - "antroposfer"
-  - "regional"
-featuredImage: "view-of-city-during-golden-hour-2450221.jpg"
+featuredImage: view-of-city-during-golden-hour-2450221.jpg
+category: Antroposfer
+tags:
+  - Regional
+slug: antroposfer/letak-indonesia
 ---
 
 ![](images/uploads/image-1.png)

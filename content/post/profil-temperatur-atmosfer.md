@@ -1,11 +1,12 @@
 ---
 contentType: post
-title: "Profil Temperatur Atmosfer"
+title: Profil Temperatur Atmosfer
 date: 2020-07-09
-tags: 
-  - "atmosfer"
-  - "meteorologi"
-featuredImage: "aurora-lights-1693095.jpg"
+featuredImage: /images/uploads/profil temperatur atmosfer-header.jpg
+category: Atmosfer
+tags:
+  - Meteorologi
+slug: atmosfer/meteorologi
 ---
 
 Pernahkah kalian melihat gunung-gunung yang pada puncaknya sebagian tertutup salju walaupun gunung itu tidak berada pada tempat dengan [iklim](http://supergeografi.com/geografi/cuaca-dan-iklim) dingin? Lihat saja pegunungan Jayawijaya di Papua. Puncak gunung tersebut tertutup salju padahal berada di Indonesia yang sudah jelas-jelas beriklim tropis. Pada gunung tersebut, hanya puncaknya saja yang tertutup salju sedangkan dasarnya tidak. Dapat disimpulkan jika hal ini berhubungan dengan suhu yang semakin menurun seiring ketinggian sebuah tempat bertambah. Perubahan suhu ini dapat ditelaah melalui profil temperatur atmosfer.

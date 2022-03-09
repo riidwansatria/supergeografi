@@ -1,8 +1,10 @@
 ---
 contentType: post
-title: "10 Konsep Geografi"
+title: 10 Konsep Geografi
 date: 2020-06-26
-featuredImage: "abstract-asphalt-background-color-443422.jpg"
+featuredImage: abstract-asphalt-background-color-443422.jpg
+category: Uncategorized
+slug: uncategorized/konsep-geografi
 ---
 
 Geografi sebagai sebuah bentuk ilmu pengetahuan telah berkembang dengan sangat signifikan dalam sejarahnya yang bermula dari zaman Yunani kuno, hingga ke abad digital saat ini. Geografi menjadi ilmu yang berfokus pada studi tentang tempat dan hubungan antara manusia dengan lingkungannya. Dalam usaha untuk memahami geografi, terdapat beberapa konsep yang esensial dalam memahami geografi.  Menurut Ikatan Geograf Indonesia (IGI), terdapat 10 konsep geografi yang mendasar dalam ilmu geografi. Konsep-konsep tersebut adalah Lokasi, Jarak, Keterjangkauan, Pola, Morfologi, Aglomerasi, Interaksi, Nilai Kegunaan, Diferensiasi Area, dan Keterkaitan Keruangan.

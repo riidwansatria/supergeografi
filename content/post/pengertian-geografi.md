@@ -1,8 +1,10 @@
 ---
 contentType: post
-title: "Pengertian dan Ruang Lingkup Geografi"
+title: Pengertian dan Ruang Lingkup Geografi
 date: 2020-06-25
-featuredImage: "Webp.net-compress-image.jpg"
+featuredImage: Webp.net-compress-image.jpg
+category: Uncategorized
+slug: uncategorized/pengertian-geografi
 ---
 
 Mungkin sebagian orang menganggap geografi berasosiasi dengan pengetahuan tentang negara negara di dunia, bermain dengan peta, dan menghafal nama nama ibukota di dunia. Hal ini tidak sepenuhnya benar dan tidak sepenuhnya salah. Geografi memang benar erat kaitannya dengan pengetahuan tentang negara negara dan peta. Namun, ruang lingkup dari ilmu geografi jauh lebih luas dari itu dan pengertian geografi tersusun dari berbagai pemahaman.

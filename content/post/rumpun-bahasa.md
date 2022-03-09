@@ -1,11 +1,12 @@
 ---
 contentType: post
-title: "6 Rumpun Bahasa Terbesar Dunia"
+title: 6 Rumpun Bahasa Terbesar Dunia
 date: 2020-07-19
-tags: 
-  - "antroposfer"
-  - "budaya"
-featuredImage: "font-705667_1280.jpg"
+featuredImage: /images/uploads/rumpun bahasa-header.jpg
+category: Antroposfer
+tags:
+  - Budaya
+slug: antroposfer/rumpun-bahasa
 ---
 
 Saat ini, terdapat 7117 bahasa yang digunakan sehari-hari oleh berbagai masyarakat dunia dan terdapat 23 bahasa yang digunakan oleh lebih dari 50% populasi dunia. Namun, 40% dari bahasa tersebut saat ini berada dalam kondisi terancam punah. Dari banyaknya bahasa yang ada saat ini, banyak dari bahasa-bahasa tersebut memiliki unsur-unsur yang serupa dengan bahasa lainnya. Hal ini dikarenakan bahasa-bahasa tersebut termasuk ke dalam rumpun bahasa yang sama.

@@ -1,11 +1,12 @@
 ---
 contentType: post
-title: "Sejarah Pertanian"
+title: Sejarah Pertanian
 date: 2020-07-05
-tags: 
-  - "agrikultur"
-  - "biosfer"
-featuredImage: "green-tractor-175389.jpg"
+featuredImage: /images/uploads/sejarah pertanian-header.jpg
+category: Biosfer
+tags:
+  - Agrikultur
+slug: biosfer/sejarah-pertanian
 ---
 
 Pertanian, yang juga dikenal sebagai Agrikultur, adalah ilmu dan seni dalam mengolah lahan, menanam tanaman, dan memelihara hewan ternak. Umat manusia telah melewati jalan panjang dalam sejarah pertanian. Teknologi pertanian saat ini sudah berkembang dengan sangat jauh bila dibandingkan dengan saat pertama kali manusia mencoba untuk mengolah lahan.

@@ -1,11 +1,12 @@
 ---
 contentType: post
-title: "Sirkulasi Atmosfer"
+title: Sirkulasi Atmosfer
 date: 2020-07-04
-tags: 
-  - "atmosfer"
-  - "meteorologi"
-featuredImage: "above-atmosphere-clouds-flight-37728.jpg"
+featuredImage: /images/uploads/sirkulasi atmosfer-header.jpg
+category: Atmosfer
+tags:
+  - Meteorologi
+slug: atmosfer/sirkulasi-atmosfer
 ---
 
 Bumi, planet tempat kita tinggal saat ini, diselimuti oleh lapisan udara yang biasa disebut [atmosfer](http://supergeografi.com/geografi/struktur-dan-komposisi-atmosfer). Atmosfer menjadi salah satu faktor yang berperan penting dalam menunjang seluruh kehidupan di Bumi. Alih-alih selalu berada pada tempatnya, [atmosfer](http://supergeografi.com/geografi/struktur-dan-komposisi-atmosfer) terus menerus bergerak. Pergerakan ini disebut dengan sirkulasi atmosfer.

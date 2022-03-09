@@ -1,11 +1,12 @@
 ---
 contentType: post
-title: "Jet Stream"
+title: Jet Stream
 date: 2020-07-17
-tags: 
-  - "atmosfer"
-  - "meteorologi"
-featuredImage: "Jetstream-accross-usa.jpg"
+featuredImage: /images/uploads/jet stream-header.jpg
+category: Atmosfer
+tags:
+  - Meteorologi
+slug: atmosfer/jet-stream
 ---
 
 Penerbangan British Airways BA112 pada 9 Februari 2020 mencetak rekor baru dalam penerbangan Trans-Atlantik. Penerbangan antara New York dengan London yang normalnya berdurasi 7 jam 30 menit itu ditempuh British Airways BA112 hanya dalam waktu 4 jam 56 menit. Pemecahan rekor tersebut disebabkan oleh adanya suatu fenomena pada [atmosfer](http://supergeografi.com/geografi/struktur-dan-komposisi-atmosfer) yang disebut dengan _Jet stream._
