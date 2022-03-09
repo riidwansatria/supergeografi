@@ -1,7 +1,7 @@
 ---
 contentType: post
 title: "Klasifikasi Iklim Köppen"
-date: "2021-05-07T10:31:28.164Z"
+date: 2021-05-07
 featuredImage: "/images/uploads/klasifikasi iklim koppen-header, Pexels.jpg"
 category: Atmosfer
 tags: 

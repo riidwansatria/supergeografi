@@ -11,7 +11,7 @@ const navigation = [
   { name: 'Hidrosfer', to: '/hidrosfer', current: false },
   { name: 'Biosfer', to: '/biosfer', current: false },
   { name: 'Antroposfer', to: '/antroposfer', current: false },
-  { name: 'Olimpiade 🔥', to: '/#', current: true },
+  { name: 'Olimpiade 🔥', to: '/olimpiade', current: true },
 ]
 
 function classNames(...classes) {

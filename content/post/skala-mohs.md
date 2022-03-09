@@ -1,7 +1,7 @@
 ---
 contentType: post
 title: "Skala Mohs"
-date: "2021-04-28T22:40:32.169Z"
+date: 2021-04-28
 featuredImage: "/images/uploads/skala mohs-header, pexels.jpg"
 category: Litosfer
 tags: 

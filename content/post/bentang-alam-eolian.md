@@ -1,7 +1,7 @@
 ---
 contentType: post
 title: "Bentang Alam Eolian"
-date: "2021-04-26T10:31:28.164Z"
+date: 2021-04-26
 featuredImage: "/images/uploads/bentang alam eolian-rock pedestal, wikimedia.png"
 category: Litosfer
 tags: 

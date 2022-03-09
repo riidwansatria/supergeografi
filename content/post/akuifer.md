@@ -1,7 +1,7 @@
 ---
 contentType: post
 title: "Akuifer: Sumber Air yang Tersembunyi"
-date: 2020-07-13T12:37:08.713Z
+date: 2020-07-13
 category: Hidrosfer
 Tags: 
   - "geologi"

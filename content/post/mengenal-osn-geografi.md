@@ -1,7 +1,7 @@
 ---
 contentType: post
 title: Mengenal OSN Geografi
-date: 2020-05-24T12:37:08.713Z
+date: 2020-05-24
 featuredImage: /images/uploads/supergeografi-header.png
 category: Olimpiade
 slug: olimpiade/mengenal-osn-geografi

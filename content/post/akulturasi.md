@@ -1,11 +1,11 @@
 ---
 contentType: post
 title: "Akulturasi"
-date: "2020-07-11"
-categories: 
+date: 2020-07-11
+tags: 
   - "antroposfer"
   - "budaya"
-coverImage: "Akulturasi-masjid-kudus.jpg"
+featuredImage: "Akulturasi-masjid-kudus.jpg"
 ---
 
 Budaya merupakan suatu hal yang bersifat dinamis. Budaya selalu berkembang dan berubah. Dari waktu ke waktu, beberapa budaya muncul dan beberapa lagi punah ditelan zaman. Tiap individu ataupun kelompok pastinya memiliki budaya dan kebiasaannya masing-masing dan saat suatu individu/kelompok bermigrasi ke daerah lain yang asing, budaya dan kebiasaan mereka harus beradaptasi untuk menyesuaikan dengan lingkungan sekitar. Proses adaptasi ini disebut dengan akulturasi.
