@@ -57,7 +57,7 @@ const Categories = ({ data, location }) => {
         </div>
       </div>
 
-      <main className="grid grid-cols-4 sm:grid-cols-6 gap-8 max-w-6xl px-4 mx-auto">
+      <main className="grid grid-cols-4 sm:grid-cols-6 gap-8 max-w-6xl px-4 pb-8 mx-auto">
         {/* Articles list */}
         <div className="col-span-4">
           <ol style={{ listStyle: `none` }}>
