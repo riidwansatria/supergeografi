@@ -27,9 +27,13 @@ const Categories = ({ data, location }) => {
                 <div className="h-full"></div>
               </div>
             </div>
-            <img 
-            className="absolute col-span-2 w-full h-[32rem] z-0 mx-auto object-cover rounded-2xl"
-            src={category.featuredImage} alt={category.title}></img>
+
+            {category.featuredImage && (
+              <img 
+              className="absolute col-span-2 w-full h-[32rem] z-0 mx-auto object-cover rounded-2xl"
+              src={category.featuredImage} alt={category.title}></img>
+            )}
+            
         </header>
 
         <div className="border-y-2 border-gray-1 my-8">
