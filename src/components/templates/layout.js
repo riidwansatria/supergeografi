@@ -3,14 +3,11 @@ import Header from "../organisms/Header"
 import Footer from "../organisms/Footer"
 
 const Layout = ({ children }) => {
-
   return (
     <body className="bg-white">
-      <Header/>
-      <main className="py-6">
-        {children}
-      </main>
-      <Footer/>
+      <Header />
+      <main className="py-6">{children}</main>
+      <Footer />
     </body>
   )
 }
