@@ -41,7 +41,7 @@ const Page = ({ data, location }) => {
         </div>
       </div>
 
-      <main className="grid grid-cols-6 gap-8 max-w-6xl mx-auto my-8">
+      <main className="grid grid-cols-4 sm:grid-cols-6 gap-8 max-w-6xl mx-auto my-8">
         {/* Main content */}
         <section
           dangerouslySetInnerHTML={{ __html: page.html }}
@@ -50,7 +50,7 @@ const Page = ({ data, location }) => {
         />
 
         {/* Sidebar */}
-        <div className="col-span-2 grid grid-cols-1 gap-12 border-2 border-gray-1 rounded-xl h-fit p-4 ml-20">
+        <div className="col-span-2 hidden sm:grid grid-cols-1 gap-12 border-2 border-gray-1 rounded-xl h-fit p-4 ml-20">
           {/* Newsletter */}
           <div className="space-y-4">
             <h3 className="text-md font-bold uppercase tracking-widest">
