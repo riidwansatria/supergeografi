@@ -1,36 +1,43 @@
 ---
 contentType: page
 template: DefaultPage
-title: "Kumpulan Soal"
+title: "Kumpulan Soal Geografi"
 ---
 
-## Olimpiade Sains Nasional
-### Tingkat Kota/Kabupaten
-- [OSK2013](https://drive.google.com/drive/folders/19GGCLva2589b_dAIAxMhaJnREe1s8xLm?usp=sharing)
-- [OSK2014](https://drive.google.com/drive/folders/1U02Yhf87a_vcBgBHvxn-NByvDYN4KLh8?usp=sharing)
-- [OSK2015](https://drive.google.com/drive/folders/1XjrlHcnmnCUTV1MgSkCp8894QJwxah-b?usp=sharing)
-- [OSK2016](https://drive.google.com/drive/folders/17R15Ic_WPn5AhHiIyvayKh9FA58sjudk?usp=sharing)
-- [OSK2017](https://drive.google.com/drive/folders/1ez4XdC0nfFdGx9mgkd0F9Ur-793bpiFw?usp=sharing)
-- [OSK2018](https://drive.google.com/drive/folders/1UVyBNuSF2rdLCs2CsZMnnBZWSu-NQvkn?usp=sharing)
-- [OSK2019](https://drive.google.com/drive/folders/1G_BneTVrKgg_FI0eJ2vfJ8A7_iGhn6y5?usp=sharing)
-- [OSK2020](https://drive.google.com/drive/folders/1rrEmowtHCsjOf8IY6tU0Upb3B4pgt5v8?usp=sharing)
+Selain baca baca materi, latihan soal juga tidak kalah pentingnya dalam belajar geografi. Pada laman ini kalian dapat mendownload kumpulan soal geografi untuk pembelajaran kalian. Pada laman ini tersedia sejumlah latihan soal mulai dari kumpulan soal geografi di Olimpiade Sains Nasional sampai soal *International Geography Olympiad*. Kalian bisa mulai dari mengerjakan soal OSN, lalu belajar lebih jauh dengan mengerjakan soal soal iGeo. Bila dirasa kurang cukup, USGC (OSN Geografinya Amerika Serikat) bisa jadi tambahan yang bagus untuk berlatih menghadapi Olimpiade Sains Nasional.
 
-### Tingkat Provinsi
-- [OSP2013](https://drive.google.com/drive/folders/1tR8eCQcRNO6WrxtlXpSM4C2GczTwFm5u?usp=sharing)
-- [OSP2014](https://drive.google.com/drive/folders/1fJ5kpsRypj2xYuX6UfPJlN0-mFcq46VO?usp=sharing)
-- [OSP2015](https://drive.google.com/drive/folders/1br_ji26x4mGQlDiNT6yZXHO0Y7eM5bA8?usp=sharing)
-- [OSP2016](https://drive.google.com/drive/folders/1FvYmwZBH3MxkgBhH0FGX6iB4woYBPxc-?usp=sharing)
-- [OSP2017](https://drive.google.com/drive/folders/1_CkoxazYmjKh067qYKc4aTMBvPbRAKUe?usp=sharing)
-- OSP2018
-- [OSP2019](https://drive.google.com/drive/folders/1j2Egs7SSSmebXmbjKt_W8vZQu9Ity84U?usp=sharing)
-- OSP2020
+[Mengenal OSN Geografi](https://supergeografi.com/olimpiade/mengenal-osn-geografi) 
 
-### Tingkat Nasional
-- [OSN2013](https://drive.google.com/drive/folders/1KTTOmlJiVLdeC8dWgOJxmu1Hc4GIWeb0?usp=sharing)
-- [OSN2014](https://drive.google.com/drive/folders/1OFFO0lbKcn6xevZXrwgX8G-ZxNmBOq3e?usp=sharing)
-- [OSN2015](https://drive.google.com/drive/folders/1_2etNwj1A95oediFiVMyMJno3Vxivoiu?usp=sharing)
-- [OSN2016](https://drive.google.com/drive/folders/1H_-IjnrFs5oArOBtFp2eOLK1w_kwTaJu?usp=sharing)
-- OSN2017
-- OSN2018
-- OSN2019
-- OSN2020
+## Kumpulan Soal Olimpiade Sains Nasional
+
+**Olimpiade Sains Nasional** atau biasa disingkat **OSN** adalah event kompetisi sains tahunan untuk siswa siswi pada jenjang SD, SMP, dan SMA yang diselenggarakan oleh Pusat Prestasi Nasional. OSN bisa dianggap perlombaan paling prestius buat pelajar Indonesia karena merupakan salah satu event resmi dari Kementrian Pendidikan dan Kebudayaan.
+
+OSN terdiri dari 9 bidang lomba, yaitu Matematika, Fisika, Biologi, Kimia, Astronomi, Komputer, Ekonomi, Kebumian, dan Geografi. Pesertanya diseleksi dari tingkat kota sampai tingkat nasional untuk dipilih menjadi tim yang nantinya akan mewakili Indonesia di tingkat internasional. Untuk bidang geografi, para medalis akan diseleksi lagi untuk menjadi Tim Olimpiade Geografi Indonesia (TOGI).
+
+[OSN](https://supergeografi.com/olimpiade/kumpulan-soal-olimipiade-sains-nasional/)
+
+---
+
+## Kumpulan Soal International Geography Olympiad
+
+**International Geography Olympiad** atau **iGeo** adalah kompetisi geografi internasional tahunan untuk siswa berusia 16 sampai 19 tahun. Pesertanya merupakan siswa siswi terbaik dari seluruh dunia yang dipilih untuk mewakili negara mereka. iGeo merupakan salah satu dari 12 olimpiade sains internasional. Para medalis OSN berhak mengikuti pelatihan nasional yang akan memilih kontingen Indonesia di iGeo.
+
+[iGeo](https://supergeografi.com/olimpiade/kumpulan-soal-igeo/)
+
+---
+
+## Kumpulan Soal United States Geography Championships
+
+United States Geography Championships atau biasa disingkat USGC adalah kompetisi geografi tingkat nasional untuk siswa sekolah dasar dan menengah di Amerika Serikat. USGC pertama kali diadakan tahun 2013 dengan nama United States Geography Olympiad (USGC). Pemenang USGC tingkat nasional nantinya akan mewakili Amerika Serikat di iGeo selanjutnya.
+
+[USGC](https://supergeografi.com/olimpiade/kumpulan-soal-usgc/)
+
+---
+
+## Referensi
+
+- [https://en.wikipedia.org/wiki/Indonesia_National_Science_Olympiad](https://en.wikipedia.org/wiki/Indonesia_National_Science_Olympiad)
+- [http://olimpiade.psma.kemdikbud.go.id/index/](http://olimpiade.psma.kemdikbud.go.id/index/)
+- [http://www.geoolympiad.org/](http://www.geoolympiad.org/)
+- [https://www.iacompetitions.com/](https://www.iacompetitions.com/)
+- [https://geographychampionships.com/](https://geographychampionships.com/)

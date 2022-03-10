@@ -1,7 +1,9 @@
 ---
 contentType: page
-template: DefaultPage
+template: TentangKamiPage
 title: "Tentang Supergeografi"
 ---
 
-## Hello world
+Telusuri lebih jauh tentang manusia, lingkungannya, dan bumi yang kita pijak beserta bentang alamnya bersama Supergeografi!
+
+---
