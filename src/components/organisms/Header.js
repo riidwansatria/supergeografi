@@ -1,17 +1,23 @@
 import React from "react"
+import { Fragment } from 'react'
 import { Link } from "gatsby"
-import { Disclosure } from "@headlessui/react"
+import { Disclosure, Popover, Transition } from "@headlessui/react"
 import { MenuIcon, XIcon } from "@heroicons/react/outline"
 import logo from "/src/images/logo.png"
 import ContactIcons from "/src/components/atoms/contactIcons.js"
 
 const navigation = [
-  { name: "Litosfer", to: "/litosfer", current: false },
-  { name: "Atmosfer", to: "/atmosfer", current: false },
-  { name: "Hidrosfer", to: "/hidrosfer", current: false },
-  { name: "Biosfer", to: "/biosfer", current: false },
-  { name: "Antroposfer", to: "/antroposfer", current: false },
-  { name: "Olimpiade 🔥", to: "/olimpiade", current: true },
+  { name: "Litosfer", to: "/litosfer/", current: false },
+  { name: "Atmosfer", to: "/atmosfer/", current: false },
+  { name: "Hidrosfer", to: "/hidrosfer/", current: false },
+  { name: "Biosfer", to: "/biosfer/", current: false },
+  { name: "Antroposfer", to: "/antroposfer/", current: false },
+]
+
+const navigationOlimpiade = [
+  { name: "Mengenal OSN Geografi", to: "/olimpiade/mengenal-osn-geografi/" },
+  { name: "Materi OSN", to: "/materi/" },
+  { name: "Kumpulan Soal", to: "/kumpulan-soal/" },
 ]
 
 function classNames(...classes) {
@@ -67,7 +73,7 @@ export default function Example() {
 
               {/* Lower header*/}
               <div className="hidden sm:flex sm:border-b-2 border-gray-1 justify-center">
-                <div className="flex flex-1 max-w-6xl sm:justify-end align-middle py-1">
+                <div className="flex flex-1 max-w-6xl sm:justify-end align-middle py-1 space-x-2">
                   <div className="flex space-x-2">
                     {navigation.map(item => (
                       <Link
@@ -85,6 +91,45 @@ export default function Example() {
                       </Link>
                     ))}
                   </div>
+                  <Popover className="relative">
+                    {({ open }) => (
+                      <>
+                        <Popover.Button
+                          className="flex text-primary hover:bg-gray-1 px-1 py-1 my-auto rounded-md text-sm uppercase items-center font-semibold tracking-wider"
+                        >
+                          <span>Olimpiade 🔥</span>
+                        </Popover.Button>
+
+                        <Transition
+                          as={Fragment}
+                          enter="transition ease-out duration-200"
+                          enterFrom="opacity-0 translate-y-1"
+                          enterTo="opacity-100 translate-y-0"
+                          leave="transition ease-in duration-150"
+                          leaveFrom="opacity-100 translate-y-0"
+                          leaveTo="opacity-0 translate-y-1"
+                        >
+                          <Popover.Panel className="absolute z-50 -ml-14 mt-3 transform px-2 sm:px-0">
+                            <div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden">
+                              <div className="relative grid gap-2 bg-white p-2">
+                                {navigationOlimpiade.map((item) => (
+                                  <Link
+                                    key={item.name}
+                                    to={item.to}
+                                    className="p-1 flex items-start rounded-lg hover:bg-gray-50"
+                                  >
+                                    <div className="">
+                                      <p className="text-base font-medium text-gray-7">{item.name}</p>
+                                    </div>
+                                  </Link>
+                                ))}
+                              </div>
+                            </div>
+                          </Popover.Panel>
+                        </Transition>
+                      </>
+                    )}
+                  </Popover>
                 </div>
               </div>
             </div>
