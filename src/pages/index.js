@@ -10,9 +10,6 @@ import HighlightOSN from "../components/organisms/HighlightOSN"
 
 import socialMedia from "../data/social-media"
 
-import Search from "../components/search"
-const searchIndices = [{ name: `Pages`, title: `Pages` }]
-
 const _ = require("lodash")
 
 const navigation = [
@@ -186,8 +183,6 @@ const BlogIndex = ({ data, location }) => {
         </div>
 
         <HighlightOSN />
-
-        <Search indices={searchIndices} />
 
         {/* Categories section */}
         <div className="grid grid-cols-4 sm:grid-cols-6 max-w-6xl mx-auto gap-8 p-4">
