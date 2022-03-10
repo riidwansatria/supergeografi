@@ -2,7 +2,7 @@ import React from "react"
 import { Fragment } from 'react'
 import { Link } from "gatsby"
 import { Disclosure, Popover, Transition } from "@headlessui/react"
-import { MenuIcon, XIcon } from "@heroicons/react/outline"
+import { MenuIcon, XIcon, SearchIcon } from "@heroicons/react/outline"
 import logo from "/src/images/logo.png"
 import ContactIcons from "/src/components/atoms/contactIcons.js"
 
@@ -58,10 +58,18 @@ export default function Example() {
                   </div>
 
                   {/* Search bar */}
-                  <div className="bg-black"></div>
+                  <div className="flex flex-1">
+                    <div className="flex flex-1 px-4 rounded-xl">
+                      <Link className="w-full" to="/cari/">
+                        <button className="flex items-center justify-between w-full bg-gray-2 text-gray-4 text-sm sm:text-md text-left font-bold py-2 px-4 rounded-lg">
+                          <p className="flex">Cari materi... </p>
+                          <SearchIcon className="flex h-4 w-4"/>
+                        </button></Link>
+                    </div>
+                  </div>
 
                   {/* Social buttons */}
-                  <div className="flex flex-1 object-left">
+                  <div className="flex flex-none object-left">
                     <div className="hidden sm:flex sm:flex-grow sm:ml-6">
                       <div className="flex flex-grow my-auto">
                         <ContactIcons />
