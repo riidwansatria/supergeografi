@@ -174,7 +174,7 @@ const BlogPostTemplate = ({ data, location }) => {
             {previous && (
               <Link to={previous.fields.slug} rel="prev">
                 <div className="flex justify-start items-center gap-4 sm:border-r border-gray-3 sm:py-10 sm:px-4">
-                  <div className="hidden">
+                  <div className="hidden sm:block">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="53"
@@ -209,7 +209,7 @@ const BlogPostTemplate = ({ data, location }) => {
                       {next.frontmatter.title}
                     </p>
                   </div>
-                  <div className="hidden">
+                  <div className="hidden sm:block">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="53"

@@ -126,7 +126,7 @@ module.exports = {
             // if `string` is used, it will be used to create RegExp and then test if pathname of
             // current page satisfied this regular expression;
             // if not provided or `undefined`, all pages will have feed reference inserted
-            match: "^/blog/",
+            match: "^/post/",
             // optional configuration to specify external rss feed, such as feedburner
             link: "https://feeds.feedburner.com/gatsby/blog",
           },
@@ -150,13 +150,13 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Gatsby Starter Blog`,
-        short_name: `GatsbyJS`,
+        name: `Supergeografi`,
+        short_name: `Supergeografi`,
         start_url: `/`,
         background_color: `#ffffff`,
-        theme_color: `#663399`,
+        theme_color: `#ffffff`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `src/images/icon-circle-white.png`, // This path is relative to the root of the site.
       },
     },
     `gatsby-plugin-netlify`,
