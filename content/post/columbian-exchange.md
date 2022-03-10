@@ -9,10 +9,9 @@ tags:
   - Budaya
 slug: biosfer/columbian-exchange
 ---
+Mendaratnya Christopher Columbus di Benua Baru, Amerika, menandai bertemunya 2 dunia biologis yang berbeda. Benua Amerika sebelumnya terisolasi dari Afro-Eurasia kembali terhubung setelah terpisahkan akibat pergerakan [lempeng bumi](https://supergeografi.com/litosfer/struktur-lapisan-bumi/). Selama puluhan juta tahun lamanya, organisme-organisme berevolusi secara terisolir antara satu sama lain. Setelah pendaratan Columbus, hewan, tumbuhan, dan bakteri dari dua dunia ini mulai bercampur kembali dalam sebuah proses yang kita sebut dengan ***Columbian Exchange**.*
 
-Mendaratnya Christopher Columbus di Benua Baru, Amerika, menandai bertemunya 2 dunia biologis yang berbeda. Benua Amerika sebelumnya terisolasi dari Afro-Eurasia kembali terhubung setelah terpisahkan akibat pergerakan [lempeng bumi](https://supergeografi.com/litosfer/struktur-lapisan-bumi/). Selama puluhan juta tahun lamanya, organisme-organisme berevolusi secara terisolir antara satu sama lain. Setelah pendaratan Columbus, hewan, tumbuhan, dan bakteri dari dua dunia ini mulai bercampur kembali dalam sebuah proses yang kita sebut dengan _**Columbian Exchange**._
-
-Istilah _Columbian Exchange_ pertama kali digunakan tahun 1972 oleh sejarawan Amerika Serikat bernama Alfred W. Crosby. Ia menggunakan istilah ini pada bukunya yang berjudul **_The Columbian Exchange_** untuk menjelaskan proses pertukaran antarbenua ini. _Columbian Exchange_ merupakan penyebaran dan pertukaran secara luas tumbuhan, hewan, budaya, populasi manusia, teknologi, penyakit, dan bahkan gagasan antara Amerika dan Dunia Lama (Afro-Eurasia) pada abad ke-15 dan ke-16. Percampuran ini mengubah kondisi biologis di kedua dunia dan bahkan mengubah tatanan hidup manusia hidup hingga saat ini.
+Istilah *Columbian Exchange* pertama kali digunakan tahun 1972 oleh sejarawan Amerika Serikat bernama Alfred W. Crosby. Ia menggunakan istilah ini pada bukunya yang berjudul ***The Columbian Exchange*** untuk menjelaskan proses pertukaran antarbenua ini. *Columbian Exchange* merupakan penyebaran dan pertukaran secara luas tumbuhan, hewan, budaya, populasi manusia, teknologi, penyakit, dan bahkan gagasan antara Amerika dan Dunia Lama (Afro-Eurasia) pada abad ke-15 dan ke-16. Percampuran ini mengubah kondisi biologis di kedua dunia dan bahkan mengubah tatanan hidup manusia hidup hingga saat ini.
 
 ## Pelayaran Christopher Columbus
 
@@ -20,17 +19,17 @@ Pada abad ke-15 hingga ke-16, para pemimpin dari beberapa bangsa Eropa mulai mem
 
 Berbeda dengan penjelajahan Portugis sebelumnya, Columbus berniat untuk mencapai Asia dengan berlayar ke arah barat sebagai gantinya. Pada 1492, Raja Ferdinand dan Ratu Isabella dan Spanyol bersedia untuk membiayai penjelajahan Christopher Columbus. Namun, alih-alih mencapai Asia, armada Columbus mencapai benua Amerika.
 
-![Rute pelayaran Columbus](images/uploads/columbian-exchange-columbus-voyages-Wikimedia.png)
+![Rute pelayaran Columbus](https://res.cloudinary.com/supergeografi/image/upload/v1646915503/columbian_exchange-columbus_voyages_Wikimedia_r1vbqq.png)
 
 Sumber: Wikimedia Commons
 
-Pelayaran _Columbus_ menandai awal dari penjelajahan dan kolonialisme selama berabad-abad di Amerika Utara dan Selatan. Dampak utama dari perjalanan Columbus adalah pertukaran komoditas antara Dunia Lama (Eropa) dan Dunia Baru (Amerika). Berbagai komoditas dari Eropa dibawa ke benua Amerika oleh para penjelajah awal dan sebaliknya, berbagai komoditas dari Amerika juga dibawa pulang ke daerah asal mereka.
+Pelayaran *Columbus* menandai awal dari penjelajahan dan kolonialisme selama berabad-abad di Amerika Utara dan Selatan. Dampak utama dari perjalanan Columbus adalah pertukaran komoditas antara Dunia Lama (Eropa) dan Dunia Baru (Amerika). Berbagai komoditas dari Eropa dibawa ke benua Amerika oleh para penjelajah awal dan sebaliknya, berbagai komoditas dari Amerika juga dibawa pulang ke daerah asal mereka.
 
 ## Pertukaran Spesies Hewan dan Tumbuhan
 
 Pertukaran spesies-spesies hewan dan tumbuhan yang terjadi mulai masa ini berpengaruh sangat besar pada pola hidup manusia kedepannya, baik di benua baru Amerika maupun di Afro-Eurasia. Kontak antara dua wilayah ini menyebabkan pertukaran berbagai komoditas hasil bumi dan ternak baru yang juga berkontribusi meningkatkan populasi manusia di kedua benua.
 
-![Peta dampak columbian exchange](images/uploads/columbian-exchange-transfer-map-openstax.png)
+![Peta dampak columbian exchange](https://res.cloudinary.com/supergeografi/image/upload/v1646915501/columbian_exchange-transfer_map_openstax_uqg2lf.png)
 
 Sumber: OpenStax
 
@@ -38,21 +37,21 @@ Berbagai komoditas flora dan fauna disebarluaskan antara Amerika dan Afro-Eurasi
 
 ### Tanaman Pangan
 
-Perdagangan komoditas baru akibat _columbian exchange_ menyebabkan sejumlah tanaman asli Amerika telah menyebar ke seluruh dunia. Hingga abad ke-15, budidaya kentang hanya dikenal di Amerika Selatan. Pada abad ke-19, komoditas kentang sudah dibudidayakan dan dikonsumsi secara luas di Eropa dan telah menjadi komoditas penting di India dan Amerika Utara. Kentang akhirnya menjadi makanan pokok yang penting di sebagian besar wilayah Eropa, berkontribusi pada sekitar 25% pertumbuhan populasi di Afro-Eurasia antara tahun 1700 dan 1900.
+Perdagangan komoditas baru akibat *columbian exchange* menyebabkan sejumlah tanaman asli Amerika telah menyebar ke seluruh dunia. Hingga abad ke-15, budidaya kentang hanya dikenal di Amerika Selatan. Pada abad ke-19, komoditas kentang sudah dibudidayakan dan dikonsumsi secara luas di Eropa dan telah menjadi komoditas penting di India dan Amerika Utara. Kentang akhirnya menjadi makanan pokok yang penting di sebagian besar wilayah Eropa, berkontribusi pada sekitar 25% pertumbuhan populasi di Afro-Eurasia antara tahun 1700 dan 1900.
 
 Hal serupa juga terjadi pada komoditas lainnya. Jagung dan singkong yang diperkenalkan oleh Portugis dari Amerika Selatan pada abad ke-16, secara bertahap menggantikan sorgum dan millet sebagai makanan pokok masyarakat Afrika. Pada abad ke-16 bangsa Spanyol juga memperkenalkan tanaman jagung dan ubi jalar ke Asia yang berkontribusi besar pada pertumbuhan populasi di Asia.
 
 ### Cash Crop
 
-_Columbian exchange_ menjadi babak baru dari perdagangan komoditas-komoditas bernilai jual tinggi yang biasa disebut dengan _**cash crop**._ Tebu dan tembakau merupakan dua komoditas terpenting di perdagangan Atlantik pada masa itu.
+*Columbian exchange* menjadi babak baru dari perdagangan komoditas-komoditas bernilai jual tinggi yang biasa disebut dengan ***cash crop**.* Tebu dan tembakau merupakan dua komoditas terpenting di perdagangan Atlantik pada masa itu.
 
 Pada era kolonial, perdagangan gula bisa dibilang sama pentingnya dengan minyak bumi pada perdagangan global saat ini. Bangsa-bangsa Eropa saling berlomba-lomba untuk membangun perkebunan gula di benua Amerika dan bahkan saling berperang untuk mengontrol produksinya. Columbus membawa komoditas gula ke Hispaniola pada tahun 1493, dan tanaman baru tersebut tumbuh subur disana. Selama berabad-abad berikutnya, kepulauan-kepulauan Karibia dan sebagian besar wilayah tropis lainnya menjadi pusat produksi gula yang juga meningkatnya permintaan akan tenaga kerja budak Afrika.
 
-![Segitiga atlantik](images/uploads/columbian-exchange-tringular-trade-Wikimedia.png)
+![Segitiga atlantik](https://res.cloudinary.com/supergeografi/image/upload/v1646915505/columbian_exchange-tringular_trade_Wikimedia_s9yejh.png)
 
 Sumber: Wikimedia Commons
 
-Tembakau juga menjadi komoditas _cash crop_ penting bagi perdagangan lintas Atlantik pada masa ini. Masyarakat Eropa sebelumnya tidak mengenal tembakau sampai tahun 1492. Pada awalnya, para penjelajah Spanyol awal memiliki stigma negatif terhadap tembakau. Penggunaan tembakau oleh penduduk asli dianggap bukti dari kebiadaban mereka.
+Tembakau juga menjadi komoditas *cash crop* penting bagi perdagangan lintas Atlantik pada masa ini. Masyarakat Eropa sebelumnya tidak mengenal tembakau sampai tahun 1492. Pada awalnya, para penjelajah Spanyol awal memiliki stigma negatif terhadap tembakau. Penggunaan tembakau oleh penduduk asli dianggap bukti dari kebiadaban mereka.
 
 Penduduk asli Amerika telah menanam tembakau untuk tujuan pengobatan dan ritual selama berabad-abad sebelum bersinggungan dengan bangsa Eropa. Mereka percaya bahwa tembakau dapat meningkatkan konsentrasi dan meningkatkan kebijaksanaan. Bagi beberapa orang, tembakau bahkan menjadi bagian dari spiritualitas mereka.
 
@@ -76,27 +75,27 @@ Penyebaran penyakit tidak hanya berjalan satu arah, salah satu penyakit asli Ame
 
 ## Migrasi Pemukim Pendatang dan Budak
 
-![Peta koloni amerika utara](images/uploads/columbian-exchange-american-colonization-Wikimedia.png)
+![Peta koloni amerika utara](https://res.cloudinary.com/supergeografi/image/upload/v1646915499/columbian_exchange-american_colonization_Wikimedia_tvggvr.png)
 
 Sumber: Wikimedia Commons
 
-[Migrasi](https://supergeografi.com/antroposfer/penyebab-migrasi/) manusia menjadi faktor yang juga dominan dalam _columbian exchange._ Kedatangan penjelajah Eropa dan pendirian koloni-koloni di Dunia Baru membuat populasi penduduk asli Amerika semakin terdesak. Benua Amerika menjadi arena perebutan kekuasaan bagi kerajaan-kerajaan Eropa dan koloni-koloni mereka. Berbagai perang, pemberontakan, dan revolusi kemudian membentuk sejarah benua Amerika Utara dan Selatan saat ini. Hal ini dapat dilihat dari masyarakat benua Amerika yang sebagian besar penduduknya merupakan keturunan Eropa ataupun ras campuran bangsa Eropa.
+[Migrasi](https://supergeografi.com/antroposfer/penyebab-migrasi/) manusia menjadi faktor yang juga dominan dalam *columbian exchange.* Kedatangan penjelajah Eropa dan pendirian koloni-koloni di Dunia Baru membuat populasi penduduk asli Amerika semakin terdesak. Benua Amerika menjadi arena perebutan kekuasaan bagi kerajaan-kerajaan Eropa dan koloni-koloni mereka. Berbagai perang, pemberontakan, dan revolusi kemudian membentuk sejarah benua Amerika Utara dan Selatan saat ini. Hal ini dapat dilihat dari masyarakat benua Amerika yang sebagian besar penduduknya merupakan keturunan Eropa ataupun ras campuran bangsa Eropa.
 
 ## Pertukaran Budaya
 
-![penggunaan kuda oleh masyarakat pribumi sebagai dampak columbian exchange](images/uploads/columbian-exchange-native-american-horseback-riding-Pixabay-1024x785.jpg)
+![penggunaan kuda oleh masyarakat pribumi sebagai dampak columbian exchange](https://res.cloudinary.com/supergeografi/image/upload/v1646915516/columbian_exchange-native_american_horseback_riding_Pixabay_lpmjvk.jpg)
 
 Sumber: Pixabay
 
-Dampak lain dari perpindahan penduduk yang terjadi antara _Old World_ dan _New World_ adalah pertukaran [budaya](https://supergeografi.com/antroposfer/budaya/). Budaya masyarakat Eropa sedikit demi sedikit mempengaruhi cara hidup masyarakat pribumi Amerika. Sebagai contoh, konsep kepemilikan pribadi, konsep monogami, peran perempuan dan anak dalam sistem sosial, dan perbudakan mulai mempengaruhi cara hidup mereka. Pada arah sebaliknya, budaya merokok dan mengonsumsi cokelat mempengaruhi cara hidup masyarakat Eurasia dan Afrika.
+Dampak lain dari perpindahan penduduk yang terjadi antara *Old World* dan *New World* adalah pertukaran [budaya](https://supergeografi.com/antroposfer/budaya/). Budaya masyarakat Eropa sedikit demi sedikit mempengaruhi cara hidup masyarakat pribumi Amerika. Sebagai contoh, konsep kepemilikan pribadi, konsep monogami, peran perempuan dan anak dalam sistem sosial, dan perbudakan mulai mempengaruhi cara hidup mereka. Pada arah sebaliknya, budaya merokok dan mengonsumsi cokelat mempengaruhi cara hidup masyarakat Eurasia dan Afrika.
 
-* * *
+- - -
 
-Referensi:  
-_New Worlds in the Americas: Labor, Commerce, and the Columbian Exchange._ [https://openstax.org/books/us-history/pages/2-4-new-worlds-in-the-americas-labor-commerce-and-the-columbian-exchange](https://openstax.org/books/us-history/pages/2-4-new-worlds-in-the-americas-labor-commerce-and-the-columbian-exchange)  
-_Columbian Exchange_. [https://billofrightsinstitute.org/essays/columbian-exchange](https://billofrightsinstitute.org/essays/columbian-exchange)  
-_The Columbian Exchange._ [https://ap.gilderlehrman.org/essay/columbian-exchange](https://ap.gilderlehrman.org/essay/columbian-exchange)  
-_Columbian Exchange._ [https://www.britannica.com/event/Columbian-exchange](https://www.britannica.com/event/Columbian-exchange)  
-_Christopher Columbus._ [https://www.history.com/topics/exploration/christopher-columbus](https://www.history.com/topics/exploration/christopher-columbus)
+Referensi:\
+*New Worlds in the Americas: Labor, Commerce, and the Columbian Exchange.* <https://openstax.org/books/us-history/pages/2-4-new-worlds-in-the-americas-labor-commerce-and-the-columbian-exchange>\
+*Columbian Exchange*. <https://billofrightsinstitute.org/essays/columbian-exchange>\
+*The Columbian Exchange.* <https://ap.gilderlehrman.org/essay/columbian-exchange>\
+*Columbian Exchange.* <https://www.britannica.com/event/Columbian-exchange>\
+*Christopher Columbus.* <https://www.history.com/topics/exploration/christopher-columbus>
 
 Foto: Wikimedia Commons

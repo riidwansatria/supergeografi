@@ -8,7 +8,6 @@ tags:
   - Geomorfologi
 slug: litosfer/bentang-alam-eolian
 ---
-
 Angin juga merupakan salah satu faktor yang dapat menyebabkan perubahan geomorfologi bumi. Hembusan angin dan hubungannya dengan partikel-partikel sedimen di permukaan sangat mempengaruhi kenampakan alam di wilayah-wilayah kering dunia. Pada banyak wilayah kering dunia, aliran angin yang berhembus mampu mengangkut partikel sedimen hingga yang sangat jarak jauh. Geomorfologi eolian merupakan cabang geomorfologi yang berkaitan dengan bentukan-bentukan lahan pada area dengan angin sebagai pengaruh utamanya. 
 
 ## Mengenal Bentang Alam Eolian
@@ -19,7 +18,7 @@ Geomorfologi eolian mempengaruhi mayoritas daerah arid dan semi-arid di [iklim](
 
 ## Gurun
 
-![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/9f13e6ca-ac84-4ece-8605-df956e7bb228/bentang_alam_eolian-peta_persebaran_gurun.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/9f13e6ca-ac84-4ece-8605-df956e7bb228/bentang_alam_eolian-peta_persebaran_gurun.png)
+![Gurun](https://res.cloudinary.com/supergeografi/image/upload/v1646915513/bentang_alam_eolian-peta_persebaran_gurun_wikimedia_ucrtgc.png)
 
 Sumber: Wikimedia Commons
 
@@ -67,7 +66,7 @@ Melalui proses-proses erosional yang mengikis permukaan lahan, angin membentuk b
 
 ### Cekungan Deflasi
 
-![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/a123e4d1-da36-4806-a6d3-3b7b6c864bb2/bentang_alam_eolian-cekungan_deflasi_Flickr.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/a123e4d1-da36-4806-a6d3-3b7b6c864bb2/bentang_alam_eolian-cekungan_deflasi_Flickr.png)
+![Cekungan deflasi](https://res.cloudinary.com/supergeografi/image/upload/v1646915508/bentang_alam_eolian-cekungan_deflasi_Flickr_prlwnw.jpg)
 
 Sumber: flickr
 
@@ -75,7 +74,7 @@ Depresi tanah gurun, yang dikenal sebagai *deflation hollow* terbentuk di bebera
 
 ### *Lag Gravel* dan *Desert Pavement*
 
-![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/1ccd8491-2136-4b31-b977-989a4e773544/bentang_alam_eolian-desert_pavement_wikimedia.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/1ccd8491-2136-4b31-b977-989a4e773544/bentang_alam_eolian-desert_pavement_wikimedia.png)
+![Lag gravel](https://res.cloudinary.com/supergeografi/image/upload/v1646915510/bentang_alam_eolian-desert_pavement_wikimedia_rp3znv.jpg)
 
 Sumber: Wikimedia Commons
 
@@ -83,7 +82,7 @@ Seiring angin membawa partikel sedimen yang berukuran lebih kecil/halus dari pem
 
 ### *Desert Varnish*
 
-![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/122b5963-e093-44a2-b491-d6dd63499ce6/bentang_alam_eolian-desert_varnish_wikimedia.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/122b5963-e093-44a2-b491-d6dd63499ce6/bentang_alam_eolian-desert_varnish_wikimedia.png)
+![Desert varnish](https://res.cloudinary.com/supergeografi/image/upload/v1646915512/bentang_alam_eolian-desert_varnish_wikimedia_uizkpw.jpg)
 
 Sumber: Wikimedia Commons
 
@@ -91,7 +90,7 @@ Batuan yang tak terlindungi di daerah gurun sering kali membentuk lapisan coklat
 
 ### Ventifact
 
-![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/d01bc947-f299-4245-a8e9-2592418d3d60/bentang_alam_eolian-ventifact_sandatlas.org.jpg](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/d01bc947-f299-4245-a8e9-2592418d3d60/bentang_alam_eolian-ventifact_sandatlas.org.jpg)
+![Ventifact](https://res.cloudinary.com/supergeografi/image/upload/v1646915541/bentang_alam_eolian-ventifact_sandatlas.org_mwtwkk.jpg)
 
 Sumber: sandatlas
 
@@ -99,7 +98,7 @@ Ventifact diciptakan oleh *sandblasting* pada permukaan batuan yang terbuka. Pas
 
 ### Yardang
 
-![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/f59fff43-5ed4-43d9-8270-3b3c49bc427d/bentang_alam_eolian-yardang_american_geophysical_union.jpg](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/f59fff43-5ed4-43d9-8270-3b3c49bc427d/bentang_alam_eolian-yardang_american_geophysical_union.jpg)
+![Yardang](https://res.cloudinary.com/supergeografi/image/upload/v1646915538/bentang_alam_eolian-yardang_american_geophysical_union_eps1dz.jpg)
 
 Sumber: American Geophysical Union
 
@@ -107,7 +106,7 @@ Selain menciptakan ventifact, erosi oleh aliran angin juga menghasilkan fitur gu
 
 ### *Rock Pedestal*
 
-![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/3fb8290e-251b-431b-876b-345a67abbcbd/bentang_alam_eolian-rock_pedestal_wikimedia.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/3fb8290e-251b-431b-876b-345a67abbcbd/bentang_alam_eolian-rock_pedestal_wikimedia.png)
+![Rock pedestal](https://res.cloudinary.com/supergeografi/image/upload/v1646915538/bentang_alam_eolian-rock_pedestal_wikimedia_zlsfwq.jpg)
 
 Sumber: Wikimedia Commons
 
@@ -121,7 +120,7 @@ Transportasi material-material sedimen oleh angin juga ditentukan oleh karakteri
 
 [Gumuk Pasir](https://supergeografi.com/litosfer/jenis-gumuk-pasir/) atau ***sand dunes*** merupakan sebuah bentukan lahan berupa gundukan pasir yang terbentuk akibat pengaruh angin, biasanya di daerah pantai ataupun gurun. Gumuk pasir dapat ditemukan dekat dengan daerah sumbernya karena aliran angin tidak dapat membawa partikel pasir lebih jauh.
 
-![https://supergeografi.com/wp-content/uploads/2020/08/image-15.jpeg](https://supergeografi.com/wp-content/uploads/2020/08/image-15.jpeg)
+![Gumuk pasir](https://res.cloudinary.com/supergeografi/image/upload/v1646917115/bentang_alam_eolian-gumuk_pasir.jpg)
 
 Sumber: Good News From Indonesia
 
@@ -129,7 +128,7 @@ Gumuk pasir memiliki bentuk geometris yang beragam tergantung oleh seberapa bany
 
 ### Loess
 
-![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/706f4022-b297-492c-a01e-e08ae490db00/bentang_alam_eolian-loess_European_GeosciencesUnion.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/706f4022-b297-492c-a01e-e08ae490db00/bentang_alam_eolian-loess_European_GeosciencesUnion.png)
+![Loess](https://res.cloudinary.com/supergeografi/image/upload/v1646915538/bentang_alam_eolian-loess_European_GeosciencesUnion_ercinr.jpg)
 
 Sumber: European Geosciences Union
 
@@ -139,10 +138,10 @@ Referensi:
 Lutgens, Frederick K., et al. *[Essentials of Geology](https://amzn.to/33LIzLZ)*. Pearson, 2017.
 Hess, Darrell., Tasa, Dennis G. *[McKnight's Physical Geography: A Landscape Appreciation.](https://amzn.to/3im93ru)* Pearson, 2017.
 Holden, Joseph A. *[An Introduction to Physical Geography and the Environment](https://amzn.to/2YFT7ZV)*. Pearson, 2017.
-*Desert.* [https://www.britannica.com/science/desert](https://www.britannica.com/science/desert)
-*Eolian Processes and Landforms.* [http://www.physicalgeography.net/fundamentals/10ah.html](http://www.physicalgeography.net/fundamentals/10ah.html)
-*Aeolian (Dunes) Landforms.* [https://www.nps.gov/subjects/geology/aeolian-landforms.htm](https://www.nps.gov/subjects/geology/aeolian-landforms.htm)
-*Deserts, explained.* [https://www.nationalgeographic.com/environment/article/deserts](https://www.nationalgeographic.com/environment/article/deserts)
-*Desert loess: formation, distribution, geoscientific value.* [https://blogs.egu.eu/divisions/ssp/2020/09/30/desert-loess-formation-distribution-geoscientific-value/](https://blogs.egu.eu/divisions/ssp/2020/09/30/desert-loess-formation-distribution-geoscientific-value/)
+*Desert.* <https://www.britannica.com/science/desert>
+*Eolian Processes and Landforms.* <http://www.physicalgeography.net/fundamentals/10ah.html>
+*Aeolian (Dunes) Landforms.* <https://www.nps.gov/subjects/geology/aeolian-landforms.htm>
+*Deserts, explained.* <https://www.nationalgeographic.com/environment/article/deserts>
+*Desert loess: formation, distribution, geoscientific value.* <https://blogs.egu.eu/divisions/ssp/2020/09/30/desert-loess-formation-distribution-geoscientific-value/>
 
 Foto: Wikimedia Commons
