@@ -14,7 +14,7 @@ const Categories = ({ data, location }) => {
 
   return (
     <Layout location={location} title={siteTitle}>
-      <Seo title={category} />
+      <Seo title={category.title} />
 
       {/* Category header */}
       <header className="relative h-40 sm:h-[32rem] md:mx-12 mx-4 rounded-2xl items-center my-6 sm:mb-16">
