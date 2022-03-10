@@ -170,6 +170,7 @@ module.exports = {
         }
       }
     },
+    'gatsby-plugin-robots-txt',
     `gatsby-plugin-sitemap`,
     "gatsby-plugin-slug",
     // this (optional) plugin enables Progressive Web App + Offline functionality
