@@ -43,7 +43,7 @@ const Categories = ({ data, location }) => {
 
       <div className="border-y-2 border-gray-1 px-4 my-8">
         <div className="flex flex-1 max-w-6xl align-middle py-1 mx-auto">
-          <div className="flex space-x-2">
+          <div className="flex flex-wrap gap-2">
             {categoryTags.map(tag => (
               <Link
                 key={tag.frontmatter.title}

@@ -185,8 +185,8 @@ const BlogIndex = ({ data, location }) => {
         <HighlightOSN />
 
         {/* Categories section */}
-        <div className="grid grid-cols-4 sm:grid-cols-6 max-w-6xl mx-auto gap-8">
-          <div className="col-span-4 p-4">
+        <div className="grid grid-cols-4 sm:grid-cols-6 max-w-6xl mx-auto gap-8 p-4">
+          <div className="col-span-4">
             <ol style={{ listStyle: `none` }} className="grid gap-8">
               {categories.map(category => {
                 return (
