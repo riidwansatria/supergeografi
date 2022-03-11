@@ -58,13 +58,14 @@ export default function Example() {
                   </div>
 
                   {/* Search bar */}
-                  <div className="flex flex-1">
+                  <div className="hidden sm:flex flex-1">
                     <div className="flex flex-1 px-4 rounded-xl">
                       <Link className="w-full" to="/cari/">
                         <button className="flex items-center justify-between w-full bg-gray-2 text-gray-4 text-sm sm:text-md text-left font-bold py-2 px-4 rounded-lg">
                           <p className="flex">Cari materi... </p>
                           <SearchIcon className="flex h-4 w-4"/>
-                        </button></Link>
+                        </button>
+                      </Link>
                     </div>
                   </div>
 
@@ -159,6 +160,14 @@ export default function Example() {
                     {item.name}
                   </Link>
                 ))}
+                <div className="p-2">
+                  <Link className="w-full" to="/cari/">
+                    <button className="flex items-center justify-between w-full bg-gray-2 text-gray-4 text-sm sm:text-md text-left font-bold py-2 px-4 rounded-lg">
+                      <p className="flex">Cari materi... </p>
+                      <SearchIcon className="flex h-4 w-4"/>
+                    </button>
+                  </Link>
+                </div>
               </div>
             </Disclosure.Panel>
           </>
