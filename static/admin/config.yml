@@ -60,6 +60,7 @@ collections:
           widget: image,
           required: false,
         }
+      - {label: "URL Slug", name: "slug", widget: "string"}
       - {label: "Description", name: "description", widget: "string", required: false}
       - label: 'Meta'
         required: false

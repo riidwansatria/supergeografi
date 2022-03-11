@@ -2,6 +2,7 @@
 contentType: page
 template: DefaultPage
 title: "Profil Kontributor"
+slug: profil-kontributor
 ---
 
 ## Ridwan Satria

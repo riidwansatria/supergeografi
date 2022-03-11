@@ -2,6 +2,7 @@
 contentType: page
 template: DefaultPage
 title: "Kumpulan Soal Geografi"
+slug: kumpulan-soal
 ---
 
 Selain baca baca materi, latihan soal juga tidak kalah pentingnya dalam belajar geografi. Pada laman ini kalian dapat mendownload kumpulan soal geografi untuk pembelajaran kalian. Pada laman ini tersedia sejumlah latihan soal mulai dari kumpulan soal geografi di Olimpiade Sains Nasional sampai soal *International Geography Olympiad*. Kalian bisa mulai dari mengerjakan soal OSN, lalu belajar lebih jauh dengan mengerjakan soal soal iGeo. Bila dirasa kurang cukup, USGC (OSN Geografinya Amerika Serikat) bisa jadi tambahan yang bagus untuk berlatih menghadapi Olimpiade Sains Nasional.

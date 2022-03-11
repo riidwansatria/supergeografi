@@ -2,6 +2,7 @@
 contentType: page
 template: MateriPage
 title: "Materi KSN Geografi"
+slug: materi
 ---
 
 ## Iklim dan Perubahan Iklim
