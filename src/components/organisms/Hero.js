@@ -5,7 +5,7 @@ import earth from "/src/images/earth.png"
 
 const Hero = () => {
   return (
-    <body className="bg-white rounded-xl">
+    <div className="bg-white rounded-xl">
       <div className="max-w-6xl md:py-20 py-12 mx-auto grid grid-cols-1 md:grid-cols-2 items-center">
         <div className="col-span-1 p-4">
           <img className="inline h-12 sm:h-20" src={logo} alt="Logo" />
@@ -22,7 +22,7 @@ const Hero = () => {
           <img className="h-96" src={earth} alt="Earth" />
         </div>
       </div>
-    </body>
+    </div>
   )
 }
 

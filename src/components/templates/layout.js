@@ -4,11 +4,11 @@ import Footer from "../organisms/Footer"
 
 const Layout = ({ children }) => {
   return (
-    <body className="bg-white">
+    <div className="bg-white">
       <Header />
       <main className="sm:py-6">{children}</main>
       <Footer />
-    </body>
+    </div>
   )
 }
 

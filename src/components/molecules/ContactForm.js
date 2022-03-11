@@ -2,12 +2,11 @@ import * as React from "react"
 
 const ContactForm = () => {
   return (
-    <body className="bg-white">
+    <div className="bg-white">
       <form
         name="contact"
         method="POST"
         data-netlify="true"
-        onSubmit="submit"
         data-netlify-honeypot="bot-field"
       >
         <div class="grid grid-cols-1 md:gap-6 gap-4 pb-12">
@@ -68,7 +67,7 @@ const ContactForm = () => {
           </div>
         </div>
       </form>
-    </body>
+    </div>
   )
 }
 

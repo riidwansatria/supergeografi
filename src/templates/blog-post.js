@@ -47,7 +47,7 @@ const BlogPostTemplate = ({ data, location }) => {
                   <ol className="flex space-x-2 list-none">
                     {tags.map(tag => {
                       return (
-                        <li className="">
+                        <li className="" key={tag}>
                           <span className="uppercase text-sm text-primary font-bold tracking-wider">
                             {tag}
                           </span>
@@ -86,7 +86,7 @@ const BlogPostTemplate = ({ data, location }) => {
           <section
             dangerouslySetInnerHTML={{ __html: post.html }}
             itemProp="articleBody"
-            className="prose col-span-4 p-4"
+            className="prose break-words col-span-4 p-4"
           />
 
           {/* Sidebar */}
@@ -103,7 +103,6 @@ const BlogPostTemplate = ({ data, location }) => {
                 name="contact"
                 method="POST"
                 data-netlify="true"
-                onSubmit="submit"
                 data-netlify-honeypot="bot-field"
               >
                 <input type="hidden" name="form-name" value="contact"></input>

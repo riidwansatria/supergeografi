@@ -16,7 +16,7 @@ const navigation = [
 
 const Footer = () => {
   return (
-    <body className="">
+    <div className="">
       {/* Upper footer */}
       <div className=" bg-gray-6 px-4 py-8 sm:py-16">
         <div className="grid grid-cols-1 sm:grid-cols-3 max-w-6xl mx-auto">
@@ -82,7 +82,7 @@ const Footer = () => {
           © {new Date().getFullYear()} All rights reserved.
         </div>
       </div>
-    </body>
+    </div>
   )
 }
 export default Footer

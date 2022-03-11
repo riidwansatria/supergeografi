@@ -11,8 +11,9 @@ media_library:
     api_key: 671999412332542
     default_transformations: 
       - - fetch_format: auto
-          width: 720
+          width: 600
           quality: 80
+          crop: scale
 
 local_backend: true
 
