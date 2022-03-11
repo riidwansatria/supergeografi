@@ -33,24 +33,24 @@ const Footer = () => {
             <ul className="flex space-x-2 pb-6 sm:pt-6">
               {data.map(s => (
                 <li key={s.label} className="">
-                  <button className="flex bg-gray-4 hover:bg-gray-5 text-white text-md font-bold p-2 items-center justify-center h-8 w-8 rounded">
-                    <a alt={s.label} href={s.link}>
+                  <a alt={s.label} href={s.link}>
+                    <button aria-label={s.label} className="flex bg-gray-4 hover:bg-gray-5 text-white text-md font-bold p-2 items-center justify-center h-8 w-8 rounded">
                       <FontAwesomeIcon icon={s.icon} />
-                    </a>
-                  </button>
+                    </button>
+                  </a>
                 </li>
               ))}
             </ul>
           </div>
           <div></div>
           <div className="grid grid-cols-2">
-            <div>
+            <div className="grid grid-cols-1 gap-2">
               <span className="text-white text-lg font-medium">Kategori</span>
               {navigation.map(item => (
                 <Link
                   key={item.name}
                   to={item.to}
-                  className="block text-gray-2 py-1"
+                  className="block text-gray-2"
                 >
                   {item.name}
                 </Link>
