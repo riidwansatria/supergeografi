@@ -9,6 +9,10 @@ media_library:
   config: 
     cloud_name: supergeografi
     api_key: 671999412332542
+    default_transformations: 
+      - - fetch_format: auto
+          width: 720
+          quality: 80
 
 local_backend: true
 

@@ -8,16 +8,15 @@ tags:
   - Meteorologi
 slug: atmosfer/jenis-jenis-front
 ---
-
 Meskipun terlihat serupa, massa udara pada [atmosfer](https://supergeografi.com/atmosfer/struktur-dan-komposisi-atmosfer/) memiliki karakteristik khususnya masing masing. Satu [massa udara](https://supergeografi.com/atmosfer/massa-udara/) mungkin temperaturnya lebih dingin dibandingkan massa udara lainnnya. Hal ini juga berlaku untuk karakteristik kelembapannya. Massa udara yang terbentuk di atas lautan cenderung memiliki kelembapan yang lebih tinggi dibandingkan massa udara yang terbentuk di atas daratan. Saat massa udara bertemu dengan massa udara lainnya, perbedaan karakteristik keduanya akan menciptakan sebuah batasan yang disebut dengan **front**. Selanjutnya, front juga dapat diklasifikasikan menjadi beberapa jenis front.
 
 ## Apa itu Front?
 
-Dalam Meteorologi, front dapat diartikan sebagai wilayah transisi tempat bertemunya dua **[massa udara](https://supergeografi.com/atmosfer/massa-udara/)** dengan karakteristik yang berbeda. Sejarah istilah "front" berasal dari periode Perang Dunia I. Kala itu, seorang ahli meteorologi Norwegia menganalogikan massa udara dingin dan hangat seperti dua pihak yang bertempur di sepanjang _battlefront_ di dataran Eropa. Apabila massa udara dingin mendesak massa udara hangat, front yang terbentuk disebut dengan front dingin. Hal ini juga berlaku sebaliknya, apabila massa udara hangat mendesak massa udara dingin, front yang terbentuk disebut dengan front hangat.
+Dalam Meteorologi, front dapat diartikan sebagai wilayah transisi tempat bertemunya dua **[massa udara](https://supergeografi.com/atmosfer/massa-udara/)** dengan karakteristik yang berbeda. Sejarah istilah "front" berasal dari periode Perang Dunia I. Kala itu, seorang ahli meteorologi Norwegia menganalogikan massa udara dingin dan hangat seperti dua pihak yang bertempur di sepanjang *battlefront* di dataran Eropa. Apabila massa udara dingin mendesak massa udara hangat, front yang terbentuk disebut dengan front dingin. Hal ini juga berlaku sebaliknya, apabila massa udara hangat mendesak massa udara dingin, front yang terbentuk disebut dengan front hangat.
 
 Pada peta, keberadaan front ditandai dengan garis warna-warni (sebagian besar merah dan biru) yang bergerak melintasi peta cuaca.
 
-![Garis front](images/uploads/front-garis-front.png)
+![Garis front](https://res.cloudinary.com/supergeografi/image/upload/f_auto,q_80/v1646915506/front-garis_front_q57ag2.png)
 
 Sumber: Wikimedia Commons
 
@@ -25,7 +24,7 @@ Front merupakan salah satu pembentuk [presipitasi](https://supergeografi.com/atm
 
 ## Front Hangat
 
-![Front Hangat](images/uploads/front-front-hangat-1024x600.png)
+![Front Hangat](https://res.cloudinary.com/supergeografi/image/upload/f_auto,q_80/v1646915506/front-front_hangat_hrv0h1.png)
 
 Front hangat akan terbentuk apabila massa udara hangat bertemu dan bergerak menggantikan massa udara dingin didepannya. Densitas udara dingin yang lebih tinggi memaksa udara hangat untuk bergerak naik ke atas massa udara dingin. Seiring udara bergerak naik secara perlahan ke wilayah dengan tekanan lebih rendah, udara mendingin dan kandungan uap air didalamnya terkondensasi sehingga menghasilkan lembaran awan-awan **stratiform**.
 
@@ -35,7 +34,7 @@ Front hangat pada umumnya bergerak dengan lamban (sekitar 10-20 mil/jam). Pada p
 
 ## Front Dingin
 
-![Front dingin](images/uploads/front-front-dingin-1024x600.png)
+![Front dingin](https://res.cloudinary.com/supergeografi/image/upload/f_auto,q_80/v1646915506/front-front_dingin_lfrccn.png)
 
 Apabila massa udara dingin bergerak menggantikan udara yang lebih hangat, perbedaan karakteristik udara keduanya akan menyebabkan terbentuknya front dingin. Pada peta sinoptik, front dingin ditandai oleh garis berwarna biru dengan segitiga yang mengarah searah dengan pergerakannya. Saat suatu wilayah dilewati oleh front dingin, temperatur dan kelembapan udara wilayah tersebut akan menurun.
 
@@ -43,7 +42,7 @@ Pada umumnya, front dingin bergerak lebih cepat dibandingkan front hangat. Densi
 
 ## Front Oklusi
 
-![Front oklusi](images/uploads/front-front-oklusi-1024x600.png)
+![Front oklusi](https://res.cloudinary.com/supergeografi/image/upload/f_auto,q_80/v1646915507/front-front_oklusi_cdjr7i.png)
 
 Front oklusi adalah gabungan dari dua sistem front yang tergabung oleh oklusi. Front dingin umumnya bergerak lebih cepat dari front hangat. Bahkan, front dingin memiliki rata rata kecepatan sekitar dua kali lipat dari kecepatan front hangat biasa. Akibatnya, front dingin terkadang akan menabrak front hangat yang berada didepannya. Front oklusi terbentuk saat tiga massa udara bertemu.
 
@@ -53,7 +52,7 @@ Pada peta sinoptik, jenis front oklusi ditandai oleh garis berwarna ungu dengan 
 
 ## Front Stasioner
 
-![Front stasioner](images/uploads/front-front-stasioner-1024x601.png)
+![Front stasioner](https://res.cloudinary.com/supergeografi/image/upload/f_auto,q_80/v1646915507/front-front_stasioner_d05abl.png)
 
 Terkadang, aliran udara pada kedua sisi front tidak mengarah ke massa udara dingin maupun ke massa udara hangat, melainkan hampir sejajar dengan garis front. Akibatnya, posisi front tidak bergerak, atau bergerak dengan lamban. Kondisi ini disebut dengan front stasioner.
 
@@ -61,14 +60,14 @@ Saat salah satu massa udara bergerak maju mendorong massa udara lainnya, front s
 
 Front stasioner muncul pada peta sinoptik sebagai garis merah-biru dengan dengan segitiga biru mengarah ke sisi front yang ditempati oleh udara yang lebih hangat, dan setengah lingkaran merah yang mengarah ke sisi udara dingin.
 
-* * *
+- - -
 
-Referensi:  
-Ahrens, C. Donald., Henson, Robert. _[Meteorology Today](https://amzn.to/30NAZPI)._ Cengage, 2013. 
-Lutgens, Frederick K., et al. _[Earth Science](https://amzn.to/2XtZJJo)._ Pearson, 2014. 
-Lutgens, Frederick K., et al. _[The Atmosphere: an Introduction to Meteorology](https://amzn.to/2EcZ897)._ Pearson, 2013. 
-_Front._ [https://www.nationalgeographic.org/encyclopedia/front/](https://www.nationalgeographic.org/encyclopedia/front/)  
-_Types of Fronts._ [https://www.e-education.psu.edu/meteo3/l3\_p6.html](https://www.e-education.psu.edu/meteo3/l3_p6.html)  
-_Weather fronts._ [https://www.metoffice.gov.uk/weather/learn-about/weather/atmosphere/weather-fronts](https://www.metoffice.gov.uk/weather/learn-about/weather/atmosphere/weather-fronts)
+Referensi:\
+Ahrens, C. Donald., Henson, Robert. *[Meteorology Today](https://amzn.to/30NAZPI).* Cengage, 2013. 
+Lutgens, Frederick K., et al. *[Earth Science](https://amzn.to/2XtZJJo).* Pearson, 2014. 
+Lutgens, Frederick K., et al. *[The Atmosphere: an Introduction to Meteorology](https://amzn.to/2EcZ897).* Pearson, 2013. 
+*Front.* <https://www.nationalgeographic.org/encyclopedia/front/>\
+*Types of Fronts.* <https://www.e-education.psu.edu/meteo3/l3_p6.html>\
+*Weather fronts.* <https://www.metoffice.gov.uk/weather/learn-about/weather/atmosphere/weather-fronts>
 
 Foto: Pixabay
