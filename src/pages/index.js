@@ -5,10 +5,11 @@ import Seo from "../components/seo"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { ChevronRightIcon } from "@heroicons/react/outline"
 
-import Hero from "../components/organisms/Hero"
 import HighlightOSN from "../components/organisms/HighlightOSN"
 
 import socialMedia from "../data/social-media"
+import logo from "../images/logo.png"
+import earth from "../images/earth.png"
 
 const _ = require("lodash")
 
@@ -31,7 +32,24 @@ const BlogIndex = ({ data, location }) => {
     <div className="bg-white">
       <Layout location={location} title={siteTitle}>
         <Seo title="Home" />
-        <Hero />
+        
+        {/* Hero section */}
+        <div className="max-w-6xl md:py-20 py-12 mx-auto grid grid-cols-1 md:grid-cols-2 items-center">
+          <div className="col-span-1 p-4">
+            <img className="inline h-12 sm:h-20" src={logo} alt="Logo" />
+            <p className="m-2 text-lg text-gray-8">
+              Telusuri lebih jauh tentang manusia, lingkungannya, dan bumi yang
+              kita pijak beserta bentang alamnya bersama Supergeografi!
+            </p>
+            <button className="bg-primary hover:bg-primary-light text-white text-sm sm:text-md font-bold m-2 mt-8 py-2 px-4 rounded-lg">
+              <Link to="/materi">Materi OSN Geografi →</Link>
+            </button>
+          </div>
+
+          <div className="hidden md:grid col-span-1 my-auto ml-auto">
+            <img className="h-96" src={earth} alt="Earth" />
+          </div>
+        </div>
 
         {/* Recent articles section */}
         <div className="max-w-6xl p-6 mx-auto">
