@@ -7,55 +7,16 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
 
   // Define a template for pages
   const blogPost = path.resolve(`./src/templates/blog-post.js`)
-  const tagTemplate = path.resolve("src/templates/tags.js")
-  const categoryTemplate = path.resolve("src/templates/categories.js")
 
   // Get all markdown blog posts sorted by date
   const result = await graphql(
     `
       {
-        postsRemark: allMarkdownRemark(
-          sort: { fields: [frontmatter___date], order: ASC }
-          filter: {frontmatter: {contentType: {eq: "post"}}}
-          limit: 1000
-        ) {
+        postsGroup: allContentfulBlogPost(sort: {fields: date, order: ASC}) {
           nodes {
-            id
-            fields {
-              slug
-            }
-            frontmatter {
-              tags
-            }
-          }
-        }
-        categoriesGroup: allMarkdownRemark(
-          sort: {fields: frontmatter___id, order: ASC}
-          filter: {frontmatter: {contentType: {eq: "postCategory"}}}
-          ) {
-          nodes {
-            id
-            frontmatter {
-              title
-            }
-          }
-        }
-        tagsGroup: allMarkdownRemark(limit: 2000) {
-          group(field: frontmatter___tags) {
-            fieldValue
-          }
-        }
-        pagesGroup: allMarkdownRemark(
-          sort: {fields: frontmatter___id, order: ASC}
-          filter: {frontmatter: {contentType: {eq: "page"}}}
-          ) {
-          nodes {
-            id
-            fields {
-              slug
-            }
-            frontmatter {
-              template
+            title
+            slug
+            category {
               title
             }
           }
@@ -72,70 +33,29 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     return
   }
 
-  const posts = result.data.postsRemark.nodes
+  const posts = result.data.postsGroup.nodes
 
   // Create blog posts pages
-  // But only if there's at least one markdown file found at "content/blog" (defined in gatsby-config.js)
+  // But only if there's at least one blog post found in Contentful
   // `context` is available in the template as a prop and as a variable in GraphQL
 
   if (posts.length > 0) {
     posts.forEach((post, index) => {
-      const previousPostId = index === 0 ? null : posts[index - 1].id
-      const nextPostId = index === posts.length - 1 ? null : posts[index + 1].id
+      const previousPostSlug = index === 0 ? null : posts[index - 1].slug
+      const nextPostSlug =
+        index === posts.length - 1 ? null : posts[index + 1].slug
 
       createPage({
-        path: `${post.fields.slug}/`,
+        path: `/${_.kebabCase(post.category.title)}/${post.slug}/`,
         component: blogPost,
         context: {
-          id: post.id,
-          previousPostId,
-          nextPostId,
+          slug: post.slug,
+          previousPostSlug,
+          nextPostSlug,
         },
       })
     })
   }
-
-  // Extract category data from query
-  const categories = result.data.categoriesGroup.nodes
-  // Make category pages
-  categories.forEach(category => {
-    createPage({
-      path: `/${_.kebabCase(category.frontmatter.title)}/`,
-      component: categoryTemplate,
-      context: {
-        id: category.id,
-        category: category.frontmatter.title,
-      },
-    })
-  })
-
-  // Extract tag data from query
-  const tags = result.data.tagsGroup.group
-  // Make tag pages
-  tags.forEach(tag => {
-    createPage({
-      path: `/tags/${_.kebabCase(tag.fieldValue)}/`,
-      component: tagTemplate,
-      context: {
-        tag: tag.fieldValue,
-      },
-    })
-  })
-
-  // Extract page data from query
-  const pages = result.data.pagesGroup.nodes
-  // Make pages
-  pages.forEach(page => {
-    createPage({
-      path: page.fields.slug,
-      component: path.resolve(
-        `src/templates/${String(page.frontmatter.template)}.js`
-      ),
-      context: {
-        id: page.id
-      },
-    })
-  })
 }
 
 exports.createSchemaCustomization = ({ actions }) => {

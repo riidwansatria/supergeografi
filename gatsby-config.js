@@ -198,5 +198,12 @@ module.exports = {
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
     `gatsby-plugin-netlify`,
+    {
+      resolve: `gatsby-source-contentful`,
+      options: {
+        spaceId: `1qxcg8ht0ty0`,
+        accessToken: `bdeL5bC660z9_iTx84BVQJHZpodHBKKP40TlOheyfLc`,
+      },
+    },
   ],
 }
