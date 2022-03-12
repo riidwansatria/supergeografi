@@ -14,12 +14,21 @@ module.exports = {
     },
   },
   plugins: [
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
     `gatsby-plugin-image`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `uploads`,
         path: `${__dirname}/static/images/uploads`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path: `${__dirname}/src/images`,
       },
     },
     {
@@ -51,13 +60,6 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `images`,
-        path: `${__dirname}/src/images`,
-      },
-    },
-    {
       resolve: `gatsby-transformer-remark`,
       options: {
         plugins: [
@@ -79,9 +81,7 @@ module.exports = {
         ],
       },
     },
-    `gatsby-transformer-sharp`,
     'gatsby-plugin-postcss',
-    `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-plugin-algolia`,
       options: {
@@ -176,7 +176,6 @@ module.exports = {
         icon: `src/images/icon-circle-white.png`, // This path is relative to the root of the site.
       },
     },
-    `gatsby-plugin-netlify`,
     {
       resolve: 'gatsby-plugin-netlify-cms',
       options: {
@@ -198,5 +197,6 @@ module.exports = {
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
+    `gatsby-plugin-netlify`,
   ],
 }

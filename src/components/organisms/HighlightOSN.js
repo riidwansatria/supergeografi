@@ -31,8 +31,8 @@ const Hero = () => {
             Olimpiade Sains Nasional
           </h2>
         </Link>
-        <div className="col-span-1 sm:flex gap-16 space-y-4">
-          <div className="flex items-center space-x-4">
+        <div className="col-span-1 sm:flex gap-16">
+          <div className="flex items-center space-x-4 py-2">
             <button className="flex bg-primary hover:bg-primary-light text-white text-md text-3xl p-2 items-center justify-center h-16 w-16 rounded-xl">
               <Link to="/materi">
                 <FontAwesomeIcon icon={faBook} />
@@ -40,7 +40,7 @@ const Hero = () => {
             </button>
             <span className="flex text-2xl font-bold">Materi</span>
           </div>
-          <div className="flex items-center space-x-4">
+          <div className="flex items-center space-x-4 py-2">
             <button className="flex bg-primary hover:bg-primary-light text-white text-3xl p-2 items-center justify-center h-16 w-16 rounded-xl">
               <Link to="/kumpulan-soal">
                 <FontAwesomeIcon icon={faPenRuler} />
