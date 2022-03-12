@@ -124,7 +124,6 @@ const BlogPostTemplate = ({ data, location }) => {
                     SUBSCRIBE
                   </button>
                 </div>
-                <div data-netlify-recaptcha="true"></div>
               </form>
             </div>
 
@@ -151,7 +150,7 @@ const BlogPostTemplate = ({ data, location }) => {
                         />
                         <div className="flex-1 items-center">
                           <h3 className="text-gray-8 text-xs">
-                            <Link to={post.slug} itemProp="url">
+                            <Link to={`/${_.kebabCase(post.category.title)}/${post.slug}/`} itemProp="url">
                               <span itemProp="headline">{title}</span>
                             </Link>
                           </h3>
@@ -172,7 +171,7 @@ const BlogPostTemplate = ({ data, location }) => {
         <ul className="grid grid-cols-1 sm:grid-cols-2 mx-auto font-semibold text-sm tracking-widest">
           <li>
             {previous && (
-              <Link to={previous.slug} rel="prev">
+              <Link to={`/${_.kebabCase(previous.category.title)}/${previous.slug}/`} rel="prev">
                 <div className="flex justify-start items-center gap-4 sm:border-r border-gray-3 sm:py-10 sm:px-4">
                   <div className="hidden sm:block">
                     <svg
@@ -201,7 +200,7 @@ const BlogPostTemplate = ({ data, location }) => {
           </li>
           <li>
             {next && (
-              <Link to={next.slug} rel="next">
+              <Link to={`/${_.kebabCase(next.category.title)}/${next.slug}/`} rel="next">
                 <div className="flex justify-end items-center gap-4 sm:border-l border-gray-3 sm:py-10 sm:px-4">
                   <div>
                     <p className="text-sm sm:text-md text-right text-gray-5">selanjutnya</p>
@@ -270,10 +269,16 @@ export const pageQuery = graphql`
     previous: contentfulBlogPost(slug: { eq: $previousPostSlug }) {
       slug
       title
+      category {
+        title
+      }
     }
     next: contentfulBlogPost(slug: { eq: $nextPostSlug }) {
       slug
       title
+      category {
+        title
+      }
     }
     recentPosts: allContentfulBlogPost(
       sort: {fields: date, order: DESC}
@@ -283,6 +288,9 @@ export const pageQuery = graphql`
         title
         slug
         date(formatString: "MMMM Do, YYYY")
+        category {
+          title
+        }
         featuredImage {
           gatsbyImageData
         }
