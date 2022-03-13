@@ -1,14 +1,17 @@
 import React from "react"
-import PropTypes from "prop-types"
 import { Link, graphql } from "gatsby"
+import { GatsbyImage } from "gatsby-plugin-image"
 
 import Layout from "../components/templates/layout"
 import Seo from "../components/seo"
 
+const _ = require("lodash")
+
 const Tags = ({ pageContext, data, location }) => {
   const { tag } = pageContext
   const siteTitle = data.site.siteMetadata?.title || `Title`
-  const posts = data.allMarkdownRemark.nodes
+  const tagsPosts = data.tagArticles.nodes
+  const recentPosts = data.recentPosts.nodes
 
   return (
     <Layout location={location} title={siteTitle}>
@@ -25,38 +28,38 @@ const Tags = ({ pageContext, data, location }) => {
         {/* Articles list */}
         <div className="col-span-4">
           <ol style={{ listStyle: `none` }}>
-            {posts.map(post => {
-              const title = post.frontmatter.title || post.fields.slug
+            {tagsPosts.map(post => {
+              const title = post.title || post.slug
 
               return (
-                <li key={post.fields.slug}>
+                <li key={post.slug}>
                   <article
                     className="py-4 gap-4"
                     itemScope
                     itemType="http://schema.org/Article"
                   >
-                    <div className="grid grid-cols-5 gap-4">
-                      <img
-                        className="col-span-2 w-full h-48 mx-auto object-cover rounded-2xl"
-                        src={post.frontmatter.featuredImage}
-                        alt={post.frontmatter.title}
-                      ></img>
-                      <div className="col-span-3 items-center p-4">
-                        <h3 className="font-bold text-gray-7 text-2xl">
-                          <Link to={post.fields.slug} itemProp="url">
+                    <div className="grid grid-cols-8 sm:grid-cols-5 gap-4 items-center">
+                      <GatsbyImage
+                        className="col-span-2 w-full h-20 sm:h-48 mx-auto object-cover rounded-2xl"
+                        image={post.featuredImage.gatsbyImageData}
+                        alt={post.title}
+                      />
+                      <div className="col-span-6 sm:col-span-3 sm:p-4">
+                        <h3 className="font-bold text-gray-7 text-md sm:text-2xl">
+                          <Link to={post.slug} itemProp="url">
                             <span itemProp="headline">{title}</span>
                           </Link>
                         </h3>
                         <small className="text-primary">
-                          {post.frontmatter.date}
+                          {post.date}
                         </small>
                         <p
                           dangerouslySetInnerHTML={{
                             __html:
-                              post.frontmatter.description || post.excerpt,
+                              post.body.childMarkdownRemark.excerpt,
                           }}
                           itemProp="description"
-                          className="text-sm text-gray-4"
+                          className="hidden sm:block text-sm text-gray-4"
                         />
                       </div>
                     </div>
@@ -111,29 +114,34 @@ const Tags = ({ pageContext, data, location }) => {
               Artikel terbaru
             </h3>
             <ol style={{ listStyle: `none` }}>
-              {posts.map(post => {
-                const title = post.frontmatter.title || post.fields.slug
+              {recentPosts.map(post => {
+                const title = post.title || post.slug
 
                 return (
-                  <li key={post.fields.slug}>
+                  <li key={post.slug}>
                     <article
                       className="flex py-2 gap-4"
                       itemScope
                       itemType="http://schema.org/Article"
                     >
-                      <img
+                      <GatsbyImage
                         className="w-12 h-12 mx-auto object-cover rounded-lg"
-                        src={post.frontmatter.featuredImage}
-                        alt={post.frontmatter.title}
-                      ></img>
+                        image={post.featuredImage.gatsbyImageData}
+                        alt={post.title}
+                      />
                       <div className="flex-1 items-center">
                         <h3 className="text-gray-8 text-xs">
-                          <Link to={post.fields.slug} itemProp="url">
+                          <Link
+                            to={`/${_.kebabCase(post.category.title)}/${
+                              post.slug
+                            }/`}
+                            itemProp="url"
+                          >
                             <span itemProp="headline">{title}</span>
                           </Link>
                         </h3>
                         <small className="text-gray-4 text-xs">
-                          {post.frontmatter.date}
+                          {post.date}
                         </small>
                       </div>
                     </article>
@@ -147,28 +155,7 @@ const Tags = ({ pageContext, data, location }) => {
     </Layout>
   )
 }
-Tags.propTypes = {
-  pageContext: PropTypes.shape({
-    tag: PropTypes.string.isRequired,
-  }),
-  data: PropTypes.shape({
-    allMarkdownRemark: PropTypes.shape({
-      totalCount: PropTypes.number.isRequired,
-      edges: PropTypes.arrayOf(
-        PropTypes.shape({
-          node: PropTypes.shape({
-            frontmatter: PropTypes.shape({
-              title: PropTypes.string.isRequired,
-            }),
-            fields: PropTypes.shape({
-              slug: PropTypes.string.isRequired,
-            }),
-          }),
-        }).isRequired
-      ),
-    }),
-  }),
-}
+
 export default Tags
 export const pageQuery = graphql`
   query ($tag: String) {
@@ -177,22 +164,42 @@ export const pageQuery = graphql`
         title
       }
     }
-    allMarkdownRemark(
+
+    tagArticles: allContentfulPost(
       limit: 2000
-      sort: { fields: [frontmatter___date], order: DESC }
-      filter: { frontmatter: { tags: { in: [$tag] } } }
+      sort: { fields: date, order: DESC }
+      filter: {
+        tags: {in: [$tag]}
+      }
     ) {
-      totalCount
       nodes {
-        excerpt
-        fields {
-          slug
+        title
+        date(formatString: "MMMM DD, YYYY")
+        slug
+        featuredImage {
+          gatsbyImageData(height: 192, placeholder: BLURRED)
         }
-        frontmatter {
-          date(formatString: "MMMM DD, YYYY")
+        body {
+          childMarkdownRemark {
+            excerpt
+          }
+        }
+      }
+    }
+
+    recentPosts: allContentfulPost(
+      sort: { fields: date, order: DESC }
+      limit: 5
+    ) {
+      nodes {
+        title
+        slug
+        date(formatString: "MMMM Do, YYYY")
+        category {
           title
-          description
-          featuredImage
+        }
+        featuredImage {
+          gatsbyImageData(height: 48, placeholder: BLURRED)
         }
       }
     }

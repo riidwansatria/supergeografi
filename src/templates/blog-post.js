@@ -1,5 +1,6 @@
 import * as React from "react"
 import { Link, graphql } from "gatsby"
+import { GatsbyImage } from "gatsby-plugin-image"
 import { UserCircleIcon, CalendarIcon } from "@heroicons/react/outline"
 
 import Layout from "../components/templates/layout"
@@ -8,9 +9,9 @@ import Seo from "../components/seo"
 const _ = require("lodash")
 
 const BlogPostTemplate = ({ data, location }) => {
-  const post = data.markdownRemark
-  const posts = data.allMarkdownRemark.nodes
-  const tags = data.markdownRemark.frontmatter.tags
+  const post = data.postEntry
+  const posts = data.recentPosts.nodes
+  const tags = data.postEntry.tags
   const siteTitle = data.site.siteMetadata?.title || `Title`
   const author = data.site.siteMetadata.author?.name || `Supergeografi`
   const { previous, next } = data
@@ -18,8 +19,8 @@ const BlogPostTemplate = ({ data, location }) => {
   return (
     <Layout location={location} title={siteTitle}>
       <Seo
-        title={post.frontmatter.title}
-        description={post.frontmatter.description || post.excerpt}
+        title={post.title}
+        description={post.body.childMarkdownRemark.excerpt}
       />
       <article
         className="md:px-12 px-4"
@@ -29,17 +30,17 @@ const BlogPostTemplate = ({ data, location }) => {
         {/* Article header */}
         <header className="grid grid-cols-1 sm:grid-cols-2 bg-gray-2 rounded-2xl items-center sm:mt-6 mb-8 sm:mb-16">
           <div className="hidden sm:block">
-            <img
+            <GatsbyImage
               className="w-full sm:h-[32rem] h-48 mx-auto object-cover rounded-l-2xl"
-              src={post.frontmatter.featuredImage}
-              alt={post.frontmatter.title}
-            ></img>
+              image={post.featuredImage.gatsbyImageData}
+              alt={post.title}
+            />
           </div>
           <div className="p-8 sm:p-12">
             <div className="flex space-x-2">
-              <Link to={`/${_.kebabCase(post.frontmatter.category)}/`}>
+              <Link to={`/${_.kebabCase(post.category.title)}/`}>
                 <span className="uppercase text-sm text-primary-dark font-bold tracking-wider">
-                  {post.frontmatter.category}
+                  {post.category.title}
                 </span>
               </Link>
               {tags && (
@@ -63,7 +64,7 @@ const BlogPostTemplate = ({ data, location }) => {
               itemProp="headline"
               className="text-3xl sm:text-5xl font-semibold text-gray-8 py-4"
             >
-              {post.frontmatter.title}
+              {post.title}
             </h1>
             <div className="flex gap-4 sm:mt-8">
               <div className="hidden sm:flex gap-1 items-center">
@@ -75,7 +76,7 @@ const BlogPostTemplate = ({ data, location }) => {
               <div className="flex gap-1 items-center">
                 <CalendarIcon className="block h-4 w-4" />
                 <span className="uppercase text-sm font-medium tracking-wider">
-                  {post.frontmatter.date}
+                  {post.date}
                 </span>
               </div>
             </div>
@@ -84,7 +85,9 @@ const BlogPostTemplate = ({ data, location }) => {
         <div className="grid grid-cols-4 sm:grid-cols-6 gap-8 max-w-6xl mx-auto">
           {/* Main article */}
           <section
-            dangerouslySetInnerHTML={{ __html: post.html }}
+            dangerouslySetInnerHTML={{
+              __html: post.body.childMarkdownRemark.html,
+            }}
             itemProp="articleBody"
             className="prose break-words col-span-4 p-4"
           />
@@ -123,7 +126,6 @@ const BlogPostTemplate = ({ data, location }) => {
                     SUBSCRIBE
                   </button>
                 </div>
-                <div data-netlify-recaptcha="true"></div>
               </form>
             </div>
 
@@ -134,28 +136,33 @@ const BlogPostTemplate = ({ data, location }) => {
               </h3>
               <ol style={{ listStyle: `none` }}>
                 {posts.map(post => {
-                  const title = post.frontmatter.title || post.fields.slug
+                  const title = post.title || post.slug
 
                   return (
-                    <li key={post.fields.slug}>
+                    <li key={post.slug}>
                       <article
                         className="flex py-2 gap-4"
                         itemScope
                         itemType="http://schema.org/Article"
                       >
-                        <img
+                        <GatsbyImage
                           className="w-12 h-12 mx-auto object-cover rounded-lg"
-                          src={post.frontmatter.featuredImage}
-                          alt={post.frontmatter.title}
-                        ></img>
+                          image={post.featuredImage.gatsbyImageData}
+                          alt={post.title}
+                        />
                         <div className="flex-1 items-center">
                           <h3 className="text-gray-8 text-xs">
-                            <Link to={post.fields.slug} itemProp="url">
+                            <Link
+                              to={`/${_.kebabCase(post.category.title)}/${
+                                post.slug
+                              }/`}
+                              itemProp="url"
+                            >
                               <span itemProp="headline">{title}</span>
                             </Link>
                           </h3>
                           <small className="text-gray-4 text-xs">
-                            {post.frontmatter.date}
+                            {post.date}
                           </small>
                         </div>
                       </article>
@@ -171,7 +178,12 @@ const BlogPostTemplate = ({ data, location }) => {
         <ul className="grid grid-cols-1 sm:grid-cols-2 mx-auto font-semibold text-sm tracking-widest">
           <li>
             {previous && (
-              <Link to={previous.fields.slug} rel="prev">
+              <Link
+                to={`/${_.kebabCase(previous.category.title)}/${
+                  previous.slug
+                }/`}
+                rel="prev"
+              >
                 <div className="flex justify-start items-center gap-4 sm:border-r border-gray-3 sm:py-10 sm:px-4">
                   <div className="hidden sm:block">
                     <svg
@@ -187,11 +199,13 @@ const BlogPostTemplate = ({ data, location }) => {
                       />
                     </svg>
                   </div>
-                  
+
                   <div>
-                    <p className="text-sm sm:text-md text-left text-gray-5">sebelumnya</p>
+                    <p className="text-sm sm:text-md text-left text-gray-5">
+                      sebelumnya
+                    </p>
                     <p className="text-md sm:text-xl text-left text-primary hover:text-primary-light">
-                      {previous.frontmatter.title}
+                      {previous.title}
                     </p>
                   </div>
                 </div>
@@ -200,12 +214,17 @@ const BlogPostTemplate = ({ data, location }) => {
           </li>
           <li>
             {next && (
-              <Link to={next.fields.slug} rel="next">
+              <Link
+                to={`/${_.kebabCase(next.category.title)}/${next.slug}/`}
+                rel="next"
+              >
                 <div className="flex justify-end items-center gap-4 sm:border-l border-gray-3 sm:py-10 sm:px-4">
                   <div>
-                    <p className="text-sm sm:text-md text-right text-gray-5">selanjutnya</p>
+                    <p className="text-sm sm:text-md text-right text-gray-5">
+                      selanjutnya
+                    </p>
                     <p className="text-md sm:text-xl text-right text-primary hover:text-primary-light">
-                      {next.frontmatter.title}
+                      {next.title}
                     </p>
                   </div>
                   <div className="hidden sm:block">
@@ -236,9 +255,9 @@ export default BlogPostTemplate
 
 export const pageQuery = graphql`
   query BlogPostBySlug(
-    $id: String!
-    $previousPostId: String
-    $nextPostId: String
+    $slug: String!
+    $previousPostSlug: String
+    $nextPostSlug: String
   ) {
     site {
       siteMetadata {
@@ -248,56 +267,51 @@ export const pageQuery = graphql`
         }
       }
     }
-    markdownRemark(id: { eq: $id }) {
-      id
-      excerpt(pruneLength: 160)
-      html
-      frontmatter {
-        title
-        date(formatString: "MMMM DD, YYYY")
-        category
-        tags
-        description
-        featuredImage
+    postEntry: contentfulPost(slug: { eq: $slug }) {
+      slug
+      title
+      date(formatString: "MMMM Do, YYYY")
+      featuredImage {
+        gatsbyImageData(height: 512, placeholder: BLURRED)
       }
-    }
-    previous: markdownRemark(
-      id: { eq: $previousPostId }
-      frontmatter: { contentType: { eq: "post" } }
-    ) {
-      fields {
-        slug
-      }
-      frontmatter {
+      category {
         title
       }
-    }
-    next: markdownRemark(
-      id: { eq: $nextPostId }
-      frontmatter: { contentType: { eq: "post" } }
-    ) {
-      fields {
-        slug
+      tags
+      body {
+        childMarkdownRemark {
+          excerpt
+          html
+        }
       }
-      frontmatter {
+    }
+    previous: contentfulPost(slug: { eq: $previousPostSlug }) {
+      slug
+      title
+      category {
         title
       }
     }
-    allMarkdownRemark(
-      sort: { fields: [frontmatter___date], order: DESC }
-      filter: { frontmatter: { contentType: { eq: "post" } } }
+    next: contentfulPost(slug: { eq: $nextPostSlug }) {
+      slug
+      title
+      category {
+        title
+      }
+    }
+    recentPosts: allContentfulPost(
+      sort: { fields: date, order: DESC }
       limit: 5
     ) {
       nodes {
-        excerpt
-        fields {
-          slug
-        }
-        frontmatter {
-          date(formatString: "MMMM DD, YYYY")
+        title
+        slug
+        date(formatString: "MMMM Do, YYYY")
+        category {
           title
-          description
-          featuredImage
+        }
+        featuredImage {
+          gatsbyImageData(height: 48, placeholder: BLURRED)
         }
       }
     }

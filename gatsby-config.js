@@ -32,41 +32,14 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        path: `${__dirname}/content/page`,
-        name: `page`,
-      },
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        path: `${__dirname}/content/post`,
-        name: `post`,
-      },
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        path: `${__dirname}/content/postCategory`,
-        name: `Category`,
-      },
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        path: `${__dirname}/content/postTags`,
-        name: `Tags`,
-      },
-    },
-    {
       resolve: `gatsby-transformer-remark`,
       options: {
         plugins: [
           {
-            resolve: `gatsby-remark-images`,
+            resolve: `gatsby-remark-images-contentful`,
             options: {
-              maxWidth: 630,
+              maxWidth: 720,
+              withWebp: true,
             },
           },
           {
@@ -88,66 +61,6 @@ module.exports = {
         appId: process.env.GATSBY_ALGOLIA_APP_ID,
         apiKey: process.env.ALGOLIA_ADMIN_KEY,
         queries: require("./src/utils/algolia-queries")
-      },
-    },
-    {
-      resolve: `gatsby-plugin-feed`,
-      options: {
-        query: `
-          {
-            site {
-              siteMetadata {
-                title
-                description
-                siteUrl
-                site_url: siteUrl
-              }
-            }
-          }
-        `,
-        feeds: [
-          {
-            serialize: ({ query: { site, allMarkdownRemark } }) => {
-              return allMarkdownRemark.nodes.map(node => {
-                return Object.assign({}, node.frontmatter, {
-                  description: node.excerpt,
-                  date: node.frontmatter.date,
-                  url: site.siteMetadata.siteUrl + node.fields.slug,
-                  guid: site.siteMetadata.siteUrl + node.fields.slug,
-                  custom_elements: [{ "content:encoded": node.html }],
-                })
-              })
-            },
-            query: `
-              {
-                allMarkdownRemark(
-                  sort: { order: DESC, fields: [frontmatter___date] },
-                ) {
-                  nodes {
-                    excerpt
-                    html
-                    fields { 
-                      slug 
-                    }
-                    frontmatter {
-                      title
-                      date
-                    }
-                  }
-                }
-              }
-            `,
-            output: "/rss.xml",
-            title: "Supergeografi's RSS Feed",
-            // optional configuration to insert feed reference in pages:
-            // if `string` is used, it will be used to create RegExp and then test if pathname of
-            // current page satisfied this regular expression;
-            // if not provided or `undefined`, all pages will have feed reference inserted
-            match: "^/post/",
-            // optional configuration to specify external rss feed, such as feedburner
-            link: "https://feeds.feedburner.com/gatsby/blog",
-          },
-        ],
       },
     },
     {
@@ -198,5 +111,12 @@ module.exports = {
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
     `gatsby-plugin-netlify`,
+    {
+      resolve: `gatsby-source-contentful`,
+      options: {
+        spaceId: `1qxcg8ht0ty0`,
+        accessToken: `bdeL5bC660z9_iTx84BVQJHZpodHBKKP40TlOheyfLc`,
+      },
+    },
   ],
 }

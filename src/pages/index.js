@@ -1,5 +1,6 @@
 import * as React from "react"
 import { Link, graphql } from "gatsby"
+import { GatsbyImage } from "gatsby-plugin-image"
 import Layout from "../components/templates/layout"
 import Seo from "../components/seo"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
@@ -32,7 +33,7 @@ const BlogIndex = ({ data, location }) => {
     <div className="bg-white">
       <Layout location={location} title={siteTitle}>
         <Seo title="Home" />
-        
+
         {/* Hero section */}
         <div className="max-w-6xl md:py-20 py-12 mx-auto grid grid-cols-1 md:grid-cols-2 items-center">
           <div className="col-span-1 p-4">
@@ -74,39 +75,48 @@ const BlogIndex = ({ data, location }) => {
           <div className="bg-gray-2 p-4 rounded-3xl">
             <ol style={{ listStyle: `none` }}>
               {latestPost.map(post => {
-                const title = post.frontmatter.title || post.fields.slug
+                const title = post.title || post.slug
 
                 return (
-                  <li key={post.fields.slug}>
+                  <li key={post.slug}>
                     <article
                       className=""
                       itemScope
                       itemType="http://schema.org/Article"
                     >
-                      <img
-                        className="w-full h-48 mx-auto object-cover rounded-2xl"
-                        src={post.frontmatter.featuredImage}
-                        alt={post.frontmatter.title}
-                      ></img>
+                      <GatsbyImage
+                        imgClassName="w-full h-48 mx-auto object-cover rounded-2xl"
+                        image={post.featuredImage.gatsbyImageData}
+                        alt={post.title}
+                      />
                       <div className="py-4">
                         <h3 className="font-bold text-gray-7 text-xl">
-                          <Link to={post.fields.slug} itemProp="url">
+                          <Link
+                            to={`/${_.kebabCase(post.category.title)}/${
+                              post.slug
+                            }/`}
+                            itemProp="url"
+                          >
                             <span itemProp="headline">{title}</span>
                           </Link>
                         </h3>
                         <small className="text-gray-4 text-xs">
-                          {post.frontmatter.date}
+                          {post.date}
                         </small>
                         <p
                           dangerouslySetInnerHTML={{
-                            __html:
-                              post.frontmatter.description || post.excerpt,
+                            __html: post.body.childMarkdownRemark.excerpt,
                           }}
                           itemProp="description"
                           className="text-sm text-gray-6"
                         />
                       </div>
-                      <Link to={post.fields.slug} itemProp="url">
+                      <Link
+                        to={`/${_.kebabCase(post.category.title)}/${
+                          post.slug
+                        }/`}
+                        itemProp="url"
+                      >
                         <p className="text-sm text-primary font-bold pt-8">
                           Baca selengkapnya →
                         </p>
@@ -122,28 +132,34 @@ const BlogIndex = ({ data, location }) => {
           <div>
             <ol style={{ listStyle: `none` }}>
               {posts.map(post => {
-                const title = post.frontmatter.title || post.fields.slug
+                const title = post.title || post.slug
 
                 return (
-                  <li key={post.fields.slug}>
+                  <li key={post.slug}>
                     <article
                       className="flex py-4 gap-4 items-center"
                       itemScope
                       itemType="http://schema.org/Article"
                     >
-                      <img
+                      <GatsbyImage
                         className="w-20 h-20 mx-auto object-cover rounded-2xl"
-                        src={post.frontmatter.featuredImage}
-                        alt={post.frontmatter.title}
-                      ></img>
+                        imgClassName="object-cover rounded-2xl"
+                        image={post.featuredImage.gatsbyImageData}
+                        alt={post.title}
+                      />
                       <div className="flex-1">
                         <h3 className="font-bold text-gray-8 text-sm">
-                          <Link to={post.fields.slug} itemProp="url">
+                          <Link
+                            to={`/${_.kebabCase(post.category.title)}/${
+                              post.slug
+                            }/`}
+                            itemProp="url"
+                          >
                             <span itemProp="headline">{title}</span>
                           </Link>
                         </h3>
                         <small className="text-gray-4 text-xs">
-                          {post.frontmatter.date}
+                          {post.date}
                         </small>
                       </div>
                     </article>
@@ -207,7 +223,7 @@ const BlogIndex = ({ data, location }) => {
             <ol style={{ listStyle: `none` }} className="grid gap-8">
               {categories.map(category => {
                 return (
-                  <li key={category.frontmatter.title}>
+                  <li key={category.title}>
                     <div className="col-span-4 bg-gray-2 p-4 rounded-3xl">
                       <div className="p-6">
                         <div className="flex items-center gap-2">
@@ -226,24 +242,19 @@ const BlogIndex = ({ data, location }) => {
                               strokeWidth="4"
                             />
                           </svg>
-                          <p className="col-span-1">
-                            {category.frontmatter.subtitle}
-                          </p>
+                          <p className="col-span-1">{category.subtitle}</p>
                         </div>
-                        <h2 className="font-bold text-4xl">
-                          {category.frontmatter.title}
-                        </h2>
+                        <h2 className="font-bold text-4xl">{category.title}</h2>
                         <ol
                           style={{ listStyle: `none` }}
                           className="grid sm:grid-cols-3 gap-4 py-4"
                         >
                           {categoryPosts.map(post => {
-                            const title =
-                              post.frontmatter.title || post.fields.slug
+                            const title = post.title || post.slug
 
                             return (
                               <li
-                                key={post.fields.slug}
+                                key={post.slug}
                                 className="bg-white rounded-3xl"
                               >
                                 <article
@@ -251,15 +262,17 @@ const BlogIndex = ({ data, location }) => {
                                   itemScope
                                   itemType="http://schema.org/Article"
                                 >
-                                  <img
-                                    className="w-full h-40 mx-auto object-cover rounded-t-3xl"
-                                    src={post.frontmatter.featuredImage}
-                                    alt={post.frontmatter.title}
-                                  ></img>
+                                  <GatsbyImage
+                                    imgClassName="w-full h-40 mx-auto object-cover rounded-t-3xl"
+                                    image={post.featuredImage.gatsbyImageData}
+                                    alt={post.title}
+                                  />
                                   <div className="p-4">
                                     <h3 className="font-bold text-gray-8 text-lg">
                                       <Link
-                                        to={post.fields.slug}
+                                        to={`/${_.kebabCase(
+                                          post.category.title
+                                        )}/${post.slug}/`}
                                         itemProp="url"
                                       >
                                         <span itemProp="headline">{title}</span>
@@ -272,9 +285,7 @@ const BlogIndex = ({ data, location }) => {
                           })}
                         </ol>
                         <div className="flex gap-1 items-center justify-end">
-                          <Link
-                            to={`/${_.kebabCase(category.frontmatter.title)}/`}
-                          >
+                          <Link to={`/${_.kebabCase(category.title)}/`}>
                             <p className="flex text-sm text-primary-dark hover:text-primary font-bold uppercase tracking-wider">
                               Selanjutnya
                             </p>
@@ -355,69 +366,73 @@ export const pageQuery = graphql`
       }
     }
 
-    latestArticle: allMarkdownRemark(
-      sort: { fields: [frontmatter___date], order: DESC }
-      filter: { frontmatter: { contentType: { eq: "post" } } }
+    latestArticle: allContentfulPost(
+      sort: { fields: date, order: DESC }
       limit: 1
     ) {
       nodes {
-        excerpt
-        fields {
-          slug
+        title
+        date(formatString: "MMMM DD, YYYY")
+        slug
+        featuredImage {
+          gatsbyImageData(width: 320, placeholder: BLURRED)
         }
-        frontmatter {
-          date(formatString: "MMMM DD, YYYY")
+        category {
           title
-          description
-          featuredImage
+        }
+        body {
+          childMarkdownRemark {
+            excerpt
+          }
         }
       }
     }
 
-    recentArticles: allMarkdownRemark(
-      sort: { fields: [frontmatter___date], order: DESC }
-      filter: { frontmatter: { contentType: { eq: "post" } } }
+    recentArticles: allContentfulPost(
+      sort: { fields: date, order: DESC }
       limit: 4
       skip: 1
     ) {
       nodes {
-        excerpt
-        fields {
-          slug
-        }
-        frontmatter {
-          date(formatString: "MMMM DD, YYYY")
+        title
+        date(formatString: "MMMM DD, YYYY")
+        slug
+        category {
           title
-          description
-          featuredImage
+        }
+        featuredImage {
+          gatsbyImageData(height: 80, placeholder: BLURRED)
+        }
+        body {
+          childMarkdownRemark {
+            excerpt
+          }
         }
       }
     }
 
-    categoryList: allMarkdownRemark(
-      sort: { fields: frontmatter___id, order: ASC }
-      filter: { frontmatter: { contentType: { eq: "postCategory" }, id: { gte: 1, lte: 5 } } }
+    categoryList: allContentfulPostCategory(
+      sort: { fields: categoryID, order: ASC }
+      filter: { categoryID: { gte: 1, lte: 5 } }
     ) {
       nodes {
-        frontmatter {
-          title
-          subtitle
-        }
+        title
+        subtitle
       }
     }
 
-    categoryArticles: allMarkdownRemark(
-      sort: { fields: [frontmatter___date], order: DESC }
-      filter: { frontmatter: { contentType: { eq: "post" } } }
+    categoryArticles: allContentfulPost(
+      sort: { fields: date, order: DESC }
       limit: 3
     ) {
       nodes {
-        fields {
-          slug
-        }
-        frontmatter {
+        title
+        slug
+        category {
           title
-          featuredImage
+        }
+        featuredImage {
+          gatsbyImageData(width: 208, placeholder: BLURRED)
         }
       }
     }

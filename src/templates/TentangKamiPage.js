@@ -1,26 +1,27 @@
 import React from "react"
-import PropTypes from "prop-types"
 import { Link, graphql } from "gatsby"
+import { GatsbyImage } from "gatsby-plugin-image"
 
 import Layout from "../components/templates/layout"
 import Seo from "../components/seo"
-
 import ContactForm from "../components/molecules/ContactForm"
 
+const _ = require("lodash")
+
 const Page = ({ data, location }) => {
-  const page = data.markdownRemark
+  const page = data.contentfulPage
   const siteTitle = data.site.siteMetadata?.title || `Title`
-  const posts = data.allMarkdownRemark.nodes
+  const recentPosts = data.recentPosts.nodes
 
   return (
     <Layout location={location} title={siteTitle}>
-      <Seo title={page.frontmatter.title} />
+      <Seo title={page.title} />
 
       {/* Page header */}
       <header className="md:mx-12 mx-4 bg-gray-2 rounded-2xl items-center mb-8 sm:mb-16">
         <div className="max-w-6xl p-8 mx-auto">
           <h1 className="text-3xl text-gray-7 font-semibold py-4">
-            {page.frontmatter.title}
+            {page.title}
           </h1>
         </div>
       </header>
@@ -29,7 +30,7 @@ const Page = ({ data, location }) => {
         {/* Main content */}
         <div className="col-span-4 p-4">
           <section
-            dangerouslySetInnerHTML={{ __html: page.html }}
+            dangerouslySetInnerHTML={{ __html: page.body.childMarkdownRemark.html }}
             itemProp="articleBody"
             className="prose"
           />
@@ -82,29 +83,34 @@ const Page = ({ data, location }) => {
               Artikel terbaru
             </h3>
             <ol style={{ listStyle: `none` }}>
-              {posts.map(post => {
-                const title = post.frontmatter.title || post.fields.slug
+              {recentPosts.map(post => {
+                const title = post.title || post.slug
 
                 return (
-                  <li key={post.fields.slug}>
+                  <li key={post.slug}>
                     <article
                       className="flex py-2 gap-4"
                       itemScope
                       itemType="http://schema.org/Article"
                     >
-                      <img
+                      <GatsbyImage
                         className="w-12 h-12 mx-auto object-cover rounded-lg"
-                        src={post.frontmatter.featuredImage}
-                        alt={post.frontmatter.title}
-                      ></img>
+                        image={post.featuredImage.gatsbyImageData}
+                        alt={post.title}
+                      />
                       <div className="flex-1 items-center">
                         <h3 className="text-gray-8 text-xs">
-                          <Link to={post.fields.slug} itemProp="url">
+                          <Link
+                            to={`/${_.kebabCase(post.category.title)}/${
+                              post.slug
+                            }/`}
+                            itemProp="url"
+                          >
                             <span itemProp="headline">{title}</span>
                           </Link>
                         </h3>
                         <small className="text-gray-4 text-xs">
-                          {post.frontmatter.date}
+                          {post.date}
                         </small>
                       </div>
                     </article>
@@ -118,61 +124,39 @@ const Page = ({ data, location }) => {
     </Layout>
   )
 }
-Page.propTypes = {
-  pageContext: PropTypes.shape({
-    page: PropTypes.string.isRequired,
-  }),
-  data: PropTypes.shape({
-    allMarkdownRemark: PropTypes.shape({
-      totalCount: PropTypes.number.isRequired,
-      edges: PropTypes.arrayOf(
-        PropTypes.shape({
-          node: PropTypes.shape({
-            frontmatter: PropTypes.shape({
-              title: PropTypes.string.isRequired,
-            }),
-            fields: PropTypes.shape({
-              slug: PropTypes.string.isRequired,
-            }),
-          }),
-        }).isRequired
-      ),
-    }),
-  }),
-}
+
 export default Page
+
 export const pageQuery = graphql`
-  query ($id: String!) {
+  query ($slug: String!) {
     site {
       siteMetadata {
         title
       }
     }
 
-    markdownRemark(id: { eq: $id }) {
-      id
-      html
-      frontmatter {
-        title
+    contentfulPage(slug: { eq: $slug }) {
+      title
+      body {
+        childMarkdownRemark {
+          html
+        }
       }
     }
 
-    allMarkdownRemark(
+    recentPosts: allContentfulPost(
+      sort: { fields: date, order: DESC }
       limit: 5
-      sort: { fields: [frontmatter___date], order: DESC }
-      filter: { frontmatter: { contentType: { eq: "post" } } }
     ) {
-      totalCount
       nodes {
-        excerpt
-        fields {
-          slug
-        }
-        frontmatter {
-          date(formatString: "MMMM DD, YYYY")
+        title
+        slug
+        date(formatString: "MMMM Do, YYYY")
+        category {
           title
-          description
-          featuredImage
+        }
+        featuredImage {
+          gatsbyImageData(height: 48, placeholder: BLURRED)
         }
       }
     }

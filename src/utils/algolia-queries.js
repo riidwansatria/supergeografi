@@ -1,37 +1,35 @@
 const escapeStringRegexp = require("escape-string-regexp")
 
 const pagePath = `content`
-const indexName = `Pages`
+const indexName = `Post`
 
 const pageQuery = `{
-  pages: allMarkdownRemark(
-    filter: {
-      fileAbsolutePath: { regex: "/${escapeStringRegexp(pagePath)}/" },
-      frontmatter: { contentType: { eq: "post" } },
-    }
-  ) {
+  pages: allContentfulPost {
     edges {
       node {
         id
-        frontmatter {
-          title
-          featuredImage
+        title
+        slug
+        featuredImage {
+          gatsbyImageData(height: 80, width:80, placeholder: BLURRED)
         }
-        fields {
-          slug
+        body {
+          childMarkdownRemark {
+            excerpt(pruneLength: 5000)
+          }
         }
-        excerpt(pruneLength: 5000)
       }
     }
   }
 }`
 
-function pageToAlgoliaRecord({ node: { id, frontmatter, fields, ...rest } }) {
+function pageToAlgoliaRecord({ node: { id, title, slug, body, featuredImage } }) {
   return {
     objectID: id,
-    ...frontmatter,
-    ...fields,
-    ...rest,
+    title,
+    slug,
+    excerpt: body.childMarkdownRemark.excerpt,
+    featuredImage: featuredImage.gatsbyImageData,
   }
 }
 
