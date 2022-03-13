@@ -32,34 +32,6 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        path: `${__dirname}/content/page`,
-        name: `page`,
-      },
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        path: `${__dirname}/content/post`,
-        name: `post`,
-      },
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        path: `${__dirname}/content/postCategory`,
-        name: `Category`,
-      },
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        path: `${__dirname}/content/postTags`,
-        name: `Tags`,
-      },
-    },
-    {
       resolve: `gatsby-transformer-remark`,
       options: {
         plugins: [

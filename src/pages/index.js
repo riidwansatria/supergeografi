@@ -33,7 +33,7 @@ const BlogIndex = ({ data, location }) => {
     <div className="bg-white">
       <Layout location={location} title={siteTitle}>
         <Seo title="Home" />
-        
+
         {/* Hero section */}
         <div className="max-w-6xl md:py-20 py-12 mx-auto grid grid-cols-1 md:grid-cols-2 items-center">
           <div className="col-span-1 p-4">
@@ -91,7 +91,12 @@ const BlogIndex = ({ data, location }) => {
                       />
                       <div className="py-4">
                         <h3 className="font-bold text-gray-7 text-xl">
-                          <Link to={`/${_.kebabCase(post.category.title)}/${post.slug}/`} itemProp="url">
+                          <Link
+                            to={`/${_.kebabCase(post.category.title)}/${
+                              post.slug
+                            }/`}
+                            itemProp="url"
+                          >
                             <span itemProp="headline">{title}</span>
                           </Link>
                         </h3>
@@ -100,14 +105,18 @@ const BlogIndex = ({ data, location }) => {
                         </small>
                         <p
                           dangerouslySetInnerHTML={{
-                            __html:
-                              post.body.childMarkdownRemark.excerpt,
+                            __html: post.body.childMarkdownRemark.excerpt,
                           }}
                           itemProp="description"
                           className="text-sm text-gray-6"
                         />
                       </div>
-                      <Link to={`/${_.kebabCase(post.category.title)}/${post.slug}/`} itemProp="url">
+                      <Link
+                        to={`/${_.kebabCase(post.category.title)}/${
+                          post.slug
+                        }/`}
+                        itemProp="url"
+                      >
                         <p className="text-sm text-primary font-bold pt-8">
                           Baca selengkapnya →
                         </p>
@@ -140,7 +149,12 @@ const BlogIndex = ({ data, location }) => {
                       />
                       <div className="flex-1">
                         <h3 className="font-bold text-gray-8 text-sm">
-                          <Link to={`/${_.kebabCase(post.category.title)}/${post.slug}/`} itemProp="url">
+                          <Link
+                            to={`/${_.kebabCase(post.category.title)}/${
+                              post.slug
+                            }/`}
+                            itemProp="url"
+                          >
                             <span itemProp="headline">{title}</span>
                           </Link>
                         </h3>
@@ -228,20 +242,15 @@ const BlogIndex = ({ data, location }) => {
                               strokeWidth="4"
                             />
                           </svg>
-                          <p className="col-span-1">
-                            {category.subtitle}
-                          </p>
+                          <p className="col-span-1">{category.subtitle}</p>
                         </div>
-                        <h2 className="font-bold text-4xl">
-                          {category.title}
-                        </h2>
+                        <h2 className="font-bold text-4xl">{category.title}</h2>
                         <ol
                           style={{ listStyle: `none` }}
                           className="grid sm:grid-cols-3 gap-4 py-4"
                         >
                           {categoryPosts.map(post => {
-                            const title =
-                              post.title || post.slug
+                            const title = post.title || post.slug
 
                             return (
                               <li
@@ -261,7 +270,9 @@ const BlogIndex = ({ data, location }) => {
                                   <div className="p-4">
                                     <h3 className="font-bold text-gray-8 text-lg">
                                       <Link
-                                        to={`/${_.kebabCase(post.category.title)}/${post.slug}/`}
+                                        to={`/${_.kebabCase(
+                                          post.category.title
+                                        )}/${post.slug}/`}
                                         itemProp="url"
                                       >
                                         <span itemProp="headline">{title}</span>
@@ -274,9 +285,7 @@ const BlogIndex = ({ data, location }) => {
                           })}
                         </ol>
                         <div className="flex gap-1 items-center justify-end">
-                          <Link
-                            to={`/${_.kebabCase(category.title)}/`}
-                          >
+                          <Link to={`/${_.kebabCase(category.title)}/`}>
                             <p className="flex text-sm text-primary-dark hover:text-primary font-bold uppercase tracking-wider">
                               Selanjutnya
                             </p>
@@ -357,7 +366,10 @@ export const pageQuery = graphql`
       }
     }
 
-    latestArticle: allContentfulBlogPost(sort: {fields: date, order: DESC}, limit: 1) {
+    latestArticle: allContentfulPost(
+      sort: { fields: date, order: DESC }
+      limit: 1
+    ) {
       nodes {
         title
         date(formatString: "MMMM DD, YYYY")
@@ -376,7 +388,11 @@ export const pageQuery = graphql`
       }
     }
 
-    recentArticles: allContentfulBlogPost(sort: {fields: date, order: DESC}, limit: 4, skip:1) {
+    recentArticles: allContentfulPost(
+      sort: { fields: date, order: DESC }
+      limit: 4
+      skip: 1
+    ) {
       nodes {
         title
         date(formatString: "MMMM DD, YYYY")
@@ -396,8 +412,8 @@ export const pageQuery = graphql`
     }
 
     categoryList: allContentfulPostCategory(
-      sort: {fields: categoryID, order: ASC}
-      filter: {categoryID: {gte: 1, lte: 5}}
+      sort: { fields: categoryID, order: ASC }
+      filter: { categoryID: { gte: 1, lte: 5 } }
     ) {
       nodes {
         title
@@ -405,7 +421,10 @@ export const pageQuery = graphql`
       }
     }
 
-    categoryArticles: allContentfulBlogPost(sort: {fields: date, order: DESC}, limit: 3) {
+    categoryArticles: allContentfulPost(
+      sort: { fields: date, order: DESC }
+      limit: 3
+    ) {
       nodes {
         title
         slug

@@ -7,18 +7,44 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
 
   // Define a template for pages
   const blogPost = path.resolve(`./src/templates/blog-post.js`)
+  const tagTemplate = path.resolve("src/templates/tags.js")
+  const categoryTemplate = path.resolve("src/templates/categories.js")
 
   // Get all markdown blog posts sorted by date
   const result = await graphql(
     `
       {
-        postsGroup: allContentfulBlogPost(sort: {fields: date, order: ASC}) {
+        postsGroup: allContentfulPost(sort: { fields: date, order: ASC }) {
           nodes {
             title
             slug
             category {
               title
             }
+          }
+        }
+        categoriesGroup: allContentfulPostCategory(
+          sort: {fields: categoryID, order: ASC}
+          ) {
+          nodes {
+            title
+            slug
+          }
+        }
+        tagsGroup: allContentfulPostTags {
+          nodes {
+            title
+            slug
+            category {
+              title
+            }
+          }
+        }
+        pagesGroup: allContentfulPage {
+          nodes {
+            template
+            title
+            slug
           }
         }
       }
@@ -56,6 +82,48 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
       })
     })
   }
+
+  // Extract category data from query
+  const categories = result.data.categoriesGroup.nodes
+  // Make category pages
+  categories.forEach(category => {
+    createPage({
+      path: `/${category.slug}/`,
+      component: categoryTemplate,
+      context: {
+        slug: category.slug,
+        category: category.slug,
+      },
+    })
+  })
+
+  // Extract tag data from query
+  const tags = result.data.tagsGroup.nodes
+  // Make tag pages
+  tags.forEach(tag => {
+    createPage({
+      path: `/${_.kebabCase(tag.category.title)}/${tag.slug}/`,
+      component: tagTemplate,
+      context: {
+        tag: tag.title,
+      },
+    })
+  })
+
+  // Extract page data from query
+  const pages = result.data.pagesGroup.nodes
+  // Make pages
+  pages.forEach(page => {
+    createPage({
+      path: page.slug,
+      component: path.resolve(
+        `src/templates/${String(page.template)}.js`
+      ),
+      context: {
+        slug: page.slug
+      },
+    })
+  })
 }
 
 exports.createSchemaCustomization = ({ actions }) => {

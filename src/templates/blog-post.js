@@ -85,7 +85,9 @@ const BlogPostTemplate = ({ data, location }) => {
         <div className="grid grid-cols-4 sm:grid-cols-6 gap-8 max-w-6xl mx-auto">
           {/* Main article */}
           <section
-            dangerouslySetInnerHTML={{ __html: post.body.childMarkdownRemark.html }}
+            dangerouslySetInnerHTML={{
+              __html: post.body.childMarkdownRemark.html,
+            }}
             itemProp="articleBody"
             className="prose break-words col-span-4 p-4"
           />
@@ -150,7 +152,12 @@ const BlogPostTemplate = ({ data, location }) => {
                         />
                         <div className="flex-1 items-center">
                           <h3 className="text-gray-8 text-xs">
-                            <Link to={`/${_.kebabCase(post.category.title)}/${post.slug}/`} itemProp="url">
+                            <Link
+                              to={`/${_.kebabCase(post.category.title)}/${
+                                post.slug
+                              }/`}
+                              itemProp="url"
+                            >
                               <span itemProp="headline">{title}</span>
                             </Link>
                           </h3>
@@ -171,7 +178,12 @@ const BlogPostTemplate = ({ data, location }) => {
         <ul className="grid grid-cols-1 sm:grid-cols-2 mx-auto font-semibold text-sm tracking-widest">
           <li>
             {previous && (
-              <Link to={`/${_.kebabCase(previous.category.title)}/${previous.slug}/`} rel="prev">
+              <Link
+                to={`/${_.kebabCase(previous.category.title)}/${
+                  previous.slug
+                }/`}
+                rel="prev"
+              >
                 <div className="flex justify-start items-center gap-4 sm:border-r border-gray-3 sm:py-10 sm:px-4">
                   <div className="hidden sm:block">
                     <svg
@@ -187,9 +199,11 @@ const BlogPostTemplate = ({ data, location }) => {
                       />
                     </svg>
                   </div>
-                  
+
                   <div>
-                    <p className="text-sm sm:text-md text-left text-gray-5">sebelumnya</p>
+                    <p className="text-sm sm:text-md text-left text-gray-5">
+                      sebelumnya
+                    </p>
                     <p className="text-md sm:text-xl text-left text-primary hover:text-primary-light">
                       {previous.title}
                     </p>
@@ -200,10 +214,15 @@ const BlogPostTemplate = ({ data, location }) => {
           </li>
           <li>
             {next && (
-              <Link to={`/${_.kebabCase(next.category.title)}/${next.slug}/`} rel="next">
+              <Link
+                to={`/${_.kebabCase(next.category.title)}/${next.slug}/`}
+                rel="next"
+              >
                 <div className="flex justify-end items-center gap-4 sm:border-l border-gray-3 sm:py-10 sm:px-4">
                   <div>
-                    <p className="text-sm sm:text-md text-right text-gray-5">selanjutnya</p>
+                    <p className="text-sm sm:text-md text-right text-gray-5">
+                      selanjutnya
+                    </p>
                     <p className="text-md sm:text-xl text-right text-primary hover:text-primary-light">
                       {next.title}
                     </p>
@@ -248,7 +267,7 @@ export const pageQuery = graphql`
         }
       }
     }
-    postEntry: contentfulBlogPost(slug: { eq: $slug }) {
+    postEntry: contentfulPost(slug: { eq: $slug }) {
       slug
       title
       date(formatString: "MMMM Do, YYYY")
@@ -266,22 +285,22 @@ export const pageQuery = graphql`
         }
       }
     }
-    previous: contentfulBlogPost(slug: { eq: $previousPostSlug }) {
+    previous: contentfulPost(slug: { eq: $previousPostSlug }) {
       slug
       title
       category {
         title
       }
     }
-    next: contentfulBlogPost(slug: { eq: $nextPostSlug }) {
+    next: contentfulPost(slug: { eq: $nextPostSlug }) {
       slug
       title
       category {
         title
       }
     }
-    recentPosts: allContentfulBlogPost(
-      sort: {fields: date, order: DESC}
+    recentPosts: allContentfulPost(
+      sort: { fields: date, order: DESC }
       limit: 5
     ) {
       nodes {

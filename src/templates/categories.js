@@ -1,16 +1,18 @@
 import React from "react"
-import PropTypes from "prop-types"
 import { Link, graphql } from "gatsby"
+import { GatsbyImage } from "gatsby-plugin-image"
 
 import Layout from "../components/templates/layout"
 import Seo from "../components/seo"
 
+const _ = require("lodash")
+
 const Categories = ({ data, location }) => {
-  const category = data.markdownRemark.frontmatter
+  const category = data.contentfulPostCategory
   const siteTitle = data.site.siteMetadata?.title || `Title`
   const categoryTags = data.categoryTags.nodes
   const categoryPosts = data.categoryArticles.nodes
-  const recentPosts = data.recentArticles.nodes
+  const recentPosts = data.recentPosts.nodes
 
   return (
     <Layout location={location} title={siteTitle}>
@@ -25,7 +27,7 @@ const Categories = ({ data, location }) => {
                 {category.title}
               </h1>
               <p className="hidden sm:block sm:text-lg text-gray-8 p-4">
-                {category.description}
+                {category.description.description}
               </p>
             </div>
             <div className="hidden h-full"></div>
@@ -33,11 +35,11 @@ const Categories = ({ data, location }) => {
         </div>
 
         {category.featuredImage && (
-          <img
+          <GatsbyImage
             className="absolute col-span-2 w-full h-40 sm:h-[32rem] z-0 mx-auto object-cover rounded-2xl"
-            src={category.featuredImage}
+            image={category.featuredImage.gatsbyImageData}
             alt={category.title}
-          ></img>
+          />
         )}
       </header>
 
@@ -46,11 +48,11 @@ const Categories = ({ data, location }) => {
           <div className="flex flex-wrap gap-2">
             {categoryTags.map(tag => (
               <Link
-                key={tag.frontmatter.title}
-                to={`/tags${tag.fields.slug}`}
+                key={tag.title}
+                to={`${tag.slug}/`}
                 className="text-gray-6 hover:bg-gray-1 px-1 py-1 my-auto rounded-md text-sm uppercase items-center font-semibold tracking-wider"
               >
-                {tag.frontmatter.icon} {tag.frontmatter.title}
+                {tag.icon} {tag.title}
               </Link>
             ))}
           </div>
@@ -62,34 +64,34 @@ const Categories = ({ data, location }) => {
         <div className="col-span-4">
           <ol style={{ listStyle: `none` }}>
             {categoryPosts.map(post => {
-              const title = post.frontmatter.title || post.fields.slug
+              const title = post.title || post.slug
 
               return (
-                <li key={post.fields.slug}>
+                <li key={post.slug}>
                   <article
                     className="py-4 gap-4"
                     itemScope
                     itemType="http://schema.org/Article"
                   >
                     <div className="grid grid-cols-8 sm:grid-cols-5 gap-4 items-center">
-                      <img
+                      <GatsbyImage
                         className="col-span-2 w-full h-20 sm:h-48 mx-auto object-cover rounded-2xl"
-                        src={post.frontmatter.featuredImage}
-                        alt={post.frontmatter.title}
-                      ></img>
+                        image={post.featuredImage.gatsbyImageData}
+                        alt={post.title}
+                      />
                       <div className="col-span-6 sm:col-span-3 sm:p-4">
                         <h3 className="font-bold text-gray-7 text-md sm:text-2xl">
-                          <Link to={post.fields.slug} itemProp="url">
+                          <Link to={post.slug} itemProp="url">
                             <span itemProp="headline">{title}</span>
                           </Link>
                         </h3>
                         <small className="text-primary">
-                          {post.frontmatter.date}
+                          {post.date}
                         </small>
                         <p
                           dangerouslySetInnerHTML={{
                             __html:
-                              post.frontmatter.description || post.excerpt,
+                              post.body.childMarkdownRemark.excerpt,
                           }}
                           itemProp="description"
                           className="hidden sm:block text-sm text-gray-4"
@@ -148,28 +150,33 @@ const Categories = ({ data, location }) => {
             </h3>
             <ol style={{ listStyle: `none` }}>
               {recentPosts.map(post => {
-                const title = post.frontmatter.title || post.fields.slug
+                const title = post.title || post.slug
 
                 return (
-                  <li key={post.fields.slug}>
+                  <li key={post.slug}>
                     <article
                       className="flex py-2 gap-4"
                       itemScope
                       itemType="http://schema.org/Article"
                     >
-                      <img
+                      <GatsbyImage
                         className="w-12 h-12 mx-auto object-cover rounded-lg"
-                        src={post.frontmatter.featuredImage}
-                        alt={post.frontmatter.title}
-                      ></img>
+                        image={post.featuredImage.gatsbyImageData}
+                        alt={post.title}
+                      />
                       <div className="flex-1 items-center">
                         <h3 className="text-gray-8 text-xs">
-                          <Link to={post.fields.slug} itemProp="url">
+                          <Link
+                            to={`/${_.kebabCase(post.category.title)}/${
+                              post.slug
+                            }/`}
+                            itemProp="url"
+                          >
                             <span itemProp="headline">{title}</span>
                           </Link>
                         </h3>
                         <small className="text-gray-4 text-xs">
-                          {post.frontmatter.date}
+                          {post.date}
                         </small>
                       </div>
                     </article>
@@ -183,106 +190,72 @@ const Categories = ({ data, location }) => {
     </Layout>
   )
 }
-Categories.propTypes = {
-  pageContext: PropTypes.shape({
-    category: PropTypes.string.isRequired,
-  }),
-  data: PropTypes.shape({
-    allMarkdownRemark: PropTypes.shape({
-      totalCount: PropTypes.number.isRequired,
-      edges: PropTypes.arrayOf(
-        PropTypes.shape({
-          node: PropTypes.shape({
-            frontmatter: PropTypes.shape({
-              title: PropTypes.string.isRequired,
-            }),
-            fields: PropTypes.shape({
-              slug: PropTypes.string.isRequired,
-            }),
-          }),
-        }).isRequired
-      ),
-    }),
-  }),
-}
 export default Categories
 export const pageQuery = graphql`
-  query ($id: String!, $category: String) {
+  query ($slug: String!, $category: String) {
     site {
       siteMetadata {
         title
       }
     }
 
-    markdownRemark(id: { eq: $id }) {
-      id
-      frontmatter {
-        title
-        subtitle
+    contentfulPostCategory(slug: { eq: $slug }) {
+      title
+      subtitle
+      description {
         description
-        featuredImage
+      }
+      featuredImage {
+        gatsbyImageData(height: 512, placeholder: BLURRED)
       }
     }
 
-    categoryTags: allMarkdownRemark(
-      limit: 2000
-      sort: { fields: frontmatter___id, order: ASC }
-      filter: {
-        frontmatter: {
-          contentType: { eq: "postTags" }
-          category: { in: [$category] }
-        }
-      }
+    categoryTags: allContentfulPostTags(
+      limit: 10
+      filter: {category: {slug: {in: [$category]}}}
     ) {
       nodes {
-        fields {
-          slug
-        }
-        frontmatter {
-          title
-          icon
-        }
+        title
+        icon
+        slug
       }
     }
 
-    categoryArticles: allMarkdownRemark(
+    categoryArticles: allContentfulPost(
       limit: 2000
-      sort: { fields: [frontmatter___date], order: DESC }
+      sort: { fields: date, order: DESC }
       filter: {
-        frontmatter: {
-          contentType: { eq: "post" }
-          category: { in: [$category] }
-        }
+        category: {slug: {in: [$category]}}
       }
     ) {
       nodes {
-        excerpt
-        fields {
-          slug
+        title
+        date(formatString: "MMMM DD, YYYY")
+        slug
+        featuredImage {
+          gatsbyImageData(height: 192, placeholder: BLURRED)
         }
-        frontmatter {
-          date(formatString: "MMMM DD, YYYY")
-          title
-          description
-          featuredImage
+        body {
+          childMarkdownRemark {
+            excerpt
+          }
         }
       }
     }
-    recentArticles: allMarkdownRemark(
-      sort: { fields: [frontmatter___date], order: DESC }
-      filter: { frontmatter: { contentType: { eq: "post" } } }
+    
+    recentPosts: allContentfulPost(
+      sort: { fields: date, order: DESC }
       limit: 5
     ) {
       nodes {
-        excerpt
-        fields {
-          slug
-        }
-        frontmatter {
-          date(formatString: "MMMM DD, YYYY")
+        title
+        slug
+        date(formatString: "MMMM Do, YYYY")
+        category {
           title
-          description
-          featuredImage
+        }
+        featuredImage {
+          gatsbyImageData(height: 48, placeholder: BLURRED)
         }
       }
     }
