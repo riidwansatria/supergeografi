@@ -26,9 +26,11 @@ const Categories = ({ data, location }) => {
               <h1 className="text-5xl sm:text-6xl text-gray-8 font-bold font-serif p-4">
                 {category.title}
               </h1>
-              <p className="hidden sm:block sm:text-lg text-gray-8 p-4">
-                {category.description.description}
-              </p>
+              {category.description && (
+                <p className="hidden sm:block sm:text-lg text-gray-8 p-4">
+                  {category.description.description}
+                </p>
+              )}
             </div>
             <div className="hidden h-full"></div>
           </div>
@@ -242,7 +244,7 @@ export const pageQuery = graphql`
         }
       }
     }
-    
+
     recentPosts: allContentfulPost(
       sort: { fields: date, order: DESC }
       limit: 5

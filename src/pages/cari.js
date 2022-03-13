@@ -1,15 +1,18 @@
 import * as React from "react"
 import { Link, graphql } from "gatsby"
+import { GatsbyImage } from "gatsby-plugin-image"
 
 import Layout from "../components/templates/layout"
 import Seo from "../components/seo"
 
 import Search from "/src/components/search"
-const searchIndices = [{ name: `Pages`, title: `Pages` }]
+const searchIndices = [{ name: `Post`, title: `Post` }]
+
+const _ = require("lodash")
 
 const SearchPage = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata.title
-  const posts = data.allMarkdownRemark.nodes
+  const recentPosts = data.recentPosts.nodes
 
   return (
     <Layout location={location} title={siteTitle}>
@@ -67,29 +70,34 @@ const SearchPage = ({ data, location }) => {
               Artikel terbaru
             </h3>
             <ol style={{ listStyle: `none` }}>
-              {posts.map(post => {
-                const title = post.frontmatter.title || post.fields.slug
+              {recentPosts.map(post => {
+                const title = post.title || post.slug
 
                 return (
-                  <li key={post.fields.slug}>
+                  <li key={post.slug}>
                     <article
                       className="flex py-2 gap-4"
                       itemScope
                       itemType="http://schema.org/Article"
                     >
-                      <img
+                      <GatsbyImage
                         className="w-12 h-12 mx-auto object-cover rounded-lg"
-                        src={post.frontmatter.featuredImage}
-                        alt={post.frontmatter.title}
-                      ></img>
+                        image={post.featuredImage.gatsbyImageData}
+                        alt={post.title}
+                      />
                       <div className="flex-1 items-center">
                         <h3 className="text-gray-8 text-xs">
-                          <Link to={post.fields.slug} itemProp="url">
+                          <Link
+                            to={`/${_.kebabCase(post.category.title)}/${
+                              post.slug
+                            }/`}
+                            itemProp="url"
+                          >
                             <span itemProp="headline">{title}</span>
                           </Link>
                         </h3>
                         <small className="text-gray-4 text-xs">
-                          {post.frontmatter.date}
+                          {post.date}
                         </small>
                       </div>
                     </article>
@@ -113,24 +121,21 @@ export const pageQuery = graphql`
         title
       }
     }
-    allMarkdownRemark(
-        limit: 5
-        sort: { fields: [frontmatter___date], order: DESC }
-        filter: { frontmatter: { contentType: { eq: "post" } } }
-      ) {
-        totalCount
-        nodes {
-          excerpt
-          fields {
-            slug
-          }
-          frontmatter {
-            date(formatString: "MMMM DD, YYYY")
-            title
-            description
-            featuredImage
-          }
+    recentPosts: allContentfulPost(
+      sort: { fields: date, order: DESC }
+      limit: 5
+    ) {
+      nodes {
+        title
+        slug
+        date(formatString: "MMMM Do, YYYY")
+        category {
+          title
+        }
+        featuredImage {
+          gatsbyImageData(height: 48, placeholder: BLURRED)
         }
       }
+    }
   }
 `
