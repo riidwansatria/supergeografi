@@ -85,13 +85,13 @@ const BlogIndex = ({ data, location }) => {
                       itemType="http://schema.org/Article"
                     >
                       <GatsbyImage
-                        className="w-full h-48 mx-auto object-cover rounded-2xl"
+                        imgClassName="w-full h-48 mx-auto object-cover rounded-2xl"
                         image={post.featuredImage.gatsbyImageData}
                         alt={post.title}
                       />
                       <div className="py-4">
                         <h3 className="font-bold text-gray-7 text-xl">
-                          <Link to={post.slug} itemProp="url">
+                          <Link to={`/${_.kebabCase(post.category.title)}/${post.slug}/`} itemProp="url">
                             <span itemProp="headline">{title}</span>
                           </Link>
                         </h3>
@@ -134,6 +134,7 @@ const BlogIndex = ({ data, location }) => {
                     >
                       <GatsbyImage
                         className="w-20 h-20 mx-auto object-cover rounded-2xl"
+                        imgClassName="object-cover rounded-2xl"
                         image={post.featuredImage.gatsbyImageData}
                         alt={post.title}
                       />
@@ -253,7 +254,7 @@ const BlogIndex = ({ data, location }) => {
                                   itemType="http://schema.org/Article"
                                 >
                                   <GatsbyImage
-                                    className="w-full h-40 mx-auto object-cover rounded-t-3xl"
+                                    imgClassName="w-full h-40 mx-auto object-cover rounded-t-3xl"
                                     image={post.featuredImage.gatsbyImageData}
                                     alt={post.title}
                                   />
@@ -362,7 +363,7 @@ export const pageQuery = graphql`
         date(formatString: "MMMM DD, YYYY")
         slug
         featuredImage {
-          gatsbyImageData
+          gatsbyImageData(width: 320, placeholder: BLURRED)
         }
         category {
           title
@@ -384,7 +385,7 @@ export const pageQuery = graphql`
           title
         }
         featuredImage {
-          gatsbyImageData
+          gatsbyImageData(height: 80, placeholder: BLURRED)
         }
         body {
           childMarkdownRemark {
@@ -412,7 +413,7 @@ export const pageQuery = graphql`
           title
         }
         featuredImage {
-          gatsbyImageData
+          gatsbyImageData(width: 208, placeholder: BLURRED)
         }
       }
     }

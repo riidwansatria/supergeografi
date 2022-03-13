@@ -253,7 +253,7 @@ export const pageQuery = graphql`
       title
       date(formatString: "MMMM Do, YYYY")
       featuredImage {
-        gatsbyImageData
+        gatsbyImageData(height: 512, placeholder: BLURRED)
       }
       category {
         title
@@ -292,7 +292,7 @@ export const pageQuery = graphql`
           title
         }
         featuredImage {
-          gatsbyImageData
+          gatsbyImageData(height: 48, placeholder: BLURRED)
         }
       }
     }
