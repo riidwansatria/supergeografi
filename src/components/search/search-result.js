@@ -18,7 +18,7 @@ const PageHit = ({ hit }) => (
     alt={hit.title}
     />
     <div>
-        <Link to={hit.slug}>
+        <Link to={`/${hit.category}/${hit.slug}/`}>
         <h4 className="text-bold text-xl">
             <Highlight attribute="title" hit={hit} tagName="mark" />
         </h4>

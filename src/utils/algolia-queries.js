@@ -13,6 +13,9 @@ const pageQuery = `{
         featuredImage {
           gatsbyImageData(height: 80, width:80, placeholder: BLURRED)
         }
+        category {
+          slug
+        }
         body {
           childMarkdownRemark {
             excerpt(pruneLength: 5000)
@@ -23,11 +26,12 @@ const pageQuery = `{
   }
 }`
 
-function pageToAlgoliaRecord({ node: { id, title, slug, body, featuredImage } }) {
+function pageToAlgoliaRecord({ node: { id, title, slug, category, body, featuredImage } }) {
   return {
     objectID: id,
     title,
     slug,
+    category: category.slug,
     excerpt: body.childMarkdownRemark.excerpt,
     featuredImage: featuredImage.gatsbyImageData,
   }

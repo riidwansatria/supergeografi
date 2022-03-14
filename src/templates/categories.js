@@ -216,7 +216,7 @@ export const pageQuery = graphql`
         description
       }
       featuredImage {
-        gatsbyImageData(height: 512, placeholder: BLURRED)
+        gatsbyImageData(placeholder: BLURRED)
         file {
           url
         }
