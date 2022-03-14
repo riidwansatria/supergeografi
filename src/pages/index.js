@@ -32,7 +32,9 @@ const BlogIndex = ({ data, location }) => {
   return (
     <div className="bg-white">
       <Layout location={location} title={siteTitle}>
-        <Seo title="Home" />
+        <Seo 
+        title="Supergeografi – Telusuri Materi Geografi Sekarang!" 
+        />
 
         {/* Hero section */}
         <div className="max-w-6xl md:py-20 py-12 mx-auto grid grid-cols-1 md:grid-cols-2 items-center">
@@ -198,7 +200,6 @@ const BlogIndex = ({ data, location }) => {
                   SUBSCRIBE
                 </button>
               </div>
-              <div data-netlify-recaptcha="true"></div>
             </form>
 
             <ul className="flex space-x-2 py-6">

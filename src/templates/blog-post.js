@@ -19,8 +19,9 @@ const BlogPostTemplate = ({ data, location }) => {
   return (
     <Layout location={location} title={siteTitle}>
       <Seo
-        title={post.title}
+        title={`${post.title} – ${siteTitle}`}
         description={post.body.childMarkdownRemark.excerpt}
+        image={post.featuredImage.file.url}
       />
       <article
         className="md:px-12 px-4"
@@ -273,6 +274,9 @@ export const pageQuery = graphql`
       date(formatString: "MMMM Do, YYYY")
       featuredImage {
         gatsbyImageData(height: 512, placeholder: BLURRED)
+        file {
+          url
+        }
       }
       category {
         title

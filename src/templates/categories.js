@@ -10,13 +10,19 @@ const _ = require("lodash")
 const Categories = ({ data, location }) => {
   const category = data.contentfulPostCategory
   const siteTitle = data.site.siteMetadata?.title || `Title`
+  const metaDescription = data.contentfulPostCategory.description?.description || data.site.siteMetadata.description
+  const metaImage = data.contentfulPostCategory.featuredImage?.file.url || data.site.siteMetadata.image
   const categoryTags = data.categoryTags.nodes
   const categoryPosts = data.categoryArticles.nodes
   const recentPosts = data.recentPosts.nodes
 
   return (
     <Layout location={location} title={siteTitle}>
-      <Seo title={category.title} />
+      <Seo 
+      title={`${category.title} – ${siteTitle}`} 
+      description={metaDescription}
+      image={metaImage}
+      />
 
       {/* Category header */}
       <header className="relative h-40 sm:h-[32rem] md:mx-12 mx-4 rounded-2xl items-center my-6 sm:mb-16">
@@ -198,6 +204,8 @@ export const pageQuery = graphql`
     site {
       siteMetadata {
         title
+        description
+        image
       }
     }
 
@@ -209,6 +217,9 @@ export const pageQuery = graphql`
       }
       featuredImage {
         gatsbyImageData(height: 512, placeholder: BLURRED)
+        file {
+          url
+        }
       }
     }
 

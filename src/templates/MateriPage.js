@@ -15,7 +15,7 @@ const Page = ({ data, location }) => {
 
   return (
     <Layout location={location} title={siteTitle}>
-      <Seo title={page.title} />
+      <Seo title={`${page.title} – ${siteTitle}`} />
 
       {/* Header section */}
       <div className="border-b-2 border-gray-1">

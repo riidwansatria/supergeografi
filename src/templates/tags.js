@@ -15,7 +15,7 @@ const Tags = ({ pageContext, data, location }) => {
 
   return (
     <Layout location={location} title={siteTitle}>
-      <Seo title={tag} />
+      <Seo title={`${tag} – ${siteTitle}`} />
 
       {/* Tag header */}
       <header className="md:mx-12 mx-4 bg-gray-2 rounded-2xl items-center mb-16">
