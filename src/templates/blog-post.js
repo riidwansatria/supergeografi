@@ -22,6 +22,9 @@ const BlogPostTemplate = ({ data, location }) => {
         title={`${post.title} – ${siteTitle}`}
         description={post.body.childMarkdownRemark.excerpt}
         image={post.featuredImage.file.url}
+        datePublished={post.date}
+        isBlogPost
+        location={location}
       />
       <article
         className="md:px-12 px-4"

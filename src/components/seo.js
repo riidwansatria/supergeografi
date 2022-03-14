@@ -9,8 +9,10 @@ import * as React from "react"
 import PropTypes from "prop-types"
 import { Helmet } from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
+import { Location } from '@reach/router'
+import { SchemaOrg } from "./schemaorg"
 
-const Seo = ({ description, lang, meta, title, image }) => {
+const Seo = ({ description, lang, meta, title, image: customImage, datePublished, isBlogPost }) => {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -18,6 +20,7 @@ const Seo = ({ description, lang, meta, title, image }) => {
           siteMetadata {
             title
             description
+            siteUrl
             image
             social {
               twitter
@@ -29,57 +32,78 @@ const Seo = ({ description, lang, meta, title, image }) => {
   )
 
   const metaDescription = description || site.siteMetadata.description
-  const metaImage = image || site.siteMetadata.image
+  const metaImage = customImage || site.siteMetadata.image
 
   return (
-    <Helmet
-      htmlAttributes={{
-        lang,
+    <Location>
+      {({ location }) => {
+        const url = `${site.siteMetadata.siteUrl}${location.pathname}`
+        const image = `https:${metaImage}`
+        return (
+          <>
+            <Helmet
+              htmlAttributes={{
+                lang,
+              }}
+              title={title}
+              meta={[
+                {
+                  name: `description`,
+                  content: metaDescription,
+                },
+                {
+                  property: `og:title`,
+                  content: title,
+                },
+                {
+                  property: `og:description`,
+                  content: metaDescription,
+                },
+                {
+                  property: `og:image`,
+                  content: image,
+                },
+                {
+                  property: `og:type`,
+                  content: `website`,
+                },
+                {
+                  name: `twitter:card`,
+                  content: `summary_large_image`,
+                },
+                {
+                  name: `twitter:creator`,
+                  content: site.siteMetadata?.social?.twitter || ``,
+                },
+                {
+                  name: `twitter:title`,
+                  content: title,
+                },
+                {
+                  name: `twitter:description`,
+                  content: metaDescription,
+                },
+                {
+                  property: `twitter:image`,
+                  content: image,
+                },
+              ].concat(meta)}
+            />
+            <SchemaOrg
+              title={title}
+              url={url}
+              defaultTitle="Supergeografi"
+              isBlogPost={isBlogPost}
+              image={image}
+              description={description}
+              canonicalUrl={site.siteMetadata.siteUrl}
+              datePublished={datePublished}
+            />
+          </>
+        )
       }}
-      title={title}
-      meta={[
-        {
-          name: `description`,
-          content: metaDescription,
-        },
-        {
-          property: `og:title`,
-          content: title,
-        },
-        {
-          property: `og:description`,
-          content: metaDescription,
-        },
-        {
-          property: `og:image`,
-          content: `https:${metaImage}`,
-        },
-        {
-          property: `og:type`,
-          content: `website`,
-        },
-        {
-          name: `twitter:card`,
-          content: `summary_large_image`,
-        },
-        {
-          name: `twitter:creator`,
-          content: site.siteMetadata?.social?.twitter || ``,
-        },
-        {
-          name: `twitter:title`,
-          content: title,
-        },
-        {
-          name: `twitter:description`,
-          content: metaDescription,
-        },
-        {
-          property: `twitter:image`,
-          content: `https:${metaImage}`,
-        },
-      ].concat(meta)}
-    />
+    </Location>
+    
   )
 }
 

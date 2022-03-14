@@ -145,7 +145,7 @@ const BlogIndex = ({ data, location }) => {
                     >
                       <GatsbyImage
                         className="w-20 h-20 mx-auto object-cover rounded-2xl"
-                        imgClassName="object-cover rounded-2xl"
+                        imgClassName="rounded-2xl"
                         image={post.featuredImage.gatsbyImageData}
                         alt={post.title}
                       />
@@ -264,7 +264,8 @@ const BlogIndex = ({ data, location }) => {
                                   itemType="http://schema.org/Article"
                                 >
                                   <GatsbyImage
-                                    imgClassName="w-full h-40 mx-auto object-cover rounded-t-3xl"
+                                    imgClassName="w-full h-40 rounded-t-3xl"
+                                    className="w-full h-40 rounded-t-3xl"
                                     image={post.featuredImage.gatsbyImageData}
                                     alt={post.title}
                                   />
@@ -433,7 +434,7 @@ export const pageQuery = graphql`
           title
         }
         featuredImage {
-          gatsbyImageData(width: 208, placeholder: BLURRED)
+          gatsbyImageData(width: 278, placeholder: BLURRED)
         }
       }
     }
