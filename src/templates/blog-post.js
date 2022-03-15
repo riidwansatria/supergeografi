@@ -22,7 +22,7 @@ const BlogPostTemplate = ({ data, location }) => {
     <Layout location={location} title={siteTitle}>
       <Seo
         title={`${post.title} – ${siteTitle}`}
-        description={post.body.childMarkdownRemark.excerpt}
+        description={post.description?.description || post.body.childMarkdownRemark.excerpt}
         image={post.featuredImage.file.url}
         datePublished={post.date}
         isBlogPost
@@ -288,6 +288,9 @@ export const pageQuery = graphql`
         title
       }
       tags
+      description {
+        description
+      }
       body {
         childMarkdownRemark {
           excerpt
