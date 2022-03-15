@@ -46,17 +46,19 @@ const Tags = ({ pageContext, data, location }) => {
                       />
                       <div className="col-span-6 sm:col-span-3 sm:p-4">
                         <h3 className="font-bold text-gray-7 text-md sm:text-2xl">
-                          <Link to={post.slug} itemProp="url">
+                          <Link
+                            to={`/${post.category.slug}/${
+                              post.slug
+                            }/`}
+                            itemProp="url"
+                          >
                             <span itemProp="headline">{title}</span>
                           </Link>
                         </h3>
-                        <small className="text-primary">
-                          {post.date}
-                        </small>
+                        <small className="text-primary">{post.date}</small>
                         <p
                           dangerouslySetInnerHTML={{
-                            __html:
-                              post.body.childMarkdownRemark.excerpt,
+                            __html: post.body.childMarkdownRemark.excerpt,
                           }}
                           itemProp="description"
                           className="hidden sm:block text-sm text-gray-4"
@@ -168,9 +170,7 @@ export const pageQuery = graphql`
     tagArticles: allContentfulPost(
       limit: 2000
       sort: { fields: date, order: DESC }
-      filter: {
-        tags: {in: [$tag]}
-      }
+      filter: { tags: { in: [$tag] } }
     ) {
       nodes {
         title
@@ -178,6 +178,9 @@ export const pageQuery = graphql`
         slug
         featuredImage {
           gatsbyImageData(height: 192, placeholder: BLURRED)
+        }
+        category {
+          slug
         }
         body {
           childMarkdownRemark {
