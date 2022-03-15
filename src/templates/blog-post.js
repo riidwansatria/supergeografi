@@ -5,6 +5,7 @@ import { UserCircleIcon, CalendarIcon } from "@heroicons/react/outline"
 
 import Layout from "../components/templates/layout"
 import Seo from "../components/seo"
+import ShareButtons from "../components/shareButtons"
 
 const _ = require("lodash")
 
@@ -15,6 +16,7 @@ const BlogPostTemplate = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
   const author = data.site.siteMetadata.author?.name || `Supergeografi`
   const { previous, next } = data
+  const url = typeof window !== 'undefined' ? window.location.href : '';
 
   return (
     <Layout location={location} title={siteTitle}>
@@ -70,7 +72,7 @@ const BlogPostTemplate = ({ data, location }) => {
             >
               {post.title}
             </h1>
-            <div className="flex gap-4 sm:mt-8">
+            <div className="flex gap-4 sm:mt-8 mb-4">
               <div className="hidden sm:flex gap-1 items-center">
                 <UserCircleIcon className="block h-4 w-4" />
                 <span className="uppercase text-sm font-medium tracking-wider">
@@ -84,6 +86,7 @@ const BlogPostTemplate = ({ data, location }) => {
                 </span>
               </div>
             </div>
+            <ShareButtons url={url} title={post.title} description={post.body.childMarkdownRemark.excerpt} />
           </div>
         </header>
         <div className="grid grid-cols-4 sm:grid-cols-6 gap-8 max-w-6xl mx-auto">
