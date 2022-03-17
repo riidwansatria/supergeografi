@@ -4,9 +4,10 @@ import { GatsbyImage } from "gatsby-plugin-image"
 import Layout from "../components/templates/layout"
 import Seo from "../components/seo"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { ChevronRightIcon } from "@heroicons/react/outline"
 
 import HighlightOSN from "../components/organisms/HighlightOSN"
+import { LatestCategoryCard } from "../components/LatestCategoryCard"
+import { LatestCategoryArticles } from "../components/LatestCategoryArticles"
 
 import socialMedia from "../data/social-media"
 import logo from "../images/logo.png"
@@ -26,8 +27,6 @@ const BlogIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
   const latestPost = data.latestArticle.nodes
   const posts = data.recentArticles.nodes
-  const categories = data.categoryList.nodes
-  const categoryPosts = data.categoryArticles.nodes
 
   return (
     <div className="bg-white">
@@ -221,85 +220,23 @@ const BlogIndex = ({ data, location }) => {
         {/* Categories section */}
         <div className="grid grid-cols-4 sm:grid-cols-6 max-w-6xl mx-auto gap-8 p-4">
           <div className="col-span-4">
-            <ol style={{ listStyle: `none` }} className="grid gap-8">
-              {categories.map(category => {
-                return (
-                  <li key={category.title}>
-                    <div className="col-span-4 bg-gray-2 p-4 rounded-3xl">
-                      <div className="p-6">
-                        <div className="flex items-center gap-2">
-                          <svg
-                            width="30"
-                            height="4"
-                            viewBox="0 0 30 4"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <line
-                              y1="2"
-                              x2="30"
-                              y2="2"
-                              stroke="#4565DB"
-                              strokeWidth="4"
-                            />
-                          </svg>
-                          <p className="col-span-1">{category.subtitle}</p>
-                        </div>
-                        <h2 className="font-bold text-4xl">{category.title}</h2>
-                        <ol
-                          style={{ listStyle: `none` }}
-                          className="grid sm:grid-cols-3 gap-4 py-4"
-                        >
-                          {categoryPosts.map(post => {
-                            const title = post.title || post.slug
-
-                            return (
-                              <li
-                                key={post.slug}
-                                className="bg-white rounded-3xl"
-                              >
-                                <article
-                                  className=""
-                                  itemScope
-                                  itemType="http://schema.org/Article"
-                                >
-                                  <GatsbyImage
-                                    imgClassName="w-full h-40 rounded-t-3xl"
-                                    className="w-full h-40 rounded-t-3xl"
-                                    image={post.featuredImage.gatsbyImageData}
-                                    alt={post.title}
-                                  />
-                                  <div className="p-4">
-                                    <h3 className="font-bold text-gray-8 text-lg">
-                                      <Link
-                                        to={`/${_.kebabCase(
-                                          post.category.title
-                                        )}/${post.slug}/`}
-                                        itemProp="url"
-                                      >
-                                        <span itemProp="headline">{title}</span>
-                                      </Link>
-                                    </h3>
-                                  </div>
-                                </article>
-                              </li>
-                            )
-                          })}
-                        </ol>
-                        <div className="flex gap-1 items-center justify-end">
-                          <Link to={`/${_.kebabCase(category.title)}/`}>
-                            <p className="flex text-sm text-primary-dark hover:text-primary font-bold uppercase tracking-wider">
-                              Selanjutnya
-                            </p>
-                          </Link>
-                          <ChevronRightIcon className="flex h-4 w-4 text-primary-dark" />
-                        </div>
-                      </div>
-                    </div>
-                  </li>
-                )
-              })}
-            </ol>
+            <div className="grid gap-8"> 
+              <LatestCategoryCard category={data.litosferCategory}>
+                <LatestCategoryArticles nodes={data.litosferArticles.nodes} />
+              </LatestCategoryCard>
+              <LatestCategoryCard category={data.atmosferCategory}>
+                <LatestCategoryArticles nodes={data.atmosferArticles.nodes} />
+              </LatestCategoryCard>
+              <LatestCategoryCard category={data.hidrosferCategory}>
+                <LatestCategoryArticles nodes={data.hidrosferArticles.nodes} />
+              </LatestCategoryCard>
+              <LatestCategoryCard category={data.biosferCategory}>
+                <LatestCategoryArticles nodes={data.biosferArticles.nodes} />
+              </LatestCategoryCard>
+              <LatestCategoryCard category={data.antroposferCategory}>
+                <LatestCategoryArticles nodes={data.antroposferArticles.nodes} />
+              </LatestCategoryCard>
+            </div>
           </div>
 
           {/* Sidebar */}
@@ -413,19 +350,103 @@ export const pageQuery = graphql`
       }
     }
 
-    categoryList: allContentfulPostCategory(
-      sort: { fields: categoryID, order: ASC }
-      filter: { categoryID: { gte: 1, lte: 5 } }
+    litosferCategory: contentfulPostCategory(categoryID: {eq: 1}) {
+      title
+      subtitle
+    }
+
+    litosferArticles: allContentfulPost(
+      sort: { fields: date, order: DESC }
+      limit: 3
+      filter: {category: {categoryID: {eq: 1}}}
     ) {
       nodes {
         title
-        subtitle
+        slug
+        category {
+          title
+        }
+        featuredImage {
+          gatsbyImageData(width: 278, placeholder: BLURRED)
+        }
       }
     }
 
-    categoryArticles: allContentfulPost(
+    atmosferCategory: contentfulPostCategory(categoryID: {eq: 2}) {
+      title
+      subtitle
+    }
+
+    atmosferArticles: allContentfulPost(
       sort: { fields: date, order: DESC }
       limit: 3
+      filter: {category: {categoryID: {eq: 2}}}
+    ) {
+      nodes {
+        title
+        slug
+        category {
+          title
+        }
+        featuredImage {
+          gatsbyImageData(width: 278, placeholder: BLURRED)
+        }
+      }
+    }
+
+    hidrosferCategory: contentfulPostCategory(categoryID: {eq: 3}) {
+      title
+      subtitle
+    }
+
+    hidrosferArticles: allContentfulPost(
+      sort: { fields: date, order: DESC }
+      limit: 3
+      filter: {category: {categoryID: {eq: 3}}}
+    ) {
+      nodes {
+        title
+        slug
+        category {
+          title
+        }
+        featuredImage {
+          gatsbyImageData(width: 278, placeholder: BLURRED)
+        }
+      }
+    }
+
+    biosferCategory: contentfulPostCategory(categoryID: {eq: 4}) {
+      title
+      subtitle
+    }
+
+    biosferArticles: allContentfulPost(
+      sort: { fields: date, order: DESC }
+      limit: 3
+      filter: {category: {categoryID: {eq: 4}}}
+    ) {
+      nodes {
+        title
+        slug
+        category {
+          title
+        }
+        featuredImage {
+          gatsbyImageData(width: 278, placeholder: BLURRED)
+        }
+      }
+    }
+
+    antroposferCategory: contentfulPostCategory(categoryID: {eq: 5}) {
+      title
+      subtitle
+    }
+
+    antroposferArticles: allContentfulPost(
+      sort: { fields: date, order: DESC }
+      limit: 3
+      filter: {category: {categoryID: {eq: 5}}}
     ) {
       nodes {
         title
