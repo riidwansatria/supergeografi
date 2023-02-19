@@ -157,7 +157,7 @@ export const pageQuery = graphql`
     }
 
     recentPosts: allContentfulPost(
-      sort: { fields: date, order: DESC }
+      sort: { date: DESC }
       limit: 5
     ) {
       nodes {

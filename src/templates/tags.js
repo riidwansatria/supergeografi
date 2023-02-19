@@ -169,7 +169,7 @@ export const pageQuery = graphql`
 
     tagArticles: allContentfulPost(
       limit: 2000
-      sort: { fields: date, order: DESC }
+      sort: { date: DESC }
       filter: { tags: { in: [$tag] } }
     ) {
       nodes {
@@ -191,7 +191,7 @@ export const pageQuery = graphql`
     }
 
     recentPosts: allContentfulPost(
-      sort: { fields: date, order: DESC }
+      sort: { date: DESC }
       limit: 5
     ) {
       nodes {

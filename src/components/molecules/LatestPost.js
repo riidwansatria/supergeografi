@@ -5,7 +5,7 @@ export default function LatestPost() {
   const data = useStaticQuery(graphql`
     query LatestPostQuery {
       allMarkdownRemark(
-        sort: { fields: [frontmatter___date], order: DESC }
+        sort: { frontmatter: {date: DESC} }
         limit: 1
       ) {
         nodes {

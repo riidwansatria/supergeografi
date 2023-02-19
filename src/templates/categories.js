@@ -236,7 +236,7 @@ export const pageQuery = graphql`
 
     categoryArticles: allContentfulPost(
       limit: 2000
-      sort: { fields: date, order: DESC }
+      sort: { date: DESC }
       filter: {
         category: {slug: {in: [$category]}}
       }
@@ -257,7 +257,7 @@ export const pageQuery = graphql`
     }
 
     recentPosts: allContentfulPost(
-      sort: { fields: date, order: DESC }
+      sort: { date: DESC }
       limit: 5
     ) {
       nodes {

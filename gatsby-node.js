@@ -14,7 +14,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   const result = await graphql(
     `
       {
-        postsGroup: allContentfulPost(sort: { fields: date, order: ASC }) {
+        postsGroup: allContentfulPost(sort: {date: ASC}) {
           nodes {
             title
             slug
@@ -24,7 +24,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
           }
         }
         categoriesGroup: allContentfulPostCategory(
-          sort: {fields: categoryID, order: ASC}
+          sort: {categoryID: ASC}
           ) {
           nodes {
             title

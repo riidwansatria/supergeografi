@@ -306,7 +306,7 @@ export const pageQuery = graphql`
     }
 
     latestArticle: allContentfulPost(
-      sort: { fields: date, order: DESC }
+      sort: { date: DESC }
       limit: 1
     ) {
       nodes {
@@ -328,7 +328,7 @@ export const pageQuery = graphql`
     }
 
     recentArticles: allContentfulPost(
-      sort: { fields: date, order: DESC }
+      sort: { date: DESC }
       limit: 4
       skip: 1
     ) {
@@ -356,7 +356,7 @@ export const pageQuery = graphql`
     }
 
     litosferArticles: allContentfulPost(
-      sort: { fields: date, order: DESC }
+      sort: { date: DESC }
       limit: 3
       filter: {category: {categoryID: {eq: 1}}}
     ) {
@@ -378,7 +378,7 @@ export const pageQuery = graphql`
     }
 
     atmosferArticles: allContentfulPost(
-      sort: { fields: date, order: DESC }
+      sort: { date: DESC }
       limit: 3
       filter: {category: {categoryID: {eq: 2}}}
     ) {
@@ -400,7 +400,7 @@ export const pageQuery = graphql`
     }
 
     hidrosferArticles: allContentfulPost(
-      sort: { fields: date, order: DESC }
+      sort: { date: DESC }
       limit: 3
       filter: {category: {categoryID: {eq: 3}}}
     ) {
@@ -422,7 +422,7 @@ export const pageQuery = graphql`
     }
 
     biosferArticles: allContentfulPost(
-      sort: { fields: date, order: DESC }
+      sort: { date: DESC }
       limit: 3
       filter: {category: {categoryID: {eq: 4}}}
     ) {
@@ -444,7 +444,7 @@ export const pageQuery = graphql`
     }
 
     antroposferArticles: allContentfulPost(
-      sort: { fields: date, order: DESC }
+      sort: { date: DESC }
       limit: 3
       filter: {category: {categoryID: {eq: 5}}}
     ) {

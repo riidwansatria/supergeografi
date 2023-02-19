@@ -7,7 +7,7 @@ const RecentArticles = () => {
       query={graphql`
         query HeadingQuery {
           allMarkdownRemark(
-            sort: { fields: [frontmatter___date], order: DESC }
+            sort: { frontmatter: {date: DESC} }
             limit: 1
           ) {
             nodes {
