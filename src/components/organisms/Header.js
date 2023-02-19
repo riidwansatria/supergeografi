@@ -2,7 +2,7 @@ import React from "react"
 import { Fragment } from 'react'
 import { Link } from "gatsby"
 import { Disclosure, Popover, Transition } from "@headlessui/react"
-import { MenuIcon, XIcon, SearchIcon } from "@heroicons/react/outline"
+import { Bars3Icon, XMarkIcon, MagnifyingGlassIcon } from "@heroicons/react/24/outline"
 import logo from "/src/images/logo.png"
 import ContactIcons from "/src/components/atoms/contactIcons.js"
 
@@ -37,9 +37,9 @@ export default function Example() {
                   <Disclosure.Button className="inline-flex items-center justify-center p-2 rounded-md text-gray-8 hover:bg-gray-2 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-gray-2">
                     <span className="sr-only">Open main menu</span>
                     {open ? (
-                      <XIcon className="block h-6 w-6" aria-hidden="true" />
+                      <XMarkIcon className="block h-6 w-6" aria-hidden="true" />
                     ) : (
-                      <MenuIcon className="block h-6 w-6" aria-hidden="true" />
+                      <Bars3Icon className="block h-6 w-6" aria-hidden="true" />
                     )}
                   </Disclosure.Button>
                 </div>
@@ -63,7 +63,7 @@ export default function Example() {
                       <Link className="w-full" to="/cari/">
                         <button className="flex items-center justify-between w-full bg-gray-2 text-gray-4 text-sm sm:text-md text-left font-bold py-2 px-4 rounded-lg">
                           <p className="flex">Cari materi... </p>
-                          <SearchIcon className="flex h-4 w-4"/>
+                          <MagnifyingGlassIcon className="flex h-4 w-4"/>
                         </button>
                       </Link>
                     </div>
@@ -164,7 +164,7 @@ export default function Example() {
                   <Link className="w-full" to="/cari/">
                     <button className="flex items-center justify-between w-full bg-gray-2 text-gray-4 text-sm sm:text-md text-left font-bold py-2 px-4 rounded-lg">
                       <p className="flex">Cari materi... </p>
-                      <SearchIcon className="flex h-4 w-4"/>
+                      <MagnifyingGlassIcon className="flex h-4 w-4"/>
                     </button>
                   </Link>
                 </div>

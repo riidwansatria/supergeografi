@@ -1,7 +1,7 @@
 import * as React from "react"
 import { Link, graphql } from "gatsby"
 import { GatsbyImage } from "gatsby-plugin-image"
-import { UserCircleIcon, CalendarIcon } from "@heroicons/react/outline"
+import { UserCircleIcon, CalendarIcon } from "@heroicons/react/24/outline"
 
 import Layout from "../components/templates/layout"
 import Seo from "../components/seo"

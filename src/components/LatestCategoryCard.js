@@ -1,6 +1,6 @@
 import React from "react"
 import { Link } from "gatsby"
-import { ChevronRightIcon } from "@heroicons/react/outline"
+import { ChevronRightIcon } from "@heroicons/react/24/outline"
 
 const _ = require("lodash")
 
