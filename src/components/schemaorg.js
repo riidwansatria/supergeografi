@@ -1,5 +1,4 @@
 import React from 'react'
-import Helmet from 'react-helmet'
 
 export function SchemaOrg({
   isBlogPost,
@@ -70,9 +69,6 @@ export function SchemaOrg({
     : baseSchema
 
   return (
-    <Helmet>
-      {/* Schema.org tags */}
-      <script type="application/ld+json">{JSON.stringify(schema)}</script>
-    </Helmet>
+    <script type="application/ld+json">{JSON.stringify(schema)}</script>
   )
 }
