@@ -10,9 +10,7 @@ module.exports = {
     description: `Telusuri lebih jauh tentang manusia, lingkungannya, dan bumi yang kita pijak beserta bentang alamnya bersama Supergeografi!`,
     siteUrl: `https://supergeografi.com/`,
     image: `//images.ctfassets.net/1qxcg8ht0ty0/71lB8h7EUlmHHJJSwhqBy9/0e5c4831eb7f541bc4e1d1bbce2ee58c/supergeografi-header.png`,
-    social: {
-      twitter: `@Supergeografi`,
-    },
+    twitterUsername: `@Supergeografi`,
   },
   plugins: [
     `gatsby-plugin-sharp`,
@@ -83,7 +81,6 @@ module.exports = {
         icon: `src/images/icon-circle-white.png`, // This path is relative to the root of the site.
       },
     },
-    `gatsby-plugin-react-helmet`,
     {
       resolve: 'gatsby-plugin-web-font-loader',
       options: {

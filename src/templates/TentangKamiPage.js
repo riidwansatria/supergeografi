@@ -3,7 +3,7 @@ import { Link, graphql } from "gatsby"
 import { GatsbyImage } from "gatsby-plugin-image"
 
 import Layout from "../components/templates/layout"
-import Seo from "../components/seo"
+import { Seo } from "../components/seo"
 import ContactForm from "../components/molecules/ContactForm"
 
 const _ = require("lodash")
@@ -15,7 +15,6 @@ const Page = ({ data, location }) => {
 
   return (
     <Layout location={location} title={siteTitle}>
-      <Seo title={`${page.title} – ${siteTitle}`} />
 
       {/* Page header */}
       <header className="md:mx-12 mx-4 bg-gray-2 rounded-2xl items-center mb-8 sm:mb-16">
@@ -126,6 +125,14 @@ const Page = ({ data, location }) => {
 }
 
 export default Page
+
+export const Head = ({ data }) => {
+  const siteTitle = data.site.siteMetadata?.title || `Supergeografi`
+  const page = data.contentfulPage
+  return (
+    <Seo title={`${page.title} – ${siteTitle}`} />
+  )
+}
 
 export const pageQuery = graphql`
   query ($slug: String!) {
