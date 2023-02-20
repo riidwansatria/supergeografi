@@ -159,11 +159,11 @@ const Tags = ({ pageContext, data, location }) => {
 
 export default Tags
 
-export const Head = ({ data }) => {
+export const Head = ({ pageContext, data }) => {
   const siteTitle = data.site.siteMetadata?.title || `Supergeografi`
-  const page = data.contentfulPage
+  const { tag } = pageContext
   return (
-    <Seo title={`${page.title} – ${siteTitle}`} />
+    <Seo title={`${tag} – ${siteTitle}`} />
   )
 }
 
