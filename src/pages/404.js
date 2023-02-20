@@ -2,7 +2,7 @@ import * as React from "react"
 import { graphql } from "gatsby"
 
 import Layout from "../components/templates/layout"
-import SEO from "../components/seo"
+import { Seo } from "../components/seo"
 
 import animation from "/src/images/404-animation.gif"
 
@@ -29,7 +29,7 @@ const NotFoundPage = ({ data, location }) => {
 export default NotFoundPage
 
 export const Head = () => (
-  <SEO title="404: Not Found" />
+  <Seo title="404: Not Found" />
 )
 
 export const pageQuery = graphql`

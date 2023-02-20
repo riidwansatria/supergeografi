@@ -3,7 +3,7 @@ import { Link, graphql } from "gatsby"
 import { GatsbyImage } from "gatsby-plugin-image"
 
 import Layout from "../components/templates/layout"
-import SEO from "../components/seo"
+import { Seo } from "../components/seo"
 
 import Search from "/src/components/search"
 const searchIndices = [{ name: `Post`, title: `Post` }]
@@ -114,7 +114,7 @@ const SearchPage = ({ data, location }) => {
 export default SearchPage
 
 export const Head = () => (
-  <SEO title={`Cari materi – ${siteTitle}`} />
+  <Seo title={`Cari materi – Supergeografi`} />
 )
 
 export const pageQuery = graphql`

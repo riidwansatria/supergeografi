@@ -3,15 +3,13 @@ import { Link, graphql } from "gatsby"
 import { GatsbyImage } from "gatsby-plugin-image"
 
 import Layout from "../components/templates/layout"
-import SEO from "../components/seo"
+import { Seo } from "../components/seo"
 
 const _ = require("lodash")
 
 const Categories = ({ data, location }) => {
   const category = data.contentfulPostCategory
   const siteTitle = data.site.siteMetadata?.title || `Title`
-  const metaDescription = data.contentfulPostCategory.description?.description || data.site.siteMetadata.description
-  const metaImage = data.contentfulPostCategory.featuredImage?.file.url || data.site.siteMetadata.image
   const categoryTags = data.categoryTags.nodes
   const categoryPosts = data.categoryArticles.nodes
   const recentPosts = data.recentPosts.nodes
@@ -195,13 +193,19 @@ const Categories = ({ data, location }) => {
 }
 export default Categories
 
-export const Head = () => (
-  <SEO 
-  title={`${category.title} – ${siteTitle}`} 
-  description={metaDescription}
-  image={metaImage}
-  />
-)
+export const Head = ({ data }) => {
+  const category = data.contentfulPostCategory
+  const siteTitle = data.site.siteMetadata?.title || `Title`
+  const metaDescription = data.contentfulPostCategory.description?.description || data.site.siteMetadata.description
+  const metaImage = data.contentfulPostCategory.featuredImage?.file.url || data.site.siteMetadata.image
+  return (
+    <Seo 
+    title={`${category.title} – ${siteTitle}`} 
+    description={metaDescription}
+    image={metaImage}
+    />
+  )
+}
 
 export const pageQuery = graphql`
   query ($slug: String!, $category: String) {

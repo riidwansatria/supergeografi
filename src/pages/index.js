@@ -2,7 +2,7 @@ import * as React from "react"
 import { Link, graphql } from "gatsby"
 import { GatsbyImage } from "gatsby-plugin-image"
 import Layout from "../components/templates/layout"
-import SEO from "../components/seo"
+import { Seo } from "../components/seo"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
 import HighlightOSN from "../components/organisms/HighlightOSN"
@@ -295,7 +295,7 @@ const BlogIndex = ({ data, location }) => {
 export default BlogIndex
 
 export const Head = () => (
-  <SEO title="Supergeografi – Telusuri Materi Geografi Sekarang!" />
+  <Seo title="Supergeografi – Telusuri Materi Geografi Sekarang!" />
 )
 
 export const pageQuery = graphql`
