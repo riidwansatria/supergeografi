@@ -81,6 +81,20 @@ const BlogPostTemplate = ({ data, location }) => {
             <ShareButtons url={url} title={post.title} description={post.body.childMarkdownRemark.excerpt} />
           </div>
         </header>
+
+        {/* Banner ads section */}
+        <div className="py-4 max-w-6xl mx-auto">
+          <ins class="adsbygoogle"
+              style={{ display: 'block' }}
+              data-ad-client="ca-pub-9395207160181701"
+              data-ad-slot="5666065543"
+              data-ad-format="auto"
+              data-full-width-responsive="true"></ins>
+          <script>
+              (adsbygoogle = window.adsbygoogle || []).push({});
+          </script>
+        </div>
+
         <div className="grid grid-cols-4 sm:grid-cols-6 gap-8 max-w-6xl mx-auto">
           {/* Main article */}
           <section
@@ -93,6 +107,17 @@ const BlogPostTemplate = ({ data, location }) => {
 
           {/* Sidebar */}
           <div className="hidden col-span-2 sm:grid grid-cols-1 gap-12 border-2 border-gray-1 rounded-xl h-fit p-4 ml-20">
+            {/* Sidebar ad */}
+            <ins class="adsbygoogle"
+                style={{ display: 'block' }}
+                data-ad-client="ca-pub-9395207160181701"
+                data-ad-slot="1615139898"
+                data-ad-format="auto"
+                data-full-width-responsive="true"></ins>
+            <script>
+                (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+            
             {/* Newsletter */}
             <div className="space-y-4">
               <h3 className="text-md font-bold uppercase tracking-widest">
@@ -128,6 +153,17 @@ const BlogPostTemplate = ({ data, location }) => {
               </form>
             </div>
 
+            {/* Sidebar ad */}
+            <ins class="adsbygoogle"
+                style={{ display: 'block' }}
+                data-ad-client="ca-pub-9395207160181701"
+                data-ad-slot="1615139898"
+                data-ad-format="auto"
+                data-full-width-responsive="true"></ins>
+            <script>
+                (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+            
             {/* Latest articles */}
             <div className="">
               <h3 className="text-md font-bold uppercase tracking-widest">

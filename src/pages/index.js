@@ -50,6 +50,19 @@ const BlogIndex = ({ data, location }) => {
           </div>
         </div>
 
+        {/* Homepage ads section */}
+        <div className="max-w-6xl p-4 mx-auto">
+        <ins class="adsbygoogle"
+            style={{ display: 'block' }}
+            data-ad-client="ca-pub-9395207160181701"
+            data-ad-slot="5666065543"
+            data-ad-format="auto"
+            data-full-width-responsive="true"></ins>
+       <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+       </script>
+        </div>
+
         {/* Recent articles section */}
         <div className="max-w-6xl p-6 mx-auto">
           {/* Header */}

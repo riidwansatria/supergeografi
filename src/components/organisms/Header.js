@@ -31,6 +31,17 @@ export default function Example() {
         {({ open }) => (
           <>
             <div className="mx-auto mt-4 sm:mt-0">
+              {/* Header ads */}
+              <ins class="adsbygoogle"
+                  style={{ display: 'block' }}
+                  data-ad-client="ca-pub-9395207160181701"
+                  data-ad-slot="9717830468"
+                  data-ad-format="auto"
+                  data-full-width-responsive="true"></ins>
+              <script>
+                  (adsbygoogle = window.adsbygoogle || []).push({});
+              </script>
+
               <div className="relative flex sm:border-b-2 border-gray-1 items-center justify-center">
                 {/* Mobile menu button */}
                 <div className="flex-none sm:hidden pl-2">
