@@ -3,7 +3,7 @@ import { Link, graphql } from "gatsby"
 import { GatsbyImage } from "gatsby-plugin-image"
 
 import Layout from "../components/templates/layout"
-import Seo from "../components/seo"
+import SEO from "../components/seo"
 
 import LogoOSN from "/src/images/logo-osn.png"
 const _ = require("lodash")
@@ -15,7 +15,6 @@ const Page = ({ data, location }) => {
 
   return (
     <Layout location={location} title={siteTitle}>
-      <Seo title={`${page.title} – ${siteTitle}`} />
 
       {/* Header section */}
       <div className="border-b-2 border-gray-1">
@@ -138,6 +137,10 @@ const Page = ({ data, location }) => {
 }
 
 export default Page
+
+export const Head = () => (
+  <SEO title={`${page.title} – ${siteTitle}`} />
+)
 
 export const pageQuery = graphql`
   query ($slug: String!) {

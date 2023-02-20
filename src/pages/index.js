@@ -2,7 +2,7 @@ import * as React from "react"
 import { Link, graphql } from "gatsby"
 import { GatsbyImage } from "gatsby-plugin-image"
 import Layout from "../components/templates/layout"
-import Seo from "../components/seo"
+import SEO from "../components/seo"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
 import HighlightOSN from "../components/organisms/HighlightOSN"
@@ -31,9 +31,6 @@ const BlogIndex = ({ data, location }) => {
   return (
     <div className="bg-white">
       <Layout location={location} title={siteTitle}>
-        <Seo 
-        title="Supergeografi – Telusuri Materi Geografi Sekarang!" 
-        />
 
         {/* Hero section */}
         <div className="max-w-6xl md:py-20 py-12 mx-auto grid grid-cols-1 md:grid-cols-2 items-center">
@@ -296,6 +293,10 @@ const BlogIndex = ({ data, location }) => {
 }
 
 export default BlogIndex
+
+export const Head = () => (
+  <SEO title="Supergeografi – Telusuri Materi Geografi Sekarang!" />
+)
 
 export const pageQuery = graphql`
   query {

@@ -83,7 +83,6 @@ module.exports = {
         icon: `src/images/icon-circle-white.png`, // This path is relative to the root of the site.
       },
     },
-    `gatsby-plugin-react-helmet`,
     {
       resolve: 'gatsby-plugin-web-font-loader',
       options: {

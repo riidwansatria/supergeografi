@@ -4,7 +4,7 @@ import { GatsbyImage } from "gatsby-plugin-image"
 import { UserCircleIcon, CalendarIcon } from "@heroicons/react/24/outline"
 
 import Layout from "../components/templates/layout"
-import Seo from "../components/seo"
+import SEO from "../components/seo"
 import ShareButtons from "../components/shareButtons"
 
 const _ = require("lodash")
@@ -20,14 +20,6 @@ const BlogPostTemplate = ({ data, location }) => {
 
   return (
     <Layout location={location} title={siteTitle}>
-      <Seo
-        title={`${post.title} – ${siteTitle}`}
-        description={post.description?.description || post.body.childMarkdownRemark.excerpt}
-        image={post.featuredImage.file.url}
-        datePublished={post.date}
-        isBlogPost
-        location={location}
-      />
       <article
         className="md:px-12 px-4"
         itemScope
@@ -259,6 +251,17 @@ const BlogPostTemplate = ({ data, location }) => {
 }
 
 export default BlogPostTemplate
+
+export const Head = () => (
+  <SEO 
+    title={`${post.title} – ${siteTitle}`}
+    description={post.description?.description || post.body.childMarkdownRemark.excerpt}
+    image={post.featuredImage.file.url}
+    datePublished={post.date}
+    isBlogPost
+    location={location}
+  />
+)
 
 export const pageQuery = graphql`
   query BlogPostBySlug(
