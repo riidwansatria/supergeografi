@@ -127,25 +127,6 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   })
 }
 
-exports.onCreateNode = ({ node, actions }) => {
-  const { createNode } = actions
-
-  if (node.internal.type === "ContentfulPost") {
-    const content = JSON.stringify(node)
-    const contentDigest = crypto
-      .createHash("md5")
-      .update(content)
-      .digest("hex")
-
-    createNode({
-      ...node,
-      internal: {
-        contentDigest: contentDigest,
-      },
-    })
-  }
-}
-
 exports.createSchemaCustomization = ({ actions }) => {
   const { createTypes } = actions
 
