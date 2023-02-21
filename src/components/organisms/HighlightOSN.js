@@ -3,13 +3,15 @@ import { Link } from "gatsby"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faBook, faPenRuler } from "@fortawesome/free-solid-svg-icons"
 
+import osnHeader from "/src/images/osn-header.png"
+
 const Hero = () => {
   return (
     <div className="max-w-6xl md:py-32 py-12 mx-auto grid grid-cols-1 sm:grid-cols-2 items-start">
       <div className="hidden sm:block col-span-1">
         <img
-          className="rounded-l-3xl rounded-b-3xl"
-          src="https://supergeografi.com/wp-content/uploads/2020/11/logo-osn-2-2.png"
+          className="rounded-l-3xl rounded-b-3xl w-full"
+          src={osnHeader}
           alt="OSN Geografi"
         />
       </div>
