@@ -1,6 +1,7 @@
 const path = require(`path`)
 const { createFilePath } = require(`gatsby-source-filesystem`)
 const _ = require("lodash")
+const crypto = require("crypto")
 
 exports.createPages = async ({ graphql, actions, reporter }) => {
   const { createPage } = actions
@@ -124,6 +125,25 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
       },
     })
   })
+}
+
+exports.onCreateNode = ({ node, actions }) => {
+  const { createNode } = actions
+
+  if (node.internal.type === "ContentfulPost") {
+    const content = JSON.stringify(node)
+    const contentDigest = crypto
+      .createHash("md5")
+      .update(content)
+      .digest("hex")
+
+    createNode({
+      ...node,
+      internal: {
+        contentDigest: contentDigest,
+      },
+    })
+  }
 }
 
 exports.createSchemaCustomization = ({ actions }) => {
